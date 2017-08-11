@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i");
+body {
+  font-family: "Roboto", sans-serif;
+  color: #222;
+  margin: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", monospace;
+  color: #7F2041; }
+
+h1 {
+  font-size: 40px; }
+
+p {
+  margin: 0; }
+
+header {
+  padding-top: 120px;
+  padding-bottom: 30px;
+  background-color: #7F2041;
+  color: white;
+  margin-bottom: 30px; }
+  header h1 {
+    color: #FFB800; }
+  header button {
+    margin: 30px 20px 0px 0px;
+    padding: 10px 50px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */
+    border: 0;
+    background-color: #1B1825;
+    color: #ECB730; }
+  header button:hover {
+    background-color: #484063; }
+
+#tarde {
+  margin-top: 100px; }
+
+/* Tabela */
+.disciplinas {
+  width: 100%; }
+  .disciplinas caption {
+    padding: 20px 40px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    border: 0;
+    background-color: #1B1825;
+    color: #ECB730; }
+  .disciplinas .sociedade {
+    background-color: #b1cda3; }
+    .disciplinas .sociedade button {
+      background-color: #3D8218; }
+    .disciplinas .sociedade button:hover {
+      background-color: #295710; }
+  .disciplinas .ciencia {
+    background-color: #f7d799; }
+    .disciplinas .ciencia button {
+      background-color: #EC9A00; }
+    .disciplinas .ciencia button:hover {
+      background-color: #b97900; }
+  .disciplinas .tecnologia {
+    background-color: #c3a3a4; }
+    .disciplinas .tecnologia button {
+      background-color: #6A191B; }
+    .disciplinas .tecnologia button:hover {
+      background-color: #410f10; }
+  .disciplinas .estetica {
+    background-color: #99b1cd; }
+    .disciplinas .estetica button {
+      background-color: #003D82; }
+    .disciplinas .estetica button:hover {
+      background-color: #00254f; }
+  .disciplinas .obrigatorio {
+    background-color: #adadad; }
+    .disciplinas .obrigatorio button {
+      background-color: #333; }
+    .disciplinas .obrigatorio button:hover {
+      background-color: #1a1a1a; }
+  .disciplinas .pcc {
+    background-color: #b9af99; }
+    .disciplinas .pcc button {
+      background-color: #503700; }
+    .disciplinas .pcc button:hover {
+      background-color: #1d1400; }
+  .disciplinas th {
+    background-color: #7F2041;
+    color: #ECB730;
+    border: 3px solid white;
+    text-transform: uppercase;
+    font-family: "Roboto", monospace;
+    letter-spacing: 3px;
+    padding: 10px;
+    font-weight: 400; }
+  .disciplinas td {
+    width: 20%;
+    padding: 10px;
+    border: 3px solid white;
+    vertical-align: top; }
+    .disciplinas td h4 {
+      color: black;
+      font-weight: 400;
+      margin: 12px 0px 5px;
+      font-size: calc(40px * 0.42);
+      line-height: calc(40px * 0.44); }
+    .disciplinas td p {
+      font-size: calc(14px * 0.9); }
+    .disciplinas td .professor {
+      margin-bottom: 8px;
+      font-weight: 700; }
+    .disciplinas td .local {
+      margin-top: 10px;
+      font-weight: 700;
+      font-size: calc(14px * 1.1); }
+    .disciplinas td a .sem {
+      display: none; }
+    .disciplinas td button {
+      margin-top: 15px;
+      font-size: calc(14px * 0.9);
+      padding: 5px 20px;
+      border: 0;
+      color: #fff;
+      font-family: "Roboto", monospace;
+      text-transform: uppercase; }
+    .disciplinas td .sem {
+      display: none; }
+
+.legenda .row {
+  margin-bottom: 15px; }
+
+.legenda .sociedade {
+  width: 40px;
+  height: 21px;
+  margin-right: 10px;
+  margin-left: 15px;
+  background-color: #b1cda3; }
+
+.legenda .ciencia {
+  width: 40px;
+  height: 21px;
+  margin-right: 10px;
+  margin-left: 15px;
+  background-color: #f7d799; }
+
+.legenda .tecnologia {
+  width: 40px;
+  height: 21px;
+  margin-right: 10px;
+  margin-left: 15px;
+  background-color: #c3a3a4; }
+
+.legenda .estetica {
+  width: 40px;
+  height: 21px;
+  margin-right: 10px;
+  margin-left: 15px;
+  background-color: #99b1cd; }
+
+.legenda .obrigatorio {
+  width: 40px;
+  height: 21px;
+  margin-right: 10px;
+  margin-left: 15px;
+  background-color: #adadad; }
+
+.legenda .pcc {
+  width: 40px;
+  height: 21px;
+  margin-right: 10px;
+  margin-left: 15px;
+  background-color: #b9af99; }
+
+.legenda .eixo {
+  font-size: calc(14px * 0.9);
+  line-height: calc(14px * 1.5);
+  color: #1B1825; }
+
+#myBtn {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 20px;
+  /* Place the button at the bottom of the page */
+  right: 30px;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  background-color: #1B1825;
+  color: #ECB730;
+  cursor: pointer;
+  padding: 20px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  font-size: 20px; }
+
+#myBtn:hover {
+  background-color: #555;
+  /* Add a dark-grey background on hover */ }

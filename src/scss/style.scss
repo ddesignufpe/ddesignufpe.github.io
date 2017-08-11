@@ -1,0 +1,190 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+body {
+    font-family: $fontbody;
+        color: $bodycolor;
+        margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $fontheading;
+    color: $maincolor;
+}
+
+h1 {
+    font-size: $sizetitulo;
+}
+
+p {
+
+    margin: 0;
+
+}
+
+header {
+    padding-top: 120px;
+    padding-bottom: 30px;
+    background-color: $maincolor;
+    color: white;
+    margin-bottom: 30px;
+    h1 {
+        color: $sidecolor;
+    }
+    button {
+        margin: 30px 20px 0px 0px;
+        padding: 10px 50px;
+        font-size: 30px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        @include border-radius(50px);
+        border: 0;
+        background-color: #1B1825;
+        color: #ECB730;
+        }
+    button:hover {
+        background-color: lighten(#1B1825, 20%)
+    }
+}
+
+#tarde {
+    margin-top: 100px;
+}
+
+
+/* Tabela */
+.disciplinas {
+    width: 100%;
+    
+    caption {
+        padding: 20px 40px;
+        font-size: 30px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        border: 0;
+        background-color: #1B1825;
+        color: #ECB730;
+    }
+
+    @each $eixo, $cor in $cores {
+    .#{$eixo} {
+            background-color: mix(white, $cor, $light);
+            
+            button {
+            background-color: $cor;
+            }
+
+            button:hover {
+            background-color: darken($cor, $dark);}
+}
+}
+
+
+
+    th {
+        background-color: #7F2041;
+        color: #ECB730;
+        border: 3px solid white;
+        text-transform: uppercase;
+        font-family: $fontheading;
+        letter-spacing: 3px;
+        padding: 10px;
+        font-weight: 400;
+    }
+
+
+td {
+    width: 20%;
+    padding: 10px;
+    border: 3px solid white;
+    vertical-align: top;
+
+    h4 {
+        color: black;
+        font-weight: 400;
+        margin: 12px 0px 5px;
+        font-size: calc(#{$sizetitulo} * 0.42;
+        line-height: calc(#{$sizetitulo} * 0.44;
+    }
+
+    p {
+        font-size: calc(#{$sizebody} * 0.9);
+    }
+
+    .professor {
+        margin-bottom: 8px;
+        font-weight: 700;
+    }
+    .local {
+        margin-top: 10px;
+        font-weight: 700;
+        font-size: calc(#{$sizebody} * 1.1);
+    }
+
+    a {
+       .sem {
+        display: none;
+       }
+    }
+
+    button {
+        margin-top: 15px;
+        font-size: calc(#{$sizebody} * 0.9);
+        padding: 5px 20px;
+        border: 0;
+        color: #fff;
+        font-family: $fontheading;
+        text-transform: uppercase;
+    }
+
+    .sem {
+        display: none;
+    }
+
+}
+
+}
+
+.legenda {
+    
+    .row {
+        margin-bottom: 15px;
+    }
+
+    @each $eixo, $cor in $cores {
+    .#{$eixo} {
+            width: 40px;
+            height: 21px;
+            margin-right: 10px;
+            margin-left: 15px;
+            background-color: mix(white, $cor, $light);
+    }
+}
+        .eixo {
+            font-size: calc(#{$sizebody} * 0.9);
+            line-height: calc(#{$sizebody} * 1.5);
+            color: #1B1825;
+        }
+
+}
+
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #1B1825;
+    color: #ECB730;
+    cursor: pointer;
+    padding: 20px;
+    @include border-radius(4px);
+    font-size: 20px;
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
