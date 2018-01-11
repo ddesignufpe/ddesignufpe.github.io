@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,300i,400,400i,700,700i');
 
 $maincolor: #7F2041;
 $darkercolor: darken($maincolor, 15%);
@@ -6,18 +7,19 @@ $sidecolor: #FFB800;;
 $bodycolor: #222;
 $strongcolor: darken($bodycolor, 15%);
 
-$light: 60%;
+$light: 50%;
 $dark: 10%;
 
-$fontheading: 'Roboto', monospace;
-$fontbody: 'Roboto', sans-serif;
+$fontheading: 'Work Sans', monospace;
+$fontbody1: 'Work Sans', sans-serif;
+$fontbody2: 'Roboto', sans-serif;
 
 $sizebody: 14px;
 $sizetitulo: 40px;
 
 $cores: (
 sociedade: #3D8218,
-ciencia: #EC9A00,
+ciencia: rgb(212, 138, 0),
 tecnologia: #6A191B,
 estetica: #003D82,
 obrigatorio: #333,

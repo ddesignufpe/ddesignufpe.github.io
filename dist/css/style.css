@@ -1,210 +1,307 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,300i,400,400i,700,700i");
 body {
+  background-color: #7F2041;
+  background-image: url(../img/presentation.svg) no-repeat;
   font-family: "Roboto", sans-serif;
-  color: #222;
-  margin: 0; }
+  margin: 0;
+  padding: 0; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto", monospace;
-  color: #7F2041; }
+  font-family: "Work Sans", monospace; }
 
-h1 {
-  font-size: 40px; }
+/* ============================  G R A D E ========================== */
+#header {
+  margin: 70px 0px 50px; }
+  #header h1 {
+    font-weight: 300;
+    font-size: 58px;
+    color: #FFB800;
+    margin: 0px; }
+  #header h2 {
+    font-weight: 400;
+    font-size: 28px;
+    color: #FFB800;
+    margin: 0px; }
+  #header p {
+    color: white;
+    font-family: "Work Sans", sans-serif;
+    font-size: 14px; }
 
-p {
-  margin: 0; }
+#wrapper {
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+  -ms-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 20px; }
 
-header {
-  padding-top: 120px;
-  padding-bottom: 30px;
-  background-color: #7F2041;
-  color: white;
-  margin-bottom: 30px; }
-  header h1 {
-    color: #FFB800; }
-  header button {
-    margin: 30px 20px 0px 0px;
-    padding: 10px 50px;
-    font-size: 30px;
+/* Grid */
+/* Sidebar */
+#sidebar {
+  padding: 0px 20px;
+  background-color: white;
+  border-right: 1px solid #7F2041; }
+  @media (max-width: 768px) {
+    #sidebar {
+      border-right: 0px;
+      border-bottom: 1px solid #7F2041;
+      margin-bottom: 20px; } }
+  #sidebar h4 {
+    color: #7F2041;
+    font-weight: 400;
+    font-size: 18px;
     text-transform: uppercase;
-    letter-spacing: 5px;
-    -webkit-border-radius: 50px;
-    border-radius: 50px;
-    background-clip: padding-box;
-    /* stops bg color from leaking outside the border: */
-    border: 0;
-    background-color: #1B1825;
-    color: #ECB730; }
-  header button:hover {
-    background-color: #484063; }
+    letter-spacing: 4px;
+    margin: 0; }
+  #sidebar .legenda > dt {
+    display: block;
+    font-size: 13px;
+    margin: 0px 0px 5px 0px; }
+  #sidebar .legenda .sociedade span {
+    display: inline-block;
+    width: 10%;
+    height: 10px;
+    margin-right: 10px;
+    background: #3D8218;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }
+  #sidebar .legenda .ciencia span {
+    display: inline-block;
+    width: 10%;
+    height: 10px;
+    margin-right: 10px;
+    background: #d48a00;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }
+  #sidebar .legenda .tecnologia span {
+    display: inline-block;
+    width: 10%;
+    height: 10px;
+    margin-right: 10px;
+    background: #6A191B;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }
+  #sidebar .legenda .estetica span {
+    display: inline-block;
+    width: 10%;
+    height: 10px;
+    margin-right: 10px;
+    background: #003D82;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }
+  #sidebar .legenda .obrigatorio span {
+    display: inline-block;
+    width: 10%;
+    height: 10px;
+    margin-right: 10px;
+    background: #333;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }
+  #sidebar .legenda .pcc span {
+    display: inline-block;
+    width: 10%;
+    height: 10px;
+    margin-right: 10px;
+    background: #503700;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }
 
-#tarde {
-  margin-top: 100px; }
+/* ============================  G R A D E ========================== */
+/* Cores Eixos */
+#tabela .sociedade {
+  background: #9ec18c; }
+  #tabela .sociedade button {
+    background-color: #3D8218;
+    -moz-transition: 0.15s ease-in;
+    -o-transition: 0.15s ease-in;
+    -webkit-transition: 0.15s ease-in;
+    transition: 0.15s ease-in; }
+  #tabela .sociedade button:hover {
+    background-color: #295710; }
 
-/* Tabela */
-.disciplinas {
-  width: 100%; }
-  .disciplinas caption {
-    padding: 20px 40px;
-    font-size: 30px;
+#tabela .ciencia {
+  background: #eac580; }
+  #tabela .ciencia button {
+    background-color: #d48a00;
+    -moz-transition: 0.15s ease-in;
+    -o-transition: 0.15s ease-in;
+    -webkit-transition: 0.15s ease-in;
+    transition: 0.15s ease-in; }
+  #tabela .ciencia button:hover {
+    background-color: #a16900; }
+
+#tabela .tecnologia {
+  background: #b58c8d; }
+  #tabela .tecnologia button {
+    background-color: #6A191B;
+    -moz-transition: 0.15s ease-in;
+    -o-transition: 0.15s ease-in;
+    -webkit-transition: 0.15s ease-in;
+    transition: 0.15s ease-in; }
+  #tabela .tecnologia button:hover {
+    background-color: #410f10; }
+
+#tabela .estetica {
+  background: #809ec1; }
+  #tabela .estetica button {
+    background-color: #003D82;
+    -moz-transition: 0.15s ease-in;
+    -o-transition: 0.15s ease-in;
+    -webkit-transition: 0.15s ease-in;
+    transition: 0.15s ease-in; }
+  #tabela .estetica button:hover {
+    background-color: #00254f; }
+
+#tabela .obrigatorio {
+  background: #999999; }
+  #tabela .obrigatorio button {
+    background-color: #333;
+    -moz-transition: 0.15s ease-in;
+    -o-transition: 0.15s ease-in;
+    -webkit-transition: 0.15s ease-in;
+    transition: 0.15s ease-in; }
+  #tabela .obrigatorio button:hover {
+    background-color: #1a1a1a; }
+
+#tabela .pcc {
+  background: #a89b80; }
+  #tabela .pcc button {
+    background-color: #503700;
+    -moz-transition: 0.15s ease-in;
+    -o-transition: 0.15s ease-in;
+    -webkit-transition: 0.15s ease-in;
+    transition: 0.15s ease-in; }
+  #tabela .pcc button:hover {
+    background-color: #1d1400; }
+
+/* Tabs Manhã/Tarde */
+.tabs {
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 10px; }
+  .tabs #tab1, .tabs #tab2 {
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    -webkit-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out; }
+  .tabs li {
+    list-style: none;
+    float: left;
+    width: 50%; }
+  .tabs a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 5px;
-    border: 0;
-    background-color: #1B1825;
-    color: #ECB730; }
-  .disciplinas .sociedade {
-    background-color: #b1cda3; }
-    .disciplinas .sociedade button {
-      background-color: #3D8218; }
-    .disciplinas .sociedade button:hover {
-      background-color: #295710; }
-  .disciplinas .ciencia {
-    background-color: #f7d799; }
-    .disciplinas .ciencia button {
-      background-color: #EC9A00; }
-    .disciplinas .ciencia button:hover {
-      background-color: #b97900; }
-  .disciplinas .tecnologia {
-    background-color: #c3a3a4; }
-    .disciplinas .tecnologia button {
-      background-color: #6A191B; }
-    .disciplinas .tecnologia button:hover {
-      background-color: #410f10; }
-  .disciplinas .estetica {
-    background-color: #99b1cd; }
-    .disciplinas .estetica button {
-      background-color: #003D82; }
-    .disciplinas .estetica button:hover {
-      background-color: #00254f; }
-  .disciplinas .obrigatorio {
-    background-color: #adadad; }
-    .disciplinas .obrigatorio button {
-      background-color: #333; }
-    .disciplinas .obrigatorio button:hover {
-      background-color: #1a1a1a; }
-  .disciplinas .pcc {
-    background-color: #b9af99; }
-    .disciplinas .pcc button {
-      background-color: #503700; }
-    .disciplinas .pcc button:hover {
-      background-color: #1d1400; }
-  .disciplinas th {
-    background-color: #7F2041;
-    color: #ECB730;
-    border: 3px solid white;
+    font-family: "Work Sans", monospace;
+    letter-spacing: 4px;
+    font-weight: 300;
+    font-size: 20px;
+    padding: 20px 0;
+    border-bottom: 2px solid #c6c6c6;
+    background: lightgrey;
+    color: darkgrey;
+    -moz-transition: 0.15s ease-in;
+    -o-transition: 0.15s ease-in;
+    -webkit-transition: 0.15s ease-in;
+    transition: 0.15s ease-in; }
+    .tabs a:hover, .tabs a.active {
+      background: #FFB800;
+      color: #7F2041;
+      border-bottom: 2px solid #e6a600; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/* Grid Tabela */
+.manha, .tarde {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 8px;
+  /* Grupo de Estudo - Elementos */ }
+  .manha .tabheader, .tarde .tabheader {
+    grid-column: 1/6;
+    display: none; }
+  .manha .dias, .tarde .dias {
+    text-align: center;
+    text-decoration: none;
     text-transform: uppercase;
-    font-family: "Roboto", monospace;
+    font-family: "Work Sans", monospace;
     letter-spacing: 3px;
-    padding: 10px;
-    font-weight: 400; }
-  .disciplinas td {
-    width: 20%;
-    padding: 10px;
-    border: 3px solid white;
-    vertical-align: top; }
-    .disciplinas td h4 {
-      color: black;
-      font-weight: 400;
-      margin: 12px 0px 5px;
-      font-size: calc(40px * 0.42);
-      line-height: calc(40px * 0.44); }
-    .disciplinas td p {
-      font-size: calc(14px * 0.9); }
-    .disciplinas td .professor {
-      margin-bottom: 8px;
-      font-weight: 700; }
-    .disciplinas td .local {
-      margin-top: 10px;
-      font-weight: 700;
-      font-size: calc(14px * 1.1); }
-    .disciplinas td a .sem {
-      display: none; }
-    .disciplinas td button {
-      margin-top: 15px;
-      font-size: calc(14px * 0.9);
-      padding: 5px 20px;
-      border: 0;
-      color: #fff;
-      font-family: "Roboto", monospace;
-      text-transform: uppercase; }
-    .disciplinas td .sem {
-      display: none; }
+    font-weight: 400;
+    font-size: 12px;
+    color: white;
+    background-color: #2c2c2c;
+    line-height: 30px; }
+  .manha .codigo, .tarde .codigo {
+    margin: 0px; }
+  .manha h4, .tarde h4 {
+    color: black;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    margin: 10px 0px 5px 0px;
+    font-size: calc(40px * 0.42);
+    line-height: calc(40px * 0.40); }
+  .manha p, .tarde p {
+    font-size: calc(14px * 0.9);
+    margin: 0px; }
+  .manha .professor, .tarde .professor {
+    font-weight: 700; }
+  .manha p.ciclo, .tarde p.ciclo {
+    margin-top: 10px; }
+  .manha p.local, .tarde p.local {
+    font-weight: 700;
+    margin-top: 10px;
+    font-size: calc(14px * 1.1); }
+  .manha button, .tarde button {
+    margin-top: 15px;
+    font-size: calc(14px * 0.9);
+    padding: 8px 15px 8px 20px;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Work Sans", monospace;
+    letter-spacing: 5px;
+    font-weight: 300;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px; }
+  .manha .sem, .tarde .sem {
+    display: none; }
 
-.legenda .row {
-  margin-bottom: 15px; }
+/* Ajustes */
+.manha > div,
+.tarde > div {
+  padding: 8px; }
 
-.legenda .sociedade {
-  width: 40px;
-  height: 21px;
-  margin-right: 10px;
-  margin-left: 15px;
-  background-color: #b1cda3; }
-
-.legenda .ciencia {
-  width: 40px;
-  height: 21px;
-  margin-right: 10px;
-  margin-left: 15px;
-  background-color: #f7d799; }
-
-.legenda .tecnologia {
-  width: 40px;
-  height: 21px;
-  margin-right: 10px;
-  margin-left: 15px;
-  background-color: #c3a3a4; }
-
-.legenda .estetica {
-  width: 40px;
-  height: 21px;
-  margin-right: 10px;
-  margin-left: 15px;
-  background-color: #99b1cd; }
-
-.legenda .obrigatorio {
-  width: 40px;
-  height: 21px;
-  margin-right: 10px;
-  margin-left: 15px;
-  background-color: #adadad; }
-
-.legenda .pcc {
-  width: 40px;
-  height: 21px;
-  margin-right: 10px;
-  margin-left: 15px;
-  background-color: #b9af99; }
-
-.legenda .eixo {
-  font-size: calc(14px * 0.9);
-  line-height: calc(14px * 1.5);
-  color: #1B1825; }
-
-#myBtn {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Fixed/sticky position */
-  bottom: 20px;
-  /* Place the button at the bottom of the page */
-  right: 30px;
-  /* Place the button 30px from the right */
-  z-index: 99;
-  /* Make sure it does not overlap */
-  border: none;
-  /* Remove borders */
-  outline: none;
-  /* Remove outline */
-  background-color: #1B1825;
-  color: #ECB730;
-  cursor: pointer;
-  padding: 20px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  background-clip: padding-box;
-  /* stops bg color from leaking outside the border: */
-  font-size: 20px; }
-
-#myBtn:hover {
-  background-color: #555;
-  /* Add a dark-grey background on hover */ }
+/* ============================  FOOTER ========================== */
+#footer {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: #1a1a1a; }
+  #footer .copyright {
+    text-align: right;
+    font-size: 10px;
+    color: white;
+    font-family: "Work Sans", monospace;
+    font-weight: 300; }
+    #footer .copyright a {
+      text-decoration: none;
+      color: #FFB800;
+      font-weight: 400; }

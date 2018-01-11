@@ -1,0 +1,36 @@
+@mixin box-shadow($posx, $posy, $blur, $color) {
+    -webkit-box-shadow: $posx $posy $blur $color;
+    -moz-box-shadow: $posx $posy $blur $color;
+    -ms-box-shadow: $posx $posy $blur $color;
+    box-shadow: $posx $posy $blur $color;
+}
+
+@mixin border-radius($radius) {
+    -moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+	border-radius: $radius;
+}
+
+$responsivo: 768px;
+
+@mixin mobile {
+  @media (max-width: #{$responsivo}) {
+    @content;
+  }
+}
+
+@mixin textobonitinho($spacing, $weight) {
+    text-align:center;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-family: $fontheading;
+    letter-spacing: $spacing;
+    font-weight: $weight;
+}
+
+@mixin transition($transition) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}

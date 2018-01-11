@@ -1,529 +1,228 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta author="Jônathas Souza">
-    <meta description="Grade de ofertas do período 2017.2 | dDesign">
-    <title>Grade de Ofertas</title>
+    <title>Grade dDesign</title>
     <link rel="stylesheet" href="dist/css/style.css">
     <link rel="stylesheet" href="dist/css/grid.min.css">
 </head>
+
 <body>
-    <button onclick="topFunction()" id="myBtn" title="Ir para o topo">Ir para o topo</button>
-    <header>
+    <section id="header">
         <div class="container">
-            <div class="col-md-12">
-        <h1>Grade de <strong>Ofertas</strong></h1>
-    <p>Essa tabela está em versão <strong>alpha</strong>. Nela estão dispostos os grupos de estudo ofertados no semestre 2017.2, além das ementas enviadas por cada professor. Boa escolha!</p>
-            <a href=""><button>Manhã</button></a><a href="#tarde"><button>Tarde</button></a>
-        </div>
-        </div>
-                
-    </header>
-    
-    <section id="manhã" class="container">
-        
-        <div class="row">
-            <div class="col-md-9">
-                <table class="disciplinas">
-                    <caption>manhã</caption>
-                <tr>
-                    <th>Segunda</th>
-                    <th>Terça</th>
-                    <th>Quarta</th>
-                    <th>Quinta</th>
-                    <th>Sexta</th>
-                </tr>
-                <tr>
-                    <td class="sociedade"><p class="codigo">DD120 Sociedade Z</p>
-                        <h4>Prática Profissional</h4>
-                        <p class="professor">Amilton Arruda</p>
-                        <p class="ciclo">Ciclo intermediário</p>
-                        <p class="vagas">30 vagas</p>
-                        <p class="sem local">Auditório</p>
-                        <a href="#" class="sem" target="_blank"><button>Ementa</button></a>
-                    </td>
-
-                    <td class="obrigatorio"><p class="codigo">DD001</p>
-                        <h4>História do Design</h4>
-                        <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
-                        <p class="ciclo">Ciclo básico</p>
-                        <p class="vagas">40 vagas</p>
-                        <p class="local">Auditório</p>
-                        <a href="" class="sem" target="_blank"><button>Ementa</button></a>
-                    </td>
-                    
-                    <td class="obrigatorio"><p class="codigo">DD003</p>
-                        <h4>Sistemas de Representação BI</h4>
-                        <p class="professor">Hans Waechter</p>
-                        <p class="ciclo">Ciclo básico</p>
-                        <p class="vagas">40 vagas</p>
-                        <p class="local">Auditório</p>
-                        <a href="" class="sem" target="_blank"><button>Ementa</button></a>
-                    </td>
-
-                    <td class="obrigatorio"><p class="codigo">DD002</p>
-                        <h4>Design Contemporâneo</h4>
-                        <p class="professor">Isabella Aragão</p>
-                        <p class="ciclo">Ciclo básicoo</p>
-                        <p class="vagas">40 vagas</p>
-                        <p class="local">Auditório</p>
-                        <a href="" class="sem" target="_blank"><button>Ementa</button></a>
-                    </td>
-
-                    <td class="obrigatorio"><p class="codigo">DD001</p>
-                        <h4>Sistemas de Representação TRI</h4>
-                        <p class="professor">Walter Franklin</p>
-                        <p class="ciclo">Ciclo básico</p>
-                        <p class="vagas">40 vagas</p>
-                        <p class="local">Auditório</p>
-                        <a href="" class="sem" target="_blank"><button>Ementa</button></a>
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td class="estetica"><p class="codigo">DD100 Estética Q</p>
-                        <h4>Sinalização em Edificações</h4>
-                        <p class="professor">Neide Câmara</p>
-                        <p class="ciclo">Ciclo intermediário</p>
-                        <p class="vagas">30 vagas</p>
-                        <p class="sem local">Auditório</p>
-                        <a href="ementas/dd100_sinalizacaoemedificacoes_2017.2.pdf" target="_blank"><button>Ementa</button></a>
-                    </td>
-
-                    <td class="estetica"><p class="codigo">DD098 Estética O</p>
-                        <h4>Design Editorial</h4>
-                        <p class="professor">Hans Waechter</p>
-                        <p class="ciclo">Ciclo Avançado</p>
-                        <p class="vagas">28 vagas</p>
-                        <p class="sem local">Auditório</p>
-                        <a href="ementas/dd098_designeditorial_2017.2.pdf" target="_blank"><button>Ementa</button></a>
-                    </td>
-                    
-                    <td class="estetica"><p class="codigo">DD138 Estética Z</p>
-                        <h4>História do Mobiliário em Pernambuco</h4>
-                        <p class="professor">Ana Emília</p>
-                        <p class="ciclo">Ciclo intermediário</p>
-                        <p class="vagas">30 vagas</p>
-                        <p class="sem local">Auditório</p>
-                        <a href="ementas/dd138_historiamobiliariope_2017.2.pdf" target="_blank"><button>Ementa</button></a>
-                    </td>
-
-                    <td class="estetica"><p class="codigo">DD136 Estética X</p>
-                        <h4>Artefatos Narrativos</h4>
-                        <p class="professor">Silvio Campello</p>
-                        <p class="ciclo">Ciclo básicoo</p>
-                        <p class="vagas">25 vagas</p>
-                        <p class="sem local">Auditório</p>
-                        <a href="ementas/dd136_artefatosnarrativos_2017.2.pdf" target="_blank"><button>Ementa</button></a>
-                    </td>
-
-                    <td class="estetica"><p class="codigo">DD135 Estética W</p>
-                        <h4>Moda</h4>
-                        <p class="professor">Professor Substituto</p>
-                        <p class="ciclo">Ciclo Intermediário</p>
-                        <p class="vagas">30 vagas</p>
-                        <p class="sem local">Auditório</p>
-                        <a href="#" class="sem" target="_blank"><button>Ementa</button></a>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="ciencia"><p class="codigo">DD073 Ciência Q</p>
-                        <h4>Metodologia e desenvolvimento de produto</h4>
-                        <p class="professor">Adailton Laporte</p>
-                        <p class="ciclo">Ciclo básico</p>
-                        <p class="vagas">30 vagas</p>
-                        <p class="sem local">Auditório</p>
-                        <a href="ementas/dd073_metodologiaedesenvolvimentodeproduto_2017.2.pdf" target="_blank"><button>Ementa</button></a>
-                    </td>
-
-                    <td class="ciencia"><p class="codigo">DD121 Ciência U</p>
-                        <h4>Biomimética e Basic Design</h4>
-                        <p class="professor">Amilton Arruda</p>
-                        <p class="ciclo">Ciclo Intermediário</p>
-                        <p class="vagas">30 vagas</p>
-                        <p class="sem local">Auditório</p>
-                        <a href="#" class="sem" target="_blank"><button>Ementa</button></a>
-                    </td>
-                    
-                    <td class="ciencia"><p class="codigo">DD012 Ciência A</p>
-                        <h4>Semiótica Social Aplicada ao Design Gráfico</h4>
-                        <p class="professor">Gisela Leão</p>
-                        <p class="ciclo">Ciclo Intermediário</p>
-                        <p class="vagas">30 vagas</p>
-                        <p class="sem local">Auditório</p>
-                        <a href="ementas/dd012_semioticasocial_2017.2.pdf" target="_blank"><button>Ementa</button></a>
-                    </td>
-
-                    <td class="ciencia"><p class="codigo">DD018 Ciência G</p>
-                        <h4>Design Universal, Acessibilidade e Inclusão</h4>
-                        <p class="professor">Laura Bezerra</p>
-                        <p class="ciclo">Ciclo intermediário</p>
-                        <p class="vagas">28 vagas</p>
-                        <p class="sem local">Auditório</p>
-                        <a href="ementas/dd018_designuniversal_2017.2.pdf" target="_blank"><button>Ementa</button></a>
-                    </td>
-
-                    <td class="pcc"><p class="codigo">DD048 Projeto de Conclusão 2</p>
-                        <h4>Turma DM</h4>
-                        <p class="professor">Gisela Leão</p>
-                        <p class="ciclo">Obrigatória</p>
-                        <p class="vagas">50 vagas</p>
-                        <p class="sem local">Auditório</p>
-                        <a href="#" class="sem" target="_blank"><button>Ementa</button></a>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="tecnologia"><p class="codigo">DD022 Tecnologia D</p>
-                        <h4>Oficina de Figurino</h4>
-                        <p class="professor">Professor Substituto</p>
-                        <p class="ciclo">Ciclo avançado</p>
-                        <p class="vagas">30 vagas</p>
-                        <p class="local sem">Sala 1</p>
-                        <a href="ementas/dd022_oficinadefigurino_2017.2.pdf" target="_blank"><button>Ementa</button></a>
-                    </td>
-
-                    <td class="tecnologia"><p class="codigo">DD084 Tecnologia O</p>
-                        <h4>Materiais e Processos</h4>
-                        <p class="professor">Paulo Silva</p>
-                        <p class="ciclo">Ciclo Intermediário</p>
-                        <p class="vagas">25 vagas</p>
-                        <p class="sem local">Auditório</p>
-                        <a href="ementas/dd084_materiaiseprocessos_2017.2.pdf" target="_blank"><button>Ementa</button></a>
-                    </td>
-                    
-                    <td class="tecnologia"><p class="codigo">DD021 Tecnologia C</p>
-                        <h4>Sinalização Urbana</h4>
-                        <p class="professor">Margarida Correia</p>
-                        <p class="ciclo">Ciclo Avançado</p>
-                        <p class="vagas">28 vagas</p>
-                        <p class="sem local">Auditório</p>
-                        <a href="ementas/dd021_sinalizacaourbana_2017.2.pdf" target="_blank"><button>Ementa</button></a>
-                    </td>
-
-                    <td class="tecnologia"><p class="codigo">DD107 Tecnologia K</p>
-                        <h4>Design de Mobiliário Infantil</h4>
-                        <p class="professor">Paulo Silva</p>
-                        <p class="ciclo">Ciclo intermediário</p>
-                        <p class="vagas">28 vagas</p>
-                        <p class="sem local">Auditório</p>
-                        <a href="ementas/dd107_designdemobiliarioinfantil_2017.2.pdf" target="_blank"><button>Ementa</button></a>
-                    </td>
-
-                    <td class="tecnologia"><p class="codigo">DD127 Tecnologia U</p>
-                        <h4>Modelagem de Produtos de Baixa Complexidade</h4>
-                        <p class="professor">Adailton Laporte</p>
-                        <p class="ciclo">Ciclo Intermediário</p>
-                        <p class="vagas">30 vagas</p>
-                        <p class="sem local">Auditório</p>
-                        <a href="ementas/dd127_modelagemdeprodutobaixa_2017.2.pdf" target="_blank"><button>Ementa</button></a>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="sociedade"><p class="codigo">DD005 Sociedade A</p>
-                        <h4>Projeto de Artefatos Digitais</h4>
-                        <p class="professor">Leonardo Castillo</p>
-                        <p class="ciclo">Ciclo Avançado</p>
-                        <p class="vagas">20 vagas</p>
-                        <p class="local">CIn</p>
-                        <a href="ementas/dd005_projetodeartefatosdigitais_2017.2.pdf" target="_blank"><button>Ementa</button></a>
-                    </td>
-
-                    <td>
-                    </td>
-                    
-                    <td class="sociedade"><p class="codigo">DD119 Sociedade Y</p>
-                        <h4>Design e Museus</h4>
-                        <p class="professor">Kátia Araújo</p>
-                        <p class="ciclo">Ciclo Intermediário</p>
-                        <p class="vagas">30 vagas</p>
-                        <p class="local sem">Auditório</p>
-                        <a href="ementas/dd119_designemuseus_2017.2.pdf" target="_blank"><button>Ementa</button></a>
-                    </td>
-
-                    <td class="sociedade"><p class="codigo">DD118 Sociedade X</p>
-                        <h4>Estudos de Consumo</h4>
-                        <p class="professor">Kátia Araújo</p>
-                        <p class="ciclo">Ciclo intermediário</p>
-                        <p class="vagas">30 vagas</p>
-                        <p class="local sem">Auditório</p>
-                        <a href="ementas/dd118_estudosdoconsumo_2017.2.pdf" target="_blank"><button>Ementa</button></a>
-                    </td>
-
-                    <td>
-                    </td>
-
-                </tr>
-
-            </table>
-            </div>
-            <div class="legenda col-md-3">
-                <h3>Legenda</h3>
-                <div class="row">
-                    <div class="obrigatorio"></div>
-                    <span class="eixo">Eixo Obrigatório | 1º Período</span>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1>Grade de Ofertas dDesign</h1>
+                    <h2>Semestre
+                        <strong>2018.1</strong>
+                    </h2>
                 </div>
-                <div class="row">
-                    <div class="estetica"></div>
-                    <span class="eixo">Eixo Estética</span>
-                </div>
-                <div class="row">
-                    <div class="sociedade"></div>
-                    <span class="eixo">Eixo Sociedade</span>
-                </div>
-                <div class="row">
-                    <div class="ciencia"></div>
-                    <span class="eixo">Eixo Ciência</span>
-                </div>
-                <div class="row">
-                    <div class="tecnologia"></div>
-                    <span class="eixo">Eixo Tecnologia</span>
-                </div>
-                <div class="row">
-                    <div class="pcc"></div>
-                    <span class="eixo">Eixo Obrigatório | Concluintes</span>
+                <div class="col-md-7 col-sm-12">
+                    <p>Essa tabela está em versão beta. Nela estão dispostos os grupos de estudo ofertados no semestre
+                        <strong>2018.1</strong> além das ementas enviadas por cada professor.
+                        <strong>Boa Escolha!</strong>
+                    </p>
                 </div>
             </div>
+
         </div>
     </section>
-
-    <section id="tarde" class="container">
-        <div class="row">
-            <div class="col-md-9">
-                <table class="disciplinas">
-                    <caption>Tarde</caption>
-                <tr>
-                    <th>Segunda</th>
-                    <th>Terça</th>
-                    <th>Quarta</th>
-                    <th>Quinta</th>
-                    <th>Sexta</th>
-                </tr>
-                <tr>
-                    <td class="sociedade"><p class="codigo">DD117 Sociedade W</p>
-                        <h4>Artefatos Inclusivos</h4>
-                        <p class="professor">Laura Bezerra</p>
-                        <p class="ciclo">Ciclo avançado</p>
-                        <p class="vagas">28 vagas</p>
-                        <p class="sem local">Auditório</p>
-                        <a href="ementas/dd117_artefatosinclusivos_2017.2.pdf" target="_blank"><button>Ementa</button>
-                    </td>
-
-                    <td class="sociedade"><p class="codigo">DD060 Sociedade Q</p>
-                        <h4>Ideias e Formas</h4>
-                        <p class="professor">Ana Andrade</p>
-                        <p class="ciclo">Ciclo básico</p>
-                        <p class="vagas">28 vagas</p>
-                        <p class="sem local">Auditório</p>
-                        <a href="ementas/dd060_ideiaseformas_2017.2.pdf" target="_blank"><button>Ementa</button>
-                    </td>
-                    
-                    <td class="sociedade"><p class="codigo">DD052 Sociedade H</p>
-                        <h4>Moda Contemporânea</h4>
-                        <p class="professor">Simone Barros e Debora Lobo</p>
-                        <p class="ciclo">Ciclo intermediário</p>
-                        <p class="vagas">28 vagas</p>
-                        <p class="sem local">Auditório</p>
-                        <a href="ementas/dd052_modacontemporanea_2017.2.pdf" target="_blank"><button>Ementa</button>
-                    </td>
-
-                    <td class="sociedade"><p class="codigo">DD116 Sociedade V</p>
-                        <h4>Gestão do Design</h4>
-                        <p class="professor">Ana Andrade</p>
-                        <p class="ciclo">Ciclo intermediário</p>
-                        <p class="vagas">28 vagas</p>
-                        <p class="sem local">Auditório</p>
-                        <a href="ementas/dd116_gestaododesign_2017.2.pdf" target="_blank"><button>Ementa</button>
-                    </td>
-
-                    <td class="sociedade"><p class="codigo">DD054 Sociedade J</p>
-                        <h4>História da Moda</h4>
-                        <p class="professor">História da Moda</p>
-                        <p class="ciclo">Ciclo básico</p>
-                        <p class="vagas">28 vagas</p>
-                        <p class="sem local">Auditório</p>
-                        <a href="ementas/dd054_historiadamoda_2017.2.pdf" target="_blank"><button>Ementa</button>
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td class="ciencia"><p class="codigo">DD124 Ciência X</p>
-                        <h4>Linguagem Gráfica</h4>
-                        <p class="professor">Solange Coutinho</p>
-                        <p class="ciclo">Ciclo intermediário</p>
-                        <p class="vagas">25 vagas</p>
-                        <p class="sem local">Auditório</p>
-                        <a href="ementas/dd124_linguagemgrafica_2017.2.pdf" target="_blank"><button>Ementa</button>
-                    </td>
-
-                    <td class="ciencia"><p class="codigo">DD065 Ciência H</p>
-                        <h4>Capital Social, Cultura e Design</h4>
-                        <p class="professor">Ana Emília</p>
-                        <p class="ciclo">Ciclo intermediário</p>
-                        <p class="vagas">30 vagas</p>
-                        <p class="local sem">Sala 1</p>
-                        <a class="sem" href="#" target="_blank"><button>Ementa</button></a>
-                    </td>
-                    
-                    <td class="ciencia"><p class="codigo">DD014 Ciência C</p>
-                        <h4>Arte Contemporânea</h4>
-                        <p class="professor">Gentil Filho</p>
-                        <p class="ciclo">Ciclo avançado</p>
-                        <p class="vagas">28 vagas</p>
-                        <p class="local sem">Sala 1</p>
-                        <a href="ementas/dd014_artecontemporanea_2017.2.pdf" target="_blank"><button>Ementa</button></a>
-                    </td>
-
-                    <td class="ciencia"><p class="codigo">DD066 Ciência I</p>
-                        <h4>Ergonomia e Usabilidade</h4>
-                        <p class="professor">Marcelo Soares</p>
-                        <p class="ciclo">Ciclo intermediário</p>
-                        <p class="vagas">30 vagas</p>
-                        <p class="local sem">Sala 1</p>
-                        <a href="ementas/dd066_ergonomiaeusabilidade_2017.2.pdf" target="_blank"><button>Ementa</button></a>
-                    </td>
-
-                    <td class="pcc"><p class="codigo">DD047 Projeto de Conclusão 1</p>
-                        <h4>Turma DD</h4>
-                        <p class="professor">Isabella Aragão</p>
-                        <p class="ciclo">Obrigatória</p>
-                        <p class="vagas">50 Vagas</p>
-                        <p class="local sem">Auditório</p>
-                        <a class="sem" href="#" target="_blank"><button>Ementa</button></a>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="estetica"><p class="codigo">DD108 Estética K</p>
-                        <h4>Diagramação</h4>
-                        <p class="professor">Margarida Correia</p>
-                        <p class="ciclo">Ciclo avançado</p>
-                        <p class="vagas">30 vagas</p>
-                        <p class="local sem">Sala 1</p>
-                        <a href="ementas/dd108_diagramacao_2017.2.pdf" target="_blank"><button>Ementa</button></a>
-                    </td>
-
-                    <td class="tecnologia"><p class="codigo">DD024 Tecnologia F</p>
-                        <h4>Experimentação e tendências tipográficas</h4>
-                        <p class="professor">Isabella Aragão</p>
-                        <p class="ciclo">Ciclo básico</p>
-                        <p class="vagas">25 vagas</p>
-                        <p class="local sem">Sala 1</p>
-                        <a href="ementas/dd024_experimentacaotendenciastipograficas_2017.2.pdf" target="_blank"><button>Ementa</button></a>
-                    </td>
-                    
-                    <td class="estetica"><p class="codigo">DD096 Estética M</p>
-                        <h4>Percepção Visual</h4>
-                        <p class="professor">Neide Câmara</p>
-                        <p class="ciclo">Ciclo básico</p>
-                        <p class="vagas">28 vagas</p>
-                        <p class="local sem">Sala 1</p>
-                        <a href="ementas/dd103_percepcaovisual_2017.2.pdf" target="_blank"><button>Ementa</button></a>
-                    </td>
-
-                    <td class="estetica"><p class="codigo">DD137 Estética Y</p>
-                        <h4>Design de Utensílios Domésticos</h4>
-                        <p class="professor">Leonardo Castillo</p>
-                        <p class="ciclo">Ciclo intermediário</p>
-                        <p class="vagas">28 vagas</p>
-                        <p class="local sem">Sala 1</p>
-                        <a class="sem" href="#" target="_blank"><button>Ementa</button></a>
-                    </td>
-
-                    <td class="pcc"><p class="codigo">DD048 Projeto de Conclusão 2</p>
-                        <h4>Turma DD</h4>
-                        <p class="professor">Gisela Leão</p>
-                        <p class="ciclo">Obrigatória</p>
-                        <p class="vagas">50 Vagas</p>
-                        <p class="local sem">Auditório</p>
-                        <a class="sem" href="#" target="_blank"><button>Ementa</button></a>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="tecnologia"><p class="codigo">DD130 Tecnologia X</p>
-                        <h4>Web Design</h4>
-                        <p class="professor">Guilherme Ranoya</p>
-                        <p class="ciclo">Ciclo básico</p>
-                        <p class="vagas">30 vagas</p>
-                        <p class="local sem">Sala 1</p>
-                        <a href="ementas/dd130_webdesign_2017.2.pdf" target="_blank"><button>Ementa</button></a>
-                    </td>
-
-                     <td class="tecnologia"><p class="codigo">DD025 Tecnologia G</p>
-                        <h4>Design Generativo</h4>
-                        <p class="professor">Guilherme Ranoya</p>
-                        <p class="ciclo">Ciclo básico</p>
-                        <p class="vagas">30 vagas</p>
-                        <p class="local sem">Sala 1</p>
-                        <a href="ementas/dd025_designgenerativo_2017.2.pdf" target="_blank"><button>Ementa</button></a>
-                    </td>
-
-                    <td class="tecnologia"><p class="codigo">DD129 Tecnologia P</p>
-                        <h4>Design de Produto de baixa complexidade</h4>
-                        <p class="professor">Débora Ferro</p>
-                        <p class="ciclo">Ciclo básico</p>
-                        <p class="vagas">30 vagas</p>
-                        <p class="local sem">Auditório</p>
-                        <a href="ementas/dd129_designdeprodutosbaixa_2017.2.pdf" target="_blank"><button>Ementa</button></a>
-                    </td>
-
-                    <td class="tecnologia"><p class="codigo">DD086 Tecnologia Q</p>
-                        <h4>Design de Tipos</h4>
-                        <p class="professor">Solange Coutinho</p>
-                        <p class="ciclo">Ciclo intermediário</p>
-                        <p class="vagas">30 vagas</p>
-                        <p class="local sem">Auditório</p>
-                        <a href="ementas/dd086_designdetipos_2017.2.pdf" target="_blank"><button>Ementa</button></a>
-                    </td>
-
-                    <td class="tecnologia"><p class="codigo">DD085 Tecnologia P</p>
-                        <h4>Design de Apps</h4>
-                        <p class="professor">André Neves</p>
-                        <p class="ciclo">Ciclo intermediário</p>
-                        <p class="vagas">30 vagas</p>
-                        <p class="local">Educação à Distância</p>
-                        <a href="ementas/dd085_designdeapps_2017.2.pdf" target="_blank"><button>Ementa</button></a>
-                    </td>
-
-                </tr>
-
-            </table>
-            </div>
-            <div class="legenda col-md-3">
-                <h3>Legenda</h3>
+    <section id="corpo">
+        <div class="container">
+            <div id="wrapper">
                 <div class="row">
-                    <div class="obrigatorio"></div>
-                    <span class="eixo">Eixo Obrigatório | 1º Período</span>
-                </div>
-                <div class="row">
-                    <div class="estetica"></div>
-                    <span class="eixo">Eixo Estética</span>
-                </div>
-                <div class="row">
-                    <div class="sociedade"></div>
-                    <span class="eixo">Eixo Sociedade</span>
-                </div>
-                <div class="row">
-                    <div class="ciencia"></div>
-                    <span class="eixo">Eixo Ciência</span>
-                </div>
-                <div class="row">
-                    <div class="tecnologia"></div>
-                    <span class="eixo">Eixo Tecnologia</span>
-                </div>
-                <div class="row">
-                    <div class="pcc"></div>
-                    <span class="eixo">Eixo Obrigatório | Concluintes</span>
+                    <div id="sidebar" class="col-md-3 col-sm-12">
+                        <h4>Legenda</h4>
+                        <dl class="legenda">
+                            <dt class="obrigatorio">
+                                <span></span>Eixo Obrigatório | 1º Período</dt>
+                            <dt class="estetica">
+                                <span></span>Eixo Estética</dt>
+                            <dt class="sociedade">
+                                <span></span>Eixo Sociedade</dt>
+                            <dt class="ciencia">
+                                <span></span>Eixo Ciência</dt>
+                            <dt class="tecnologia">
+                                <span></span>Eixo Tecnologia</dt>
+                            <dt class="pcc">
+                                <span></span>Eixo Obrigatório | Concluintes</dt>
+                        </dl>
+                    </div>
+                    <div id="tabela" class="col-md-9 col-sm-12">
+                        <ul class="tabs clearfix" data-tabgroup="first-tab-group">
+                            <li>
+                                <a href="#tab1" class="active">Manhã</a>
+                            </li>
+                            <li>
+                                <a href="#tab2">Tarde</a>
+                            </li>
+                        </ul>
+                        <section id="first-tab-group" class="tabgroup">
+                            <div class="manha" id="tab1">
+                                <div class="tabheader">
+                                    <h2>Heading 2</h2>
+                                    <p>Adipisci autem obcaecati velit natus quos beatae explicabo at tempora minima voluptates
+                                        deserunt eum consectetur reiciendis placeat dolorem repellat in nam asperiores impedit
+                                        voluptas iure repellendus unde eveniet accusamus ex.</p>
+                                </div>
+                                <!--Dias da Semana -->
+                                <div class="dias">Segunda</div>
+                                <div class="dias">Terça</div>
+                                <div class="dias">Quarta</div>
+                                <div class="dias">Quinta</div>
+                                <div class="dias">Sexta</div>
+
+                                <!--Grupos de Estudo Manhã -->
+                                <div class="obrigatorio">
+                                    <p class="codigo">DD001</p>
+                                    <h4>História do Design</h4>
+                                    <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                    <p class="ciclo">Ciclo básico</p>
+                                    <p class="vagas">40 vagas</p>
+                                    <p class="local">Auditório</p>
+                                    <a href="" class="sem" target="_blank">
+                                        <button>Ementa</button>
+                                    </a>
+                                </div>
+                                <div class="estetica">
+                                    <p class="codigo">DD001</p>
+                                    <h4>História do Design</h4>
+                                    <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                    <p class="ciclo">Ciclo básico</p>
+                                    <p class="vagas">40 vagas</p>
+                                    <p class="local">Auditório</p>
+                                    <a href="" target="_blank">
+                                        <button>Ementa</button>
+                                    </a>
+                                </div>
+                                <div class="obrigatorio">
+                                    <p class="codigo">DD001</p>
+                                    <h4>História do Design</h4>
+                                    <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                    <p class="ciclo">Ciclo básico</p>
+                                    <p class="vagas">40 vagas</p>
+                                    <p class="local">Auditório</p>
+                                    <a href="" class="sem" target="_blank">
+                                        <button>Ementa</button>
+                                    </a>
+                                </div>
+                                <div class="obrigatorio">
+                                    <p class="codigo">DD001</p>
+                                    <h4>História do Design</h4>
+                                    <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                    <p class="ciclo">Ciclo básico</p>
+                                    <p class="vagas">40 vagas</p>
+                                    <p class="local">Auditório</p>
+                                    <a href="" class="sem" target="_blank">
+                                        <button>Ementa</button>
+                                    </a>
+                                </div>
+                                <div class="obrigatorio">
+                                    <p class="codigo">DD001</p>
+                                    <h4>História do Design</h4>
+                                    <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                    <p class="ciclo">Ciclo básico</p>
+                                    <p class="vagas">40 vagas</p>
+                                    <p class="local">Auditório</p>
+                                    <a href="" target="_blank">
+                                        <button>Ementa</button>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="tarde" id="tab2">
+                                <div class="tabheader">
+                                    <h2>Heading 2</h2>
+                                    <p>Adipisci autem obcaecati velit natus quos beatae explicabo at tempora minima voluptates
+                                        deserunt eum consectetur reiciendis placeat dolorem repellat in nam asperiores impedit
+                                        voluptas iure repellendus unde eveniet accusamus ex.</p>
+                                </div>
+                                <!--Dias da Semana -->
+                                <div class="dias">Segunda</div>
+                                <div class="dias">Terça</div>
+                                <div class="dias">Quarta</div>
+                                <div class="dias">Quinta</div>
+                                <div class="dias">Sexta</div>
+
+
+                                <!-- Grupos de Estudo Tarde -->
+
+                                <div class="tecnologia">
+                                    <p class="codigo">DD001</p>
+                                    <h4>História do Design</h4>
+                                    <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                    <p class="ciclo">Ciclo básico</p>
+                                    <p class="vagas">40 vagas</p>
+                                    <p class="local">Auditório</p>
+                                    <a href="" class="sem" target="_blank">
+                                        <button>Ementa</button>
+                                    </a>
+                                </div>
+                                <div class="estetica">
+                                    <p class="codigo">DD001</p>
+                                    <h4>História do Design</h4>
+                                    <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                    <p class="ciclo">Ciclo básico</p>
+                                    <p class="vagas">40 vagas</p>
+                                    <p class="local">Auditório</p>
+                                    <a href="" target="_blank">
+                                        <button>Ementa</button>
+                                    </a>
+                                </div>
+                                <div class="ciencia">
+                                    <p class="codigo">DD001</p>
+                                    <h4>História do Design</h4>
+                                    <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                    <p class="ciclo">Ciclo básico</p>
+                                    <p class="vagas">40 vagas</p>
+                                    <p class="local">Auditório</p>
+                                    <a href="" target="_blank">
+                                        <button>Ementa</button>
+                                    </a>
+                                </div>
+                                <div class="obrigatorio">
+                                    <p class="codigo">DD001</p>
+                                    <h4>História do Design</h4>
+                                    <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                    <p class="ciclo">Ciclo básico</p>
+                                    <p class="vagas">40 vagas</p>
+                                    <p class="local">Auditório</p>
+                                    <a href="" class="sem" target="_blank">
+                                        <button>Ementa</button>
+                                    </a>
+                                </div>
+                                <div class="obrigatorio">
+                                    <p class="codigo">DD001</p>
+                                    <h4>História do Design</h4>
+                                    <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                    <p class="ciclo">Ciclo básico</p>
+                                    <p class="vagas">40 vagas</p>
+                                    <p class="local">Auditório</p>
+                                    <a href="" target="_blank">
+                                        <button>Ementa</button>
+                                    </a>
+                                </div>
+                            </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-<script src="dist/js/scripts.js"></script>
+
+        </section>
+        <section id="footer">
+            <div class="container">
+                <div class="copyright">
+                    Made with ♥ by
+                    <a href="http://be.net/jonathasbsouza">Jônathas Souza</a>. Source code on
+                    <a href="http://">Github</a>.
+                </div>
+            </div>
+        </section>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="dist/js/scripts.js"></script>
 </body>
+
 </html>

@@ -1,190 +1,250 @@
-@import "mixins.scss";
-@import "variables.scss";
+@import '_variables';
+@import '_mixins';
 
 body {
-    font-family: $fontbody;
-        color: $bodycolor;
-        margin: 0;
+    background-color: $maincolor;
+    background-image: url(../img/presentation.svg) no-repeat;
+    font-family: $fontbody2;
+    margin: 0;
+    padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $fontheading;
-    color: $maincolor;
 }
 
-h1 {
-    font-size: $sizetitulo;
-}
+/* ============================  G R A D E ========================== */
 
-p {
+#header {
+    margin: 70px 0px 50px;
 
-    margin: 0;
-
-}
-
-header {
-    padding-top: 120px;
-    padding-bottom: 30px;
-    background-color: $maincolor;
-    color: white;
-    margin-bottom: 30px;
     h1 {
+        font-weight: 300;
+        font-size: 58px;
         color: $sidecolor;
+        margin: 0px;
     }
-    button {
-        margin: 30px 20px 0px 0px;
-        padding: 10px 50px;
-        font-size: 30px;
-        text-transform: uppercase;
-        letter-spacing: 5px;
-        @include border-radius(50px);
-        border: 0;
-        background-color: #1B1825;
-        color: #ECB730;
-        }
-    button:hover {
-        background-color: lighten(#1B1825, 20%)
+
+    h2 {
+        font-weight: 400;
+        font-size: 28px;
+        color: $sidecolor;
+        margin: 0px; 
+    }
+
+    p {
+        color: white;
+        font-family: $fontbody1;
+        font-size: 14px;
     }
 }
 
-#tarde {
-    margin-top: 100px;
+#wrapper {
+    background-color: white;
+    @include box-shadow(0px, 0px, 25px, rgba(0,0,0,0.5));
+    @include border-radius(10px);
+    padding: 20px;
 }
 
+/* Grid */
 
-/* Tabela */
-.disciplinas {
-    width: 100%;
-    
-    caption {
-        padding: 20px 40px;
-        font-size: 30px;
+
+/* Sidebar */
+#sidebar {
+    padding: 0px 20px;
+    background-color: white;
+    border-right: 1px solid $maincolor; 
+
+    @include mobile {
+        border-right: 0px;
+        border-bottom: 1px solid $maincolor;
+        margin-bottom: 20px;
+    }
+
+    h4 {
+        color: $maincolor;
+        font-weight: 400;
+        font-size:18px;
         text-transform: uppercase;
-        letter-spacing: 5px;
-        border: 0;
-        background-color: #1B1825;
-        color: #ECB730;
+        letter-spacing: 4px;
+        margin:0;
+    }
+
+    .legenda > dt {
+        display: block;
+        font-size: 13px;
+        margin: 0px 0px 5px 0px;
     }
 
     @each $eixo, $cor in $cores {
-    .#{$eixo} {
-            background-color: mix(white, $cor, $light);
+        .legenda .#{$eixo} span {
+            display: inline-block;
+            width: 10%;
+            height: 10px;
+            margin-right: 10px;
+            background: $cor;
+            @include border-radius(5px);
+        }
+        }
+
+}
+
+/* ============================  G R A D E ========================== */
+
+/* Cores Eixos */
+
+#tabela {
+    @each $eixo, $cor in $cores {
+        .#{$eixo} {
+            background: mix(white, $cor, $light);
             
             button {
             background-color: $cor;
+            @include transition(0.15s ease-in);
             }
 
             button:hover {
             background-color: darken($cor, $dark);}
+        }
 }
 }
 
+/* Tabs Manhã/Tarde */
 
+.tabs {
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 10px;
 
-    th {
-        background-color: #7F2041;
-        color: #ECB730;
-        border: 3px solid white;
-        text-transform: uppercase;
-        font-family: $fontheading;
-        letter-spacing: 3px;
-        padding: 10px;
-        font-weight: 400;
+    #tab1, #tab2 {
+        @include transition(0.25s ease-in-out);
+    }
+    li {
+        list-style: none;
+        float:left;
+        width:50%;
+    }
+  
+    a {
+    display:block;
+    @include textobonitinho(4px, 300);
+    font-size: 20px;
+    padding:20px 0;
+    border-bottom:2px solid darken($color: lightgrey, $amount: 5);
+    background: lightgrey;
+    color: darkgrey;
+    @include transition(0.15s ease-in);
+
+    
+    &:hover, &.active {
+      background:$sidecolor;
+      color: $maincolor;
+      border-bottom:2px solid darken($color: $sidecolor, $amount: 5);
+    }
+  }
+}
+
+.clearfix:after {
+    content:"";
+    display:table;
+    clear:both;
+}
+
+/* Grid Tabela */
+
+.manha, .tarde {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 8px;
+
+    .tabheader {
+        grid-column: 1/6;
+        display: none;
     }
 
+    .dias {
+        @include textobonitinho(3px, 400);
+        font-size: 12px;
+        color: white;
+        background-color: rgb(44, 44, 44);
+        line-height: 30px;
+    }
 
-td {
-    width: 20%;
-    padding: 10px;
-    border: 3px solid white;
-    vertical-align: top;
+/* Grupo de Estudo - Elementos */
+
+    .codigo {
+        margin: 0px;
+    }
 
     h4 {
         color: black;
+        font-family: $fontbody2;
         font-weight: 400;
-        margin: 12px 0px 5px;
-        font-size: calc(#{$sizetitulo} * 0.42;
-        line-height: calc(#{$sizetitulo} * 0.44;
+        margin: 10px 0px 5px 0px;
+        font-size: calc(#{$sizetitulo} * 0.42);
+        line-height: calc(#{$sizetitulo} * 0.40);
     }
 
     p {
         font-size: calc(#{$sizebody} * 0.9);
+        margin:0px;
     }
 
     .professor {
-        margin-bottom: 8px;
         font-weight: 700;
     }
-    .local {
+
+    p.ciclo {
         margin-top: 10px;
+    }
+
+    p.local {
         font-weight: 700;
+        margin-top: 10px;
         font-size: calc(#{$sizebody} * 1.1);
     }
-
-    a {
-       .sem {
-        display: none;
-       }
-    }
-
+    
     button {
         margin-top: 15px;
         font-size: calc(#{$sizebody} * 0.9);
-        padding: 5px 20px;
+        padding: 8px 15px 8px 20px;
         border: 0;
         color: #fff;
-        font-family: $fontheading;
-        text-transform: uppercase;
+        cursor: pointer;
+        @include textobonitinho(5px, 300);
+        @include border-radius(20px);
     }
-
     .sem {
         display: none;
     }
-
 }
 
+/* Ajustes */
+
+.manha>div,
+.tarde>div {
+    padding: 8px;
 }
 
-.legenda {
-    
-    .row {
-        margin-bottom: 15px;
-    }
+/* ============================  FOOTER ========================== */
 
-    @each $eixo, $cor in $cores {
-    .#{$eixo} {
-            width: 40px;
-            height: 21px;
-            margin-right: 10px;
-            margin-left: 15px;
-            background-color: mix(white, $cor, $light);
-    }
-}
-        .eixo {
-            font-size: calc(#{$sizebody} * 0.9);
-            line-height: calc(#{$sizebody} * 1.5);
-            color: #1B1825;
+#footer {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #1a1a1a;
+
+    .copyright {
+        text-align: right;
+        font-size: 10px;
+        color: white;
+        font-family: $fontheading;
+        font-weight: 300;
+
+        a {
+            text-decoration: none;
+            color: $sidecolor;
+            font-weight: 400;
         }
-
+    }
 }
 
-
-#myBtn {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 20px; /* Place the button at the bottom of the page */
-    right: 30px; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    background-color: #1B1825;
-    color: #ECB730;
-    cursor: pointer;
-    padding: 20px;
-    @include border-radius(4px);
-    font-size: 20px;
-}
-
-#myBtn:hover {
-    background-color: #555; /* Add a dark-grey background on hover */
-}
