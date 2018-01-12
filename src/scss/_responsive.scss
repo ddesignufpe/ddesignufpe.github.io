@@ -29,39 +29,81 @@ $sextarrow: $quitarrow + $terman + 2;
   @return unquote("/");
 }
 
-.manha {
-  @for $i from 1 to ($segman + 2) {
-    .segman div:nth-child(#{$i}) {
-      grid-column: 1 / 5;
-      grid-row: $i slash() ($i + 1);
+//Colocando media querie definida em _mixins.css
+@include mobile {
+
+  .manha {
+    @for $i from 1 to ($segman + 2) {
+      .segman div:nth-child(#{$i}) {
+        grid-column: 1 / 5;
+        grid-row: $i slash() ($i + 1);
+      }
     }
-  }
-  
-  @for $i from 1 to ($terman + 2) {
-    .terman div:nth-child(#{$i}) {
-      grid-column: 1 / 5;
-      grid-row: ($termanrow + $i) slash() ($termanrow + $i + 1);
+    
+    @for $i from 1 to ($terman + 2) {
+      .terman div:nth-child(#{$i}) {
+        grid-column: 1 / 5;
+        grid-row: ($termanrow + $i) slash() ($termanrow + $i + 1);
+      }
     }
-  }
+    
+    @for $i from 1 to ($quaman + 2) {
+      .quaman div:nth-child(#{$i}) {
+        grid-column: 1 / 5;
+        grid-row: ($quamanrow + $i) slash() ($quamanrow + $i + 1);
+      }
+    }
   
-  @for $i from 1 to ($quaman + 2) {
-    .quaman div:nth-child(#{$i}) {
-      grid-column: 1 / 5;
-      grid-row: ($quamanrow + $i) slash() ($quamanrow + $i + 1);
+    @for $i from 1 to ($quiman + 2) {
+      .quaman div:nth-child(#{$i}) {
+        grid-column: 1 / 5;
+        grid-row: ($quamanrow + $i) slash() ($quamanrow + $i + 1);
+      }
+    }
+  
+    @for $i from 1 to ($sexman + 2) {
+      .quaman div:nth-child(#{$i}) {
+        grid-column: 1 / 5;
+        grid-row: ($quamanrow + $i) slash() ($quamanrow + $i + 1);
+      }
     }
   }
 
-  @for $i from 1 to ($quiman + 2) {
-    .quaman div:nth-child(#{$i}) {
-      grid-column: 1 / 5;
-      grid-row: ($quamanrow + $i) slash() ($quamanrow + $i + 1);
+  .tarde {
+    @for $i from 1 to ($segtar + 2) {
+      .segtar div:nth-child(#{$i}) {
+        grid-column: 1 / 5;
+        grid-row: $i slash() ($i + 1);
+      }
+    }
+    
+    @for $i from 1 to ($tertar + 2) {
+      .tertar div:nth-child(#{$i}) {
+        grid-column: 1 / 5;
+        grid-row: ($tertarrow + $i) slash() ($tertarrow + $i + 1);
+      }
+    }
+    
+    @for $i from 1 to ($quatar + 2) {
+      .quatar div:nth-child(#{$i}) {
+        grid-column: 1 / 5;
+        grid-row: ($quatarrow + $i) slash() ($quatarrow + $i + 1);
+      }
+    }
+  
+    @for $i from 1 to ($quitar + 2) {
+      .quitar div:nth-child(#{$i}) {
+        grid-column: 1 / 5;
+        grid-row: ($quitarrow + $i) slash() ($quitarrow + $i + 1);
+      }
+    }
+  
+    @for $i from 1 to ($sextar + 2) {
+      .sextar div:nth-child(#{$i}) {
+        grid-column: 1 / 5;
+        grid-row: ($sextarrow + $i) slash() ($sextarrow + $i + 1);
+      }
     }
   }
 
-  @for $i from 1 to ($sexman + 2) {
-    .quaman div:nth-child(#{$i}) {
-      grid-column: 1 / 5;
-      grid-row: ($quamanrow + $i) slash() ($quamanrow + $i + 1);
-    }
-  }
 }
