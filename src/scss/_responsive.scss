@@ -1,0 +1,67 @@
+// Quantidade de Disciplinas por Dia
+// Manhã 
+$segman: 4;
+$terman: 5;
+$quaman: 4;
+$quiman: 5;
+$sexman: 4;
+
+// Tarde
+$segtar: 4;
+$tertar: 5;
+$quatar: 4;
+$quitar: 5;
+$sextar: 4;
+
+// Cálculo das rows
+$termanrow: $segman + 1;
+$quamanrow: $termanrow + $quaman + 2;
+$quimanrow: $quamanrow + $quiman + 2;
+$sexmanrow: $quimanrow + $terman + 2;
+
+$tertarrow: $segman + 1;
+$quatarrow: $tertarrow + $quaman + 2;
+$quitarrow: $quatarrow + $quiman + 2;
+$sextarrow: $quitarrow + $terman + 2;
+
+//Function para escapar a barra como caracter
+@function slash() {
+  @return unquote("/");
+}
+
+.manha {
+  @for $i from 1 to ($segman + 2) {
+    .segman div:nth-child(#{$i}) {
+      grid-column: 1 / 5;
+      grid-row: $i slash() ($i + 1);
+    }
+  }
+  
+  @for $i from 1 to ($terman + 2) {
+    .terman div:nth-child(#{$i}) {
+      grid-column: 1 / 5;
+      grid-row: ($termanrow + $i) slash() ($termanrow + $i + 1);
+    }
+  }
+  
+  @for $i from 1 to ($quaman + 2) {
+    .quaman div:nth-child(#{$i}) {
+      grid-column: 1 / 5;
+      grid-row: ($quamanrow + $i) slash() ($quamanrow + $i + 1);
+    }
+  }
+
+  @for $i from 1 to ($quiman + 2) {
+    .quaman div:nth-child(#{$i}) {
+      grid-column: 1 / 5;
+      grid-row: ($quamanrow + $i) slash() ($quamanrow + $i + 1);
+    }
+  }
+
+  @for $i from 1 to ($sexman + 2) {
+    .quaman div:nth-child(#{$i}) {
+      grid-column: 1 / 5;
+      grid-row: ($quamanrow + $i) slash() ($quamanrow + $i + 1);
+    }
+  }
+}
