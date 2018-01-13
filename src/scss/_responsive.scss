@@ -1,10 +1,18 @@
+$responsivo: 768px;
+
+@mixin mobile {
+  @media (max-width: #{$responsivo}) {
+    @content;
+  }
+}
+
 // Quantidade de Disciplinas por Dia
 // Manhã 
-$segman: 4;
-$terman: 5;
-$quaman: 4;
-$quiman: 5;
-$sexman: 4;
+$segman: 1;
+$terman: 1;
+$quaman: 1;
+$quiman: 1;
+$sexman: 1;
 
 // Tarde
 $segtar: 4;
@@ -34,37 +42,37 @@ $sextarrow: $quitarrow + $terman + 2;
 
   .manha {
     @for $i from 1 to ($segman + 2) {
-      .segman div:nth-child(#{$i}) {
+      .segman:nth-of-type(#{$i}) {
         grid-column: 1 / 5;
         grid-row: $i slash() ($i + 1);
       }
     }
     
     @for $i from 1 to ($terman + 2) {
-      .terman div:nth-child(#{$i}) {
+      .terman:nth-of-type(#{$i}) {
         grid-column: 1 / 5;
         grid-row: ($termanrow + $i) slash() ($termanrow + $i + 1);
       }
     }
     
     @for $i from 1 to ($quaman + 2) {
-      .quaman div:nth-child(#{$i}) {
+      .quaman:nth-of-type(#{$i}) {
         grid-column: 1 / 5;
         grid-row: ($quamanrow + $i) slash() ($quamanrow + $i + 1);
       }
     }
   
     @for $i from 1 to ($quiman + 2) {
-      .quaman div:nth-child(#{$i}) {
+      .quiman:nth-of-type(#{$i}) {
         grid-column: 1 / 5;
-        grid-row: ($quamanrow + $i) slash() ($quamanrow + $i + 1);
+        grid-row: ($quimanrow + $i) slash() ($quimanrow + $i + 1);
       }
     }
   
     @for $i from 1 to ($sexman + 2) {
-      .quaman div:nth-child(#{$i}) {
+      .sexman:nth-of-type(#{$i}) {
         grid-column: 1 / 5;
-        grid-row: ($quamanrow + $i) slash() ($quamanrow + $i + 1);
+        grid-row: ($sexmanrow + $i) slash() ($sexmanrow + $i + 1);
       }
     }
   }

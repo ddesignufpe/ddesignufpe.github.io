@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Grade dDesign</title>
     <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="dist/css/responsive.css">
     <link rel="stylesheet" href="dist/css/grid.min.css">
 </head>
 
@@ -34,24 +35,26 @@
         <div class="container">
             <div id="wrapper">
                 <div class="row">
-                    <div id="sidebar" class="col-md-3 col-sm-12">
-                        <h4>Legenda</h4>
-                        <dl class="legenda">
-                            <dt class="obrigatorio">
-                                <span></span>Eixo Obrigatório | 1º Período</dt>
-                            <dt class="estetica">
-                                <span></span>Eixo Estética</dt>
-                            <dt class="sociedade">
-                                <span></span>Eixo Sociedade</dt>
-                            <dt class="ciencia">
-                                <span></span>Eixo Ciência</dt>
-                            <dt class="tecnologia">
-                                <span></span>Eixo Tecnologia</dt>
-                            <dt class="pcc">
-                                <span></span>Eixo Obrigatório | Concluintes</dt>
-                        </dl>
+                    <div id="sidebar" class="col-md-12 col-lg-3">
+                        <div id="getFixed">
+                            <h4>Legenda</h4>
+                            <dl class="legenda">
+                                <dt class="obrigatorio">
+                                    <span></span>Eixo Obrigatório | 1º Período</dt>
+                                <dt class="estetica">
+                                    <span></span>Eixo Estética</dt>
+                                <dt class="sociedade">
+                                    <span></span>Eixo Sociedade</dt>
+                                <dt class="ciencia">
+                                    <span></span>Eixo Ciência</dt>
+                                <dt class="tecnologia">
+                                    <span></span>Eixo Tecnologia</dt>
+                                <dt class="pcc">
+                                    <span></span>Eixo Obrigatório | Concluintes</dt>
+                            </dl>
+                        </div>
                     </div>
-                    <div id="tabela" class="col-md-9 col-sm-12">
+                    <div id="tabela" class="col-md-12 col-lg-9">
                         <ul class="tabs clearfix" data-tabgroup="first-tab-group">
                             <li>
                                 <a href="#tab1" class="active">Manhã</a>
@@ -62,150 +65,554 @@
                         </ul>
                         <section id="first-tab-group" class="tabgroup">
                             <div class="manha" id="tab1">
-                                <div class="tabheader">
-                                    <h2>Heading 2</h2>
-                                    <p>Adipisci autem obcaecati velit natus quos beatae explicabo at tempora minima voluptates
-                                        deserunt eum consectetur reiciendis placeat dolorem repellat in nam asperiores impedit
-                                        voluptas iure repellendus unde eveniet accusamus ex.</p>
-                                </div>
-                                <!--Dias da Semana -->
-                                <div class="dias">Segunda</div>
-                                <div class="dias">Terça</div>
-                                <div class="dias">Quarta</div>
-                                <div class="dias">Quinta</div>
-                                <div class="dias">Sexta</div>
-
                                 <!--Grupos de Estudo Manhã -->
-                                <div class="obrigatorio">
-                                    <p class="codigo">DD001</p>
-                                    <h4>História do Design</h4>
-                                    <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
-                                    <p class="ciclo">Ciclo básico</p>
-                                    <p class="vagas">40 vagas</p>
-                                    <p class="local">Auditório</p>
-                                    <a href="" class="sem" target="_blank">
-                                        <button>Ementa</button>
-                                    </a>
-                                </div>
-                                <div class="estetica">
-                                    <p class="codigo">DD001</p>
-                                    <h4>História do Design</h4>
-                                    <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
-                                    <p class="ciclo">Ciclo básico</p>
-                                    <p class="vagas">40 vagas</p>
-                                    <p class="local">Auditório</p>
-                                    <a href="" target="_blank">
-                                        <button>Ementa</button>
-                                    </a>
-                                </div>
-                                <div class="obrigatorio">
-                                    <p class="codigo">DD001</p>
-                                    <h4>História do Design</h4>
-                                    <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
-                                    <p class="ciclo">Ciclo básico</p>
-                                    <p class="vagas">40 vagas</p>
-                                    <p class="local">Auditório</p>
-                                    <a href="" class="sem" target="_blank">
-                                        <button>Ementa</button>
-                                    </a>
-                                </div>
-                                <div class="obrigatorio">
-                                    <p class="codigo">DD001</p>
-                                    <h4>História do Design</h4>
-                                    <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
-                                    <p class="ciclo">Ciclo básico</p>
-                                    <p class="vagas">40 vagas</p>
-                                    <p class="local">Auditório</p>
-                                    <a href="" class="sem" target="_blank">
-                                        <button>Ementa</button>
-                                    </a>
-                                </div>
-                                <div class="obrigatorio">
-                                    <p class="codigo">DD001</p>
-                                    <h4>História do Design</h4>
-                                    <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
-                                    <p class="ciclo">Ciclo básico</p>
-                                    <p class="vagas">40 vagas</p>
-                                    <p class="local">Auditório</p>
-                                    <a href="" target="_blank">
-                                        <button>Ementa</button>
-                                    </a>
-                                </div>
+                                <div class="segunda">
+                                    <div class="dias">Segunda</div>
 
+                                    <div class="grupo estetica">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="grupo ciencia">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="grupo pcc">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="terca">
+                                    <div class="dias">Terça</div>
+
+                                    <div class="grupo obrigatorio">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" class="sem" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="grupo ciencia">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="grupo sociedade">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="quarta">
+                                    <div class="dias">Quarta</div>
+
+                                    <div class="grupo estetica">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="grupo ciencia">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="grupo pcc">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="quinta">
+                                    <div class="dias">Quinta</div>
+
+                                    <div class="grupo tecnologia">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="grupo ciencia">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="grupo sociedade">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sexta">
+                                    <div class="dias">Sexta</div>
+
+                                    <div class="grupo tecnologia">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="grupo ciencia">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="grupo sociedade">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+
                             <div class="tarde" id="tab2">
-                                <div class="tabheader">
-                                    <h2>Heading 2</h2>
-                                    <p>Adipisci autem obcaecati velit natus quos beatae explicabo at tempora minima voluptates
-                                        deserunt eum consectetur reiciendis placeat dolorem repellat in nam asperiores impedit
-                                        voluptas iure repellendus unde eveniet accusamus ex.</p>
-                                </div>
-                                <!--Dias da Semana -->
-                                <div class="dias">Segunda</div>
-                                <div class="dias">Terça</div>
-                                <div class="dias">Quarta</div>
-                                <div class="dias">Quinta</div>
-                                <div class="dias">Sexta</div>
+                                <div class="segunda">
+                                    <div class="dias">Segunda</div>
 
+                                    <div class="grupo estetica">
+                                        <div class="codigo">
+                                            <span>DD002</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
 
-                                <!-- Grupos de Estudo Tarde -->
+                                    <div class="grupo ciencia">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
 
-                                <div class="tecnologia">
-                                    <p class="codigo">DD001</p>
-                                    <h4>História do Design</h4>
-                                    <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
-                                    <p class="ciclo">Ciclo básico</p>
-                                    <p class="vagas">40 vagas</p>
-                                    <p class="local">Auditório</p>
-                                    <a href="" class="sem" target="_blank">
-                                        <button>Ementa</button>
-                                    </a>
+                                    <div class="grupo pcc">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
+
                                 </div>
-                                <div class="estetica">
-                                    <p class="codigo">DD001</p>
-                                    <h4>História do Design</h4>
-                                    <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
-                                    <p class="ciclo">Ciclo básico</p>
-                                    <p class="vagas">40 vagas</p>
-                                    <p class="local">Auditório</p>
-                                    <a href="" target="_blank">
-                                        <button>Ementa</button>
-                                    </a>
+                                <div class="terca">
+                                    <div class="dias">Terça</div>
+
+                                    <div class="grupo obrigatorio">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" class="sem" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="grupo ciencia">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="grupo sociedade">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="ciencia">
-                                    <p class="codigo">DD001</p>
-                                    <h4>História do Design</h4>
-                                    <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
-                                    <p class="ciclo">Ciclo básico</p>
-                                    <p class="vagas">40 vagas</p>
-                                    <p class="local">Auditório</p>
-                                    <a href="" target="_blank">
-                                        <button>Ementa</button>
-                                    </a>
+                                <div class="quarta">
+                                    <div class="dias">Quarta</div>
+
+                                    <div class="grupo estetica">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="grupo ciencia">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="grupo pcc">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
+
                                 </div>
-                                <div class="obrigatorio">
-                                    <p class="codigo">DD001</p>
-                                    <h4>História do Design</h4>
-                                    <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
-                                    <p class="ciclo">Ciclo básico</p>
-                                    <p class="vagas">40 vagas</p>
-                                    <p class="local">Auditório</p>
-                                    <a href="" class="sem" target="_blank">
-                                        <button>Ementa</button>
-                                    </a>
+                                <div class="quinta">
+                                    <div class="dias">Quinta</div>
+
+                                    <div class="grupo tecnologia">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="grupo ciencia">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="grupo sociedade">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="obrigatorio">
-                                    <p class="codigo">DD001</p>
-                                    <h4>História do Design</h4>
-                                    <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
-                                    <p class="ciclo">Ciclo básico</p>
-                                    <p class="vagas">40 vagas</p>
-                                    <p class="local">Auditório</p>
-                                    <a href="" target="_blank">
-                                        <button>Ementa</button>
-                                    </a>
+                                <div class="sexta">
+                                    <div class="dias">Sexta</div>
+
+                                    <div class="grupo tecnologia">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="grupo ciencia">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="grupo sociedade">
+                                        <div class="codigo">
+                                            <span>DD001</span>
+                                            <span>Estética X</span>
+                                        </div>
+                                        <div class="conteudo">
+                                            <h4>História do Design</h4>
+                                            <p class="professor">Oriana Duarte, Gisela Leão e Gentil Filho</p>
+                                            <p class="ciclo">Ciclo básico</p>
+                                            <p class="vagas">40 vagas</p>
+                                            <p class="local">Auditório</p>
+                                            <a href="" target="_blank">
+                                                <button>Ementa</button>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
                     </div>
                 </div>
             </div>

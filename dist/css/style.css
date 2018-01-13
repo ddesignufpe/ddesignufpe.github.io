@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0; }
   #sidebar .legenda > dt {
     display: block;
-    font-size: 13px;
+    font-size: 12px;
     margin: 0px 0px 5px 0px; }
   #sidebar .legenda .sociedade span {
     display: inline-block;
@@ -103,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 10%;
     height: 10px;
     margin-right: 10px;
-    background: #333;
+    background: #b900aa;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px; }
@@ -118,73 +118,6 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 5px; }
 
 /* ============================  G R A D E ========================== */
-/* Cores Eixos */
-#tabela .sociedade {
-  background: #9ec18c; }
-  #tabela .sociedade button {
-    background-color: #3D8218;
-    -moz-transition: 0.15s ease-in;
-    -o-transition: 0.15s ease-in;
-    -webkit-transition: 0.15s ease-in;
-    transition: 0.15s ease-in; }
-  #tabela .sociedade button:hover {
-    background-color: #295710; }
-
-#tabela .ciencia {
-  background: #eac580; }
-  #tabela .ciencia button {
-    background-color: #d48a00;
-    -moz-transition: 0.15s ease-in;
-    -o-transition: 0.15s ease-in;
-    -webkit-transition: 0.15s ease-in;
-    transition: 0.15s ease-in; }
-  #tabela .ciencia button:hover {
-    background-color: #a16900; }
-
-#tabela .tecnologia {
-  background: #b58c8d; }
-  #tabela .tecnologia button {
-    background-color: #6A191B;
-    -moz-transition: 0.15s ease-in;
-    -o-transition: 0.15s ease-in;
-    -webkit-transition: 0.15s ease-in;
-    transition: 0.15s ease-in; }
-  #tabela .tecnologia button:hover {
-    background-color: #410f10; }
-
-#tabela .estetica {
-  background: #809ec1; }
-  #tabela .estetica button {
-    background-color: #003D82;
-    -moz-transition: 0.15s ease-in;
-    -o-transition: 0.15s ease-in;
-    -webkit-transition: 0.15s ease-in;
-    transition: 0.15s ease-in; }
-  #tabela .estetica button:hover {
-    background-color: #00254f; }
-
-#tabela .obrigatorio {
-  background: #999999; }
-  #tabela .obrigatorio button {
-    background-color: #333;
-    -moz-transition: 0.15s ease-in;
-    -o-transition: 0.15s ease-in;
-    -webkit-transition: 0.15s ease-in;
-    transition: 0.15s ease-in; }
-  #tabela .obrigatorio button:hover {
-    background-color: #1a1a1a; }
-
-#tabela .pcc {
-  background: #a89b80; }
-  #tabela .pcc button {
-    background-color: #503700;
-    -moz-transition: 0.15s ease-in;
-    -o-transition: 0.15s ease-in;
-    -webkit-transition: 0.15s ease-in;
-    transition: 0.15s ease-in; }
-  #tabela .pcc button:hover {
-    background-color: #1d1400; }
-
 /* Tabs Manhã/Tarde */
 .tabs {
   padding: 0px;
@@ -230,11 +163,9 @@ h1, h2, h3, h4, h5, h6 {
 .manha, .tarde {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-gap: 8px;
+  grid-gap: 12px;
+  /* Cores Eixos */
   /* Grupo de Estudo - Elementos */ }
-  .manha .tabheader, .tarde .tabheader {
-    grid-column: 1/6;
-    display: none; }
   .manha .dias, .tarde .dias {
     text-align: center;
     text-decoration: none;
@@ -242,12 +173,112 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Work Sans", monospace;
     letter-spacing: 3px;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 15px;
     color: white;
     background-color: #2c2c2c;
-    line-height: 30px; }
+    line-height: 40px;
+    margin-bottom: 12px; }
+  .manha .sociedade, .tarde .sociedade {
+    background: #c5daba;
+    border-bottom: 2px solid #377516; }
+    .manha .sociedade .codigo, .tarde .sociedade .codigo {
+      background-color: #3D8218; }
+    .manha .sociedade button, .tarde .sociedade button {
+      background-color: #3D8218;
+      -moz-transition: 0.15s ease-in;
+      -o-transition: 0.15s ease-in;
+      -webkit-transition: 0.15s ease-in;
+      transition: 0.15s ease-in; }
+    .manha .sociedade button:hover, .tarde .sociedade button:hover {
+      background-color: #295710; }
+  .manha .ciencia, .tarde .ciencia {
+    background: #f2dcb3;
+    border-bottom: 2px solid #bf7c00; }
+    .manha .ciencia .codigo, .tarde .ciencia .codigo {
+      background-color: #d48a00; }
+    .manha .ciencia button, .tarde .ciencia button {
+      background-color: #d48a00;
+      -moz-transition: 0.15s ease-in;
+      -o-transition: 0.15s ease-in;
+      -webkit-transition: 0.15s ease-in;
+      transition: 0.15s ease-in; }
+    .manha .ciencia button:hover, .tarde .ciencia button:hover {
+      background-color: #a16900; }
+  .manha .tecnologia, .tarde .tecnologia {
+    background: #d2babb;
+    border-bottom: 2px solid #5f1718; }
+    .manha .tecnologia .codigo, .tarde .tecnologia .codigo {
+      background-color: #6A191B; }
+    .manha .tecnologia button, .tarde .tecnologia button {
+      background-color: #6A191B;
+      -moz-transition: 0.15s ease-in;
+      -o-transition: 0.15s ease-in;
+      -webkit-transition: 0.15s ease-in;
+      transition: 0.15s ease-in; }
+    .manha .tecnologia button:hover, .tarde .tecnologia button:hover {
+      background-color: #410f10; }
+  .manha .estetica, .tarde .estetica {
+    background: #b3c5da;
+    border-bottom: 2px solid #003775; }
+    .manha .estetica .codigo, .tarde .estetica .codigo {
+      background-color: #003D82; }
+    .manha .estetica button, .tarde .estetica button {
+      background-color: #003D82;
+      -moz-transition: 0.15s ease-in;
+      -o-transition: 0.15s ease-in;
+      -webkit-transition: 0.15s ease-in;
+      transition: 0.15s ease-in; }
+    .manha .estetica button:hover, .tarde .estetica button:hover {
+      background-color: #00254f; }
+  .manha .obrigatorio, .tarde .obrigatorio {
+    background: #eab3e6;
+    border-bottom: 2px solid #a70099; }
+    .manha .obrigatorio .codigo, .tarde .obrigatorio .codigo {
+      background-color: #b900aa; }
+    .manha .obrigatorio button, .tarde .obrigatorio button {
+      background-color: #b900aa;
+      -moz-transition: 0.15s ease-in;
+      -o-transition: 0.15s ease-in;
+      -webkit-transition: 0.15s ease-in;
+      transition: 0.15s ease-in; }
+    .manha .obrigatorio button:hover, .tarde .obrigatorio button:hover {
+      background-color: #86007b; }
+  .manha .pcc, .tarde .pcc {
+    background: #cbc3b3;
+    border-bottom: 2px solid #483200; }
+    .manha .pcc .codigo, .tarde .pcc .codigo {
+      background-color: #503700; }
+    .manha .pcc button, .tarde .pcc button {
+      background-color: #503700;
+      -moz-transition: 0.15s ease-in;
+      -o-transition: 0.15s ease-in;
+      -webkit-transition: 0.15s ease-in;
+      transition: 0.15s ease-in; }
+    .manha .pcc button:hover, .tarde .pcc button:hover {
+      background-color: #1d1400; }
+  .manha .grupo, .tarde .grupo {
+    margin-bottom: 12px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); }
   .manha .codigo, .tarde .codigo {
-    margin: 0px; }
+    width: 100%;
+    color: white;
+    padding: 5px 8px;
+    font-size: 12px; }
+    .manha .codigo span:nth-of-type(2)::before, .tarde .codigo span:nth-of-type(2)::before {
+      content: "\00a0 \00b7 \00a0"; }
+    @media (min-width: 769px) {
+      .manha .codigo span:nth-of-type(2), .tarde .codigo span:nth-of-type(2) {
+        float: right; }
+      .manha .codigo span:nth-of-type(2)::before, .tarde .codigo span:nth-of-type(2)::before {
+        content: ""; } }
+  .manha .conteudo, .tarde .conteudo {
+    padding: 8px; }
   .manha h4, .tarde h4 {
     color: black;
     font-family: "Roboto", sans-serif;
@@ -266,10 +297,14 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     margin-top: 10px;
     font-size: calc(14px * 1.1); }
+  .manha a, .tarde a {
+    text-decoration: none; }
   .manha button, .tarde button {
     margin-top: 15px;
     font-size: calc(14px * 0.9);
-    padding: 8px 15px 8px 20px;
+    line-height: 30px;
+    width: 100%;
+    display: block;
     border: 0;
     color: #fff;
     cursor: pointer;
@@ -282,14 +317,26 @@ h1, h2, h3, h4, h5, h6 {
     -moz-border-radius: 20px;
     -webkit-border-radius: 20px;
     border-radius: 20px; }
+  .manha button:hover, .tarde button:hover {
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 12px;
+    margin-bottom: 3px; }
   .manha .sem, .tarde .sem {
     display: none; }
 
-/* Ajustes */
-.manha > div,
-.tarde > div {
-  padding: 8px; }
+@media (max-width: 768px) {
+  .manha > div,
+  .tarde > div {
+    grid-column: 1/6; } }
 
+/* Ajustes */
+/* .manha>div,
+.tarde>div {
+    padding: 8px;
+} */
 /* ============================  FOOTER ========================== */
 #footer {
   margin-top: 50px;

@@ -14,3 +14,24 @@ $('.tabs a').click(function(e){
     $(target).show();
   
 })
+
+/* Legenda Fixa
+From */
+jQuery(function($) {
+  function fixDiv() {
+    var $cache = $('#getFixed');
+    if ($(window).scrollTop() > 300 && $(document).width() > 768)
+      $cache.css({
+        'position': 'fixed',
+        'top': '20px',
+        'width': '200px'
+      });
+    else
+      $cache.css({
+        'position': 'relative',
+        'top': 'auto'
+      });
+  }
+  $(window).scroll(fixDiv);
+  fixDiv();
+});

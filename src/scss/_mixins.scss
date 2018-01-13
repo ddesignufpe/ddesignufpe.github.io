@@ -11,13 +11,20 @@
 	border-radius: $radius;
 }
 
-$responsivo: 768px;
+$mobile: 768px;
 
 @mixin mobile {
-  @media (max-width: #{$responsivo}) {
+  @media (max-width: #{$mobile}) {
     @content;
   }
 }
+
+@mixin desktop {
+    @media (min-width: (#{$mobile} + 1)) {
+      @content;
+    }
+  }
+
 
 @mixin textobonitinho($spacing, $weight) {
     text-align:center;

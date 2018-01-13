@@ -72,7 +72,7 @@ h1, h2, h3, h4, h5, h6 {
 
     .legenda > dt {
         display: block;
-        font-size: 13px;
+        font-size: 12px;
         margin: 0px 0px 5px 0px;
     }
 
@@ -91,23 +91,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ============================  G R A D E ========================== */
 
-/* Cores Eixos */
 
-#tabela {
-    @each $eixo, $cor in $cores {
-        .#{$eixo} {
-            background: mix(white, $cor, $light);
-            
-            button {
-            background-color: $cor;
-            @include transition(0.15s ease-in);
-            }
-
-            button:hover {
-            background-color: darken($cor, $dark);}
-        }
-}
-}
 
 /* Tabs Manhã/Tarde */
 
@@ -155,25 +139,72 @@ h1, h2, h3, h4, h5, h6 {
 .manha, .tarde {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-gap: 8px;
-
-    .tabheader {
-        grid-column: 1/6;
-        display: none;
-    }
+    grid-gap: 12px;
 
     .dias {
         @include textobonitinho(3px, 400);
-        font-size: 12px;
+        font-size: 15px;
         color: white;
         background-color: rgb(44, 44, 44);
-        line-height: 30px;
+        line-height: 40px;
+        margin-bottom: 12px;
     }
+
+
+/* Cores Eixos */
+
+    @each $eixo, $cor in $cores {
+        .#{$eixo} {
+            background: mix(white, $cor, $light);
+            border-bottom: 2px solid mix(black, $cor, $dark);
+            .codigo {
+                background-color: $cor;
+            }
+
+            button {
+            background-color: $cor;
+            @include transition(0.15s ease-in);
+            }
+
+            button:hover {
+                background-color: darken($cor, $dark);
+            }
+        }
+}
+
 
 /* Grupo de Estudo - Elementos */
 
+    .grupo {
+        margin-bottom: 12px;
+        @include border-radius(5px);
+        @include box-shadow(0px, 0px, 15px, rgba(0,0,0,0.3));
+    }
+
     .codigo {
-        margin: 0px;
+        width: 100%;
+        color: white;
+        padding: 5px 8px;
+        font-size: 12px;
+        
+        span:nth-of-type(2)::before {
+            content:"\00a0 \00b7 \00a0";
+        }
+
+        @include desktop {
+            
+            span:nth-of-type(2) {
+                float: right;
+            }
+
+            span:nth-of-type(2)::before {
+                content:"";
+            }
+        }
+    }
+
+    .conteudo {
+        padding:8px;
     }
 
     h4 {
@@ -203,28 +234,48 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: 10px;
         font-size: calc(#{$sizebody} * 1.1);
     }
+
+    a {
+        text-decoration: none;
+    }
     
     button {
         margin-top: 15px;
         font-size: calc(#{$sizebody} * 0.9);
-        padding: 8px 15px 8px 20px;
+        line-height: 30px;
+        width: 100%;
+        display: block;
         border: 0;
         color: #fff;
         cursor: pointer;
         @include textobonitinho(5px, 300);
         @include border-radius(20px);
     }
+
+    button:hover {
+        @include box-shadow(0px, 0px, 5px, rgba(0,0,0,0.2));
+        margin-top: 12px;
+        margin-bottom: 3px;
+    }
+
     .sem {
         display: none;
     }
 }
 
+
+@include mobile {
+        .manha>div,
+        .tarde>div {
+            grid-column: 1/6;
+        }
+}
 /* Ajustes */
 
-.manha>div,
+/* .manha>div,
 .tarde>div {
     padding: 8px;
-}
+} */
 
 /* ============================  FOOTER ========================== */
 
