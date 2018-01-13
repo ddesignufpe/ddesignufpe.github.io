@@ -150,6 +150,17 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 12px;
     }
 
+    @include mobile {
+        .dias {
+            font-size: 25px;
+            line-height: 80px;
+            margin-top: 25px;
+        }
+
+        .segunda .dias {
+            margin-top: 0px;
+        }
+    }
 
 /* Cores Eixos */
 
