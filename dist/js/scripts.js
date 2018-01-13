@@ -16,7 +16,7 @@ $('.tabs a').click(function(e){
 })
 
 /* Legenda Fixa
-From */
+From https://stackoverflow.com/questions/8644248/fix-div-when-browser-scrolls-to-it*/
 jQuery(function($) {
   function fixDiv() {
     var $cache = $('#getFixed');
