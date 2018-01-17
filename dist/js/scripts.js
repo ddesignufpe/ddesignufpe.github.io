@@ -14,7 +14,7 @@ window.onload = function () {
 }
 
 function getDisciplina(data) {
-  if(data.ementa !== null || data.ementa !== undefined ){
+  if(data.ementa !== ""){
     return `<div class="grupo ${data.eixo}">
                 <div class="codigo">
                     <span>${data.code}</span><span>${data.siga}</span>
@@ -31,7 +31,7 @@ function getDisciplina(data) {
                 </div>
             </div>`;
 } else {
-    return `<div class="grupo obrigatorio">
+    return `<div class="grupo ${data.eixo}">
                 <div class="codigo">
                     <span>${data.code}</span>
                 </div>

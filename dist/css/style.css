@@ -103,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 10%;
     height: 10px;
     margin-right: 10px;
-    background: #b900aa;
+    background: #686868;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px; }
@@ -238,18 +238,18 @@ h1, h2, h3, h4, h5, h6 {
     .manha .estetica button:hover, .tarde .estetica button:hover {
       background-color: #00254f; }
   .manha .obrigatorio, .tarde .obrigatorio {
-    background: #eab3e6;
-    border-bottom: 2px solid #a70099; }
+    background: #d2d2d2;
+    border-bottom: 2px solid #5e5e5e; }
     .manha .obrigatorio .codigo, .tarde .obrigatorio .codigo {
-      background-color: #b900aa; }
+      background-color: #686868; }
     .manha .obrigatorio button, .tarde .obrigatorio button {
-      background-color: #b900aa;
+      background-color: #686868;
       -moz-transition: 0.15s ease-in;
       -o-transition: 0.15s ease-in;
       -webkit-transition: 0.15s ease-in;
       transition: 0.15s ease-in; }
     .manha .obrigatorio button:hover, .tarde .obrigatorio button:hover {
-      background-color: #86007b; }
+      background-color: #4f4f4f; }
   .manha .pcc, .tarde .pcc {
     background: #cbc3b3;
     border-bottom: 2px solid #483200; }

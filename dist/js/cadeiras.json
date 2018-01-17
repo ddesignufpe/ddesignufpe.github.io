@@ -3,16 +3,89 @@
     "siga": "",
     "eixo": "obrigatorio",
     "name": "História do Design",
-    "teacher": "Gisela Leão",
+    "teacher": "Oriana Duarte",
     "ciclo": "Básico",
     "vagas": "40",
     "local": "Auditório",
-    "ementa": "facebook.com"
+    "ementa": ""
 }, {
     "code": "DD002",
     "siga": "",
     "eixo": "obrigatorio",
-    "name": "História do Design",
-    "teacher": "Gisela Leão",
-    "ementa": "facebook.com"
+    "name": "Design Contemporâneo",
+    "teacher": "Gisela Leão e Professor Substituto",
+    "ciclo": "Básico",
+    "vagas": "40",
+    "local": "Auditório",
+    "ementa": ""
+}, {
+    "code": "DD003",
+    "siga": "",
+    "eixo": "obrigatorio",
+    "name": "Sistemas de Representação Bidimensional",
+    "teacher": "Hans Waechter",
+    "ciclo": "Básico",
+    "vagas": "40",
+    "local": "Auditório",
+    "ementa": ""
+}, {
+    "code": "DD004",
+    "siga": "",
+    "eixo": "obrigatorio",
+    "name": "Sistemas de Representação Tridimensional",
+    "teacher": "Walter Franklin",
+    "ciclo": "Básico",
+    "vagas": "40",
+    "local": "Auditório",
+    "ementa": ""
+}, {
+    "code": "DD005",
+    "siga": "Sociedade A",
+    "eixo": "sociedade",
+    "name": "Projeto de Artefatos Digitais",
+    "teacher": "Leonardo Castillo e Guilherme Ranoya",
+    "ciclo": "Avançado",
+    "vagas": "20",
+    "local": "CIn",
+    "ementa": ""
+}, {
+    "code": "DD006",
+    "siga": "Sociedade B",
+    "eixo": "sociedade",
+    "name": "Moda e Cinema",
+    "teacher": "Clarissa Sóter",
+    "ciclo": "Intermediário",
+    "vagas": "30",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD053",
+    "siga": "Sociedade I",
+    "eixo": "sociedade",
+    "name": "Design de Posters e Cartazes",
+    "teacher": "Hans Waechter",
+    "ciclo": "Intermediário",
+    "vagas": "20",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD061",
+    "siga": "Sociedade R",
+    "eixo": "sociedade",
+    "name": "Empreendendo Negócios em Design na Economia Criativa",
+    "teacher": "Paulo Silva",
+    "ciclo": "Intermediário",
+    "vagas": "30",
+    "local": "Sala",
+    "ementa": "#"
+}, {
+    "code": "DD101",
+    "siga": "Estética R",
+    "eixo": "estetica",
+    "name": "Metodologia Visual",
+    "teacher": "Hans Waechter",
+    "ciclo": "Básico",
+    "vagas": "25",
+    "local": "Sala",
+    "ementa": ""
 }]
