@@ -13,6 +13,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: $fontheading;
 }
 
+/* Loader
+from http://epic-spinners.epicmax.co/ */
+
+
 /* ============================  G R A D E ========================== */
 
 #header {
@@ -220,24 +224,26 @@ h1, h2, h3, h4, h5, h6 {
 
     h4 {
         color: black;
-        font-family: $fontbody2;
-        font-weight: 400;
-        margin: 10px 0px 5px 0px;
-        font-size: calc(#{$sizetitulo} * 0.42);
-        line-height: calc(#{$sizetitulo} * 0.40);
+        font-family: $fontbody1;
+        font-weight: 500;
+        margin: 5px 0px;
+        font-size: calc(#{$sizetitulo} * 0.41);
+        line-height: calc(#{$sizetitulo} * 0.4);
     }
 
     p {
-        font-size: calc(#{$sizebody} * 0.9);
+        font-size: $sizebody;
+        line-height: $sizebody;
         margin:0px;
     }
 
     .professor {
-        font-weight: 700;
+        font-weight: 500;
+        margin-top: 10px;
     }
 
     p.ciclo {
-        margin-top: 10px;
+        margin: 5px 0px;
     }
 
     p.local {
@@ -271,6 +277,30 @@ h1, h2, h3, h4, h5, h6 {
 
     .sem {
         display: none;
+    }
+}
+
+.cadeiraspcc {
+    grid-column: 1/6;
+    padding: 20px;
+
+    h3 {
+        margin: 0px 0px 20px 0px;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 15px;
+    }
+    .professor {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    @include mobile {
+        .area {
+            grid-column: 1/7;
+        }
     }
 }
 

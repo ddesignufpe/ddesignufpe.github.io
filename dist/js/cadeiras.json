@@ -59,6 +59,86 @@
     "local": "Sala",
     "ementa": ""
 }, {
+    "code": "DD008",
+    "siga": "Sociedade D",
+    "eixo": "sociedade",
+    "name": "Moda em Revista",
+    "teacher": "Simone Barros",
+    "ciclo": "Intermediário",
+    "vagas": "25",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD019",
+    "siga": "Tecnologia A",
+    "eixo": "tecnologia",
+    "name": "Tecnologia Têxtil e Superfície Aplicada a Moda",
+    "teacher": "Clarissa Sóter",
+    "ciclo": "Intermediário",
+    "vagas": "30",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD021",
+    "siga": "Tecnologia C",
+    "eixo": "tecnologia",
+    "name": "Comunicação Urbana - Projeto",
+    "teacher": "Margarida Correia",
+    "ciclo": "Intermediário",
+    "vagas": "25",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD025",
+    "siga": "Tecnologia G",
+    "eixo": "tecnologia",
+    "name": "HQ Impresso e Digital",
+    "teacher": "Silvio Campello e Guilherme Ranoya",
+    "ciclo": "Intermediário",
+    "vagas": "25",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD027",
+    "siga": "Estética B",
+    "eixo": "estetica",
+    "name": "Embalagens Sustentáveis",
+    "teacher": "Amilton Arruda e Thamires Silva",
+    "ciclo": "Avançado",
+    "vagas": "25",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD029",
+    "siga": "Estética D",
+    "eixo": "estetica",
+    "name": "Projeto de Economia Criativa",
+    "teacher": "Solange e Gisela",
+    "ciclo": "Avançado",
+    "vagas": "25",
+    "local": "Porto Midia",
+    "ementa": ""
+}, {
+    "code": "DD047",
+    "siga": "Proj. Conclusão 1",
+    "eixo": "pcc",
+    "name": "Turma DD",
+    "teacher": "Débora Ferro",
+    "ciclo": "Obrigatório",
+    "vagas": "50",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD048",
+    "siga": "Proj. Conclusão 2",
+    "eixo": "pcc",
+    "name": "Turma DM",
+    "teacher": "Isabella Aragão",
+    "ciclo": "Obrigatório",
+    "vagas": "50",
+    "local": "Sala",
+    "ementa": ""
+}, {
     "code": "DD053",
     "siga": "Sociedade I",
     "eixo": "sociedade",
@@ -66,6 +146,36 @@
     "teacher": "Hans Waechter",
     "ciclo": "Intermediário",
     "vagas": "20",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD055",
+    "siga": "Sociedade L",
+    "eixo": "sociedade",
+    "name": "Design Social e Empreendimentos",
+    "teacher": "Ana Emília",
+    "ciclo": "Intermediário",
+    "vagas": "25",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD056",
+    "siga": "Sociedade M",
+    "eixo": "sociedade",
+    "name": "Design de Jogos",
+    "teacher": "André Neves",
+    "ciclo": "Intermediário",
+    "vagas": "30",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD058",
+    "siga": "Sociedade O",
+    "eixo": "sociedade",
+    "name": "Design e Antropologia",
+    "teacher": "Kátia Araújo",
+    "ciclo": "Avançado",
+    "vagas": "25",
     "local": "Sala",
     "ementa": ""
 }, {
@@ -77,7 +187,127 @@
     "ciclo": "Intermediário",
     "vagas": "30",
     "local": "Sala",
-    "ementa": "#"
+    "ementa": ""
+}, {
+    "code": "DD069",
+    "siga": "Ciência M",
+    "eixo": "ciencia",
+    "name": "Semiótica e Análise em Design",
+    "teacher": "Gisela Leão",
+    "ciclo": "Intermediário",
+    "vagas": "25",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD072",
+    "siga": "Ciência P",
+    "eixo": "ciencia",
+    "name": "Design Universal e Wayfinding",
+    "teacher": "Laura Bezerra",
+    "ciclo": "Intermediário",
+    "vagas": "25",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD073",
+    "siga": "Ciência Q",
+    "eixo": "ciencia",
+    "name": "Metodologia e Desenvolvimento de Produto",
+    "teacher": "Adailton Laporte",
+    "ciclo": "Básico",
+    "vagas": "30",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD080",
+    "siga": "Tecnologia J",
+    "eixo": "tecnologia",
+    "name": "Modelagem de Personagens para Stop Motion",
+    "teacher": "Adailton Laporte",
+    "ciclo": "Intermediário",
+    "vagas": "30",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD084",
+    "siga": "Tecnologia O",
+    "eixo": "tecnologia",
+    "name": "Materiais e Processos",
+    "teacher": "Gisela Leão",
+    "ciclo": "Intermediário",
+    "vagas": "25",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD085",
+    "siga": "Tecnologia P",
+    "eixo": "tecnologia",
+    "name": "Design de Jogos",
+    "teacher": "André Neves",
+    "ciclo": "Intermediário",
+    "vagas": "30",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD087",
+    "siga": "Tecnologia R",
+    "eixo": "tecnologia",
+    "name": "Design Digital",
+    "teacher": "Guilherme Ranoya",
+    "ciclo": "Intermediário",
+    "vagas": "25",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD092",
+    "siga": "Estética H",
+    "eixo": "estetica",
+    "name": "Playground: Práticas de Espaço",
+    "teacher": "Gentil Filho",
+    "ciclo": "Intermediário",
+    "vagas": "25",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD093",
+    "siga": "Estética I",
+    "eixo": "estetica",
+    "name": "Planejamento de Embalagem",
+    "teacher": "Neide Câmara",
+    "ciclo": "Intermediário",
+    "vagas": "25",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD094",
+    "siga": "Estética J",
+    "eixo": "estetica",
+    "name": "Design Com Tipos",
+    "teacher": "Isabella Aragão",
+    "ciclo": "Intermediário",
+    "vagas": "25",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD095",
+    "siga": "Estética L",
+    "eixo": "estetica",
+    "name": "Design Estratégico",
+    "teacher": "Amilton Arruda",
+    "ciclo": "Avançado",
+    "vagas": "25",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD096",
+    "siga": "Estética M",
+    "eixo": "estetica",
+    "name": "Identidade Visual",
+    "teacher": "Neide Câmara",
+    "ciclo": "Básico",
+    "vagas": "25",
+    "local": "Sala",
+    "ementa": ""
 }, {
     "code": "DD101",
     "siga": "Estética R",
@@ -86,6 +316,96 @@
     "teacher": "Hans Waechter",
     "ciclo": "Básico",
     "vagas": "25",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD102",
+    "siga": "Estética S",
+    "eixo": "estetica",
+    "name": "Linguagem das Cores",
+    "teacher": "Margarida Correia",
+    "ciclo": "Intermediário",
+    "vagas": "25",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD106",
+    "siga": "Ciência K",
+    "eixo": "ciencia",
+    "name": "Comunicação e Moda",
+    "teacher": "Simone Barros",
+    "ciclo": "Básico",
+    "vagas": "25",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD117",
+    "siga": "Sociedade W",
+    "eixo": "sociedade",
+    "name": "Artefatos Inclusivos",
+    "teacher": "Laura Bezerra",
+    "ciclo": "Avançado",
+    "vagas": "30",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD124",
+    "siga": "Ciência W",
+    "eixo": "ciencia",
+    "name": "Design como Pensamento",
+    "teacher": "André Neves",
+    "ciclo": "Intermediário",
+    "vagas": "30",
+    "local": "EaD",
+    "ementa": ""
+}, {
+    "code": "DD126",
+    "siga": "Ciência Z",
+    "eixo": "ciencia",
+    "name": "Memória Gráfica",
+    "teacher": "Solange Coutinho e Silvio Campello",
+    "ciclo": "Intermediário",
+    "vagas": "20",
+    "local": "EaD",
+    "ementa": ""
+}, {
+    "code": "DD128",
+    "siga": "Tecnologia V",
+    "eixo": "tecnologia",
+    "name": "Design de Produto de Média Complexidade",
+    "teacher": "Ana Andrade",
+    "ciclo": "Intermediário",
+    "vagas": "25",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD129",
+    "siga": "Tecnologia W",
+    "eixo": "tecnologia",
+    "name": "Tecnologia de Produto de Baixa Complexidade",
+    "teacher": "Ana Andrade",
+    "ciclo": "Básico",
+    "vagas": "25",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD136",
+    "siga": "Estética X",
+    "eixo": "estetica",
+    "name": "Artefatos Narrativos: Recolhimentos Orais",
+    "teacher": "Sílvio Campello",
+    "ciclo": "Intermediário",
+    "vagas": "25",
+    "local": "Sala",
+    "ementa": ""
+}, {
+    "code": "DD138",
+    "siga": "Estética Z",
+    "eixo": "estetica",
+    "name": "História do Mobiliário em PE",
+    "teacher": "Ana Emília",
+    "ciclo": "Intermediário",
+    "vagas": "28",
     "local": "Sala",
     "ementa": ""
 }]

@@ -33,7 +33,7 @@ function getDisciplina(data) {
 } else {
     return `<div class="grupo ${data.eixo}">
                 <div class="codigo">
-                    <span>${data.code}</span>
+                    <span>${data.code}</span><span>${data.siga}</span>
                 </div>
                 <div class="conteudo">
                 <h4>${data.name}</h4>
