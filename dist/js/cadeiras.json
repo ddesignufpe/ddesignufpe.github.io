@@ -115,7 +115,7 @@
     "name": "Projeto de Economia Criativa",
     "teacher": "Solange e Gisela",
     "ciclo": "Avançado",
-    "vagas": "25",
+    "vagas": "30",
     "local": "Porto Midia",
     "ementa": ""
 }, {
@@ -146,7 +146,7 @@
     "teacher": "Hans Waechter",
     "ciclo": "Intermediário",
     "vagas": "20",
-    "local": "Sala",
+    "local": "Auditório",
     "ementa": ""
 }, {
     "code": "DD055",
@@ -233,7 +233,7 @@
     "siga": "Tecnologia O",
     "eixo": "tecnologia",
     "name": "Materiais e Processos",
-    "teacher": "Gisela Leão",
+    "teacher": "Paulo Silva",
     "ciclo": "Intermediário",
     "vagas": "25",
     "local": "Sala",
@@ -242,10 +242,10 @@
     "code": "DD085",
     "siga": "Tecnologia P",
     "eixo": "tecnologia",
-    "name": "Design de Jogos",
-    "teacher": "André Neves",
+    "name": "Design de Embalagem em Vidro",
+    "teacher": "Leonardo Castillo",
     "ciclo": "Intermediário",
-    "vagas": "30",
+    "vagas": "25",
     "local": "Sala",
     "ementa": ""
 }, {
@@ -382,7 +382,7 @@
     "code": "DD129",
     "siga": "Tecnologia W",
     "eixo": "tecnologia",
-    "name": "Tecnologia de Produto de Baixa Complexidade",
+    "name": "Design de Produto de Baixa Complexidade",
     "teacher": "Ana Andrade",
     "ciclo": "Básico",
     "vagas": "25",
