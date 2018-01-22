@@ -67,7 +67,7 @@
     "ciclo": "Intermediário",
     "vagas": "25",
     "local": "Sala",
-    "ementa": ""
+    "ementa": "DD008_SociedadeD_ModaEmRevista"
 }, {
     "code": "DD019",
     "siga": "Tecnologia A",
@@ -87,7 +87,7 @@
     "ciclo": "Intermediário",
     "vagas": "25",
     "local": "Sala",
-    "ementa": ""
+    "ementa": "DD021_TecnologiaC_ComunicacaoUrbana"
 }, {
     "code": "DD025",
     "siga": "Tecnologia G",
@@ -147,7 +147,7 @@
     "ciclo": "Intermediário",
     "vagas": "20",
     "local": "Auditório",
-    "ementa": ""
+    "ementa": "DD053_SociedadeI_DesigndePosterese Cartazes"
 }, {
     "code": "DD055",
     "siga": "Sociedade L",
@@ -167,7 +167,7 @@
     "ciclo": "Intermediário",
     "vagas": "30",
     "local": "Sala",
-    "ementa": ""
+    "ementa": "DD056_SociedadeM_DesigndeJogos"
 }, {
     "code": "DD058",
     "siga": "Sociedade O",
@@ -177,7 +177,7 @@
     "ciclo": "Avançado",
     "vagas": "25",
     "local": "Sala",
-    "ementa": ""
+    "ementa": "DD058_SociedadeO_DesigneAntropologia"
 }, {
     "code": "DD061",
     "siga": "Sociedade R",
@@ -187,7 +187,7 @@
     "ciclo": "Intermediário",
     "vagas": "30",
     "local": "Sala",
-    "ementa": ""
+    "ementa": "DD061_SociedadeR_EmpreendendoNegociosInovadoresemDesignnaEconomiaCriativa"
 }, {
     "code": "DD069",
     "siga": "Ciência M",
@@ -217,7 +217,7 @@
     "ciclo": "Básico",
     "vagas": "30",
     "local": "Sala",
-    "ementa": ""
+    "ementa": "DD073_CienciaQ_MetodologiaeDesenvolvimentodeProduto"
 }, {
     "code": "DD080",
     "siga": "Tecnologia J",
@@ -237,7 +237,7 @@
     "ciclo": "Intermediário",
     "vagas": "25",
     "local": "Sala",
-    "ementa": ""
+    "ementa": "DD084_TecnologiaO_MateriaiseProcessos"
 }, {
     "code": "DD085",
     "siga": "Tecnologia P",
@@ -267,7 +267,7 @@
     "ciclo": "Intermediário",
     "vagas": "25",
     "local": "Sala",
-    "ementa": ""
+    "ementa": "DD092_EsteticaH_PlaygroundPráticasdeEspaço"
 }, {
     "code": "DD093",
     "siga": "Estética I",
@@ -277,7 +277,7 @@
     "ciclo": "Intermediário",
     "vagas": "25",
     "local": "Sala",
-    "ementa": ""
+    "ementa": "DD093_EsteticaI_PlanejamentodeEmbalagem"
 }, {
     "code": "DD094",
     "siga": "Estética J",
@@ -287,7 +287,7 @@
     "ciclo": "Intermediário",
     "vagas": "25",
     "local": "Sala",
-    "ementa": ""
+    "ementa": "DD094_EsteticaJ_DesignComTipos.pdf"
 }, {
     "code": "DD095",
     "siga": "Estética L",
@@ -307,7 +307,7 @@
     "ciclo": "Básico",
     "vagas": "25",
     "local": "Sala",
-    "ementa": ""
+    "ementa": "DD096_EsteticaM_IdentidadeVisual.pdf"
 }, {
     "code": "DD101",
     "siga": "Estética R",
@@ -317,7 +317,7 @@
     "ciclo": "Básico",
     "vagas": "25",
     "local": "Sala",
-    "ementa": ""
+    "ementa": "DD101_EsteticaR_MetodologiaVisua"
 }, {
     "code": "DD102",
     "siga": "Estética S",
@@ -327,7 +327,7 @@
     "ciclo": "Intermediário",
     "vagas": "25",
     "local": "Sala",
-    "ementa": ""
+    "ementa": "DD102_EsteticaS_LinguagemdasCores"
 }, {
     "code": "DD106",
     "siga": "Ciência K",
@@ -337,7 +337,7 @@
     "ciclo": "Básico",
     "vagas": "25",
     "local": "Sala",
-    "ementa": ""
+    "ementa": "DD106_CienciaK_ComunicacaoeModa"
 }, {
     "code": "DD117",
     "siga": "Sociedade W",
@@ -357,7 +357,7 @@
     "ciclo": "Intermediário",
     "vagas": "30",
     "local": "EaD",
-    "ementa": ""
+    "ementa": "DD124_CienciaW_DesignComoPensamento"
 }, {
     "code": "DD126",
     "siga": "Ciência Z",
@@ -366,7 +366,7 @@
     "teacher": "Solange Coutinho e Silvio Campello",
     "ciclo": "Intermediário",
     "vagas": "20",
-    "local": "EaD",
+    "local": "Sala",
     "ementa": ""
 }, {
     "code": "DD128",
@@ -397,7 +397,7 @@
     "ciclo": "Intermediário",
     "vagas": "25",
     "local": "Sala",
-    "ementa": ""
+    "ementa": "DD109_SociedadeK_ArtefatosNarrativos"
 }, {
     "code": "DD138",
     "siga": "Estética Z",
