@@ -57,7 +57,7 @@
     "ciclo": "Intermediário",
     "vagas": "30",
     "local": "Sala",
-    "ementa": ""
+    "ementa": "DD006_SociedadeB_ModaeCinema"
 }, {
     "code": "DD008",
     "siga": "Sociedade D",
@@ -66,7 +66,7 @@
     "teacher": "Simone Barros",
     "ciclo": "Intermediário",
     "vagas": "25",
-    "local": "Sala",
+    "local": "EaD",
     "ementa": "DD008_SociedadeD_ModaEmRevista"
 }, {
     "code": "DD019",
@@ -77,7 +77,7 @@
     "ciclo": "Intermediário",
     "vagas": "30",
     "local": "Sala",
-    "ementa": ""
+    "ementa": "DD019_TecnologiaA_TecnologiaTextileSuperficieAplicadaaModa"
 }, {
     "code": "DD021",
     "siga": "Tecnologia C",
@@ -97,7 +97,7 @@
     "ciclo": "Intermediário",
     "vagas": "25",
     "local": "Sala",
-    "ementa": ""
+    "ementa": "DD025_TecnologiaG_HQImpressoeDigital"
 }, {
     "code": "DD027",
     "siga": "Estética B",
@@ -107,7 +107,7 @@
     "ciclo": "Avançado",
     "vagas": "25",
     "local": "Sala",
-    "ementa": ""
+    "ementa": "DD027_EsteticaB_DesigndeEmbalagensSustentaveis"
 }, {
     "code": "DD029",
     "siga": "Estética D",
@@ -145,7 +145,7 @@
     "name": "Design de Posters e Cartazes",
     "teacher": "Hans Waechter",
     "ciclo": "Intermediário",
-    "vagas": "20",
+    "vagas": "25",
     "local": "Auditório",
     "ementa": "DD053_SociedadeI_DesigndePostereseCartazes"
 }, {
@@ -307,7 +307,7 @@
     "ciclo": "Básico",
     "vagas": "25",
     "local": "Sala",
-    "ementa": "DD096_EsteticaM_IdentidadeVisual.pdf"
+    "ementa": "DD096_EsteticaM_IdentidadeVisual"
 }, {
     "code": "DD101",
     "siga": "Estética R",
@@ -317,7 +317,7 @@
     "ciclo": "Básico",
     "vagas": "25",
     "local": "Sala",
-    "ementa": "DD101_EsteticaR_MetodologiaVisua"
+    "ementa": "DD101_EsteticaR_MetodologiaVisual"
 }, {
     "code": "DD102",
     "siga": "Estética S",
@@ -336,8 +336,18 @@
     "teacher": "Simone Barros",
     "ciclo": "Básico",
     "vagas": "25",
-    "local": "Sala",
+    "local": "EaD",
     "ementa": "DD106_CienciaK_ComunicacaoeModa"
+}, {
+    "code": "DD109",
+    "siga": "Sociedade K",
+    "eixo": "sociedade",
+    "name": "Artefatos Narrativos: Recolhimentos Orais",
+    "teacher": "Sílvio Campello",
+    "ciclo": "Intermediário",
+    "vagas": "25",
+    "local": "Sala",
+    "ementa": "DD109_SociedadeK_ArtefatosNarrativos"
 }, {
     "code": "DD117",
     "siga": "Sociedade W",
@@ -377,7 +387,7 @@
     "ciclo": "Intermediário",
     "vagas": "25",
     "local": "Sala",
-    "ementa": ""
+    "ementa": "DD128_TecnologiaV_DesigndeMediaComplexidade"
 }, {
     "code": "DD129",
     "siga": "Tecnologia W",
@@ -387,7 +397,7 @@
     "ciclo": "Básico",
     "vagas": "25",
     "local": "Sala",
-    "ementa": ""
+    "ementa": "DD129_TecnologiaW_DesigndeBaixaComplexidade"
 }, {
     "code": "DD136",
     "siga": "Estética X",
