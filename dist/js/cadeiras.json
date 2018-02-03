@@ -359,7 +359,7 @@
     "local": "Sala",
     "ementa": ""
 }, {
-    "code": "DD124",
+    "code": "DD123",
     "siga": "Ciência W",
     "eixo": "ciencia",
     "name": "Design como Pensamento",
@@ -367,7 +367,7 @@
     "ciclo": "Intermediário",
     "vagas": "30",
     "local": "EaD",
-    "ementa": "DD124_CienciaW_DesignComoPensamento"
+    "ementa": "DD123_CienciaW_DesignComoPensamento"
 }, {
     "code": "DD126",
     "siga": "Ciência Z",
