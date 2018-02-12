@@ -29,7 +29,7 @@ function getDisciplina(data) {
                     <p class="ciclo">Ciclo ${data.ciclo}</p>
                     <p class="vagas">${data.vagas} vagas</p>
                     <p class="local">${data.local}</p>
-                    <a href="ementas/${data.ementa}.pdf" target="_blank">
+                    <a href="ementas/${data.ementa}.pdf" download>
                         <button>Ementa</button>
                     </a>
                 </div>
