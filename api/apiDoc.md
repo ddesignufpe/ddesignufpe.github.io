@@ -21,69 +21,28 @@ The API root URL: https://us-central1-ddesign-3b3a1.cloudfunctions.net/api/
 
 ### 1. Get Courses
 
-    This method returns all courses
+This method returns all courses
 
-    **REQUEST**
+**REQUEST**
 
-    | Method | URL          |
-    |--------|--------------|
-    | GET    | api/cadeiras |
-
-
-    **RESPONSE**
-
-    | Status | Response                                                                        |
-    |--------|---------------------------------------------------------------------------------|
-    | 200    | Response will be an object containing the list of recipes (array) - [Example 1] |
-    | 500    | {error: 'Courses can not be loaded', code: 'ECF01'}                             |
+| Method | URL          |
+|--------|--------------|
+| GET    | api/cadeiras |
 
 
-    Example 1:
+**RESPONSE**
 
-    ```Json
-    {
-        "-L64bB8Navv2lEWmDlEA": {
-            "ciclo": "Básico",
-            "code": "DD001",
-            "eixo": "obrigatorio",
-            "ementa": "",
-            "local": "Auditório",
-            "name": "História do Design",
-            "siga": "",
-            "teacher": "Oriana Duarte",
-            "vagas": "40"
-        },
-        "-L64bBKbhP9RPs4BZ4v9": {...},
-        "-L64bBX4Kxr0T5cKaeuc": {...}, 
-        ...
-    }   
-    
-    ```
+| Status | Response                                                                        |
+|--------|---------------------------------------------------------------------------------|
+| 200    | Response will be an object containing the list of recipes (array) - [Example 1] |
+| 500    | {error: 'Courses can not be loaded', code: 'ECF01'}                             |
 
-### 2. Get Courses by Key
 
-    This method returns a specific course, which was provided its key
+Example 1:
 
-    **REQUEST**
-
-    | Method | URL                        |
-    |--------|----------------------------|
-    | GET    | api/cadeiras/<key_cadeira> |
-
-    | Type      | Params        | Values |
-    |-----------|---------------|--------|
-    | URL_PARAM | <key_cadeira> | string |
-
-    **RESPONSE**
-
-    | Status | Response                                           |
-    |--------|----------------------------------------------------|
-    | 200    | Response will be an object - [Example 2]           |
-    | 404    | {error: 'Course not found'}                        |
-    | 500    | {error: 'Course can not be loaded', code: 'ECF02'} |
-
-    ```Json
-    {
+```Json
+{
+    "-L64bB8Navv2lEWmDlEA": {
         "ciclo": "Básico",
         "code": "DD001",
         "eixo": "obrigatorio",
@@ -93,8 +52,49 @@ The API root URL: https://us-central1-ddesign-3b3a1.cloudfunctions.net/api/
         "siga": "",
         "teacher": "Oriana Duarte",
         "vagas": "40"
-    }
-    ```
+    },
+    "-L64bBKbhP9RPs4BZ4v9": {...},
+    "-L64bBX4Kxr0T5cKaeuc": {...}, 
+    ...
+}   
+
+```
+
+### 2. Get Courses by Key
+
+This method returns a specific course, which was provided its key
+
+**REQUEST**
+
+| Method | URL                        |
+|--------|----------------------------|
+| GET    | api/cadeiras/<key_cadeira> |
+
+| Type      | Params        | Values |
+|-----------|---------------|--------|
+| URL_PARAM | <key_cadeira> | string |
+
+**RESPONSE**
+
+| Status | Response                                           |
+|--------|----------------------------------------------------|
+| 200    | Response will be an object - [Example 2]           |
+| 404    | {error: 'Course not found'}                        |
+| 500    | {error: 'Course can not be loaded', code: 'ECF02'} |
+
+```Json
+{
+    "ciclo": "Básico",
+    "code": "DD001",
+    "eixo": "obrigatorio",
+    "ementa": "",
+    "local": "Auditório",
+    "name": "História do Design",
+    "siga": "",
+    "teacher": "Oriana Duarte",
+    "vagas": "40"
+}
+```
 
 ## Conventions
   * **Status** - HTTP status code of response.
