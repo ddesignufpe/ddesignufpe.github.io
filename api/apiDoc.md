@@ -19,8 +19,9 @@ The API root URL: https://us-central1-ddesign-3b3a1.cloudfunctions.net/api/
 
 ## Methods
 
-1. Get Courses
-This method returns all courses
+### 1. Get Courses
+
+    This method returns all courses
 
     **REQUEST**
 
@@ -59,8 +60,9 @@ This method returns all courses
     
     ```
 
-2. Get Courses by Key
-This method returns a specific course, which was provided its key
+### 2. Get Courses by Key
+
+    This method returns a specific course, which was provided its key
 
     **REQUEST**
 
