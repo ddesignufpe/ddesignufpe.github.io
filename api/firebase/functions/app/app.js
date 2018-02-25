@@ -17,18 +17,20 @@ const db = admin.database();
 app.use(cors);
 app.use('/cadeiras', cadeiras);
 
-// Routes
+// Api Hello World
 app.get('/', function(req, res){
-    res.status(200).send({menssage: "Welcome to dDesign API!"});
+    res.status(200).send({menssage: "Welcome to dDesign API! ~ Version: 1.0.0"});
 });
 
+// Routes - Cadeiras
 cadeiras.get('/', function(req, res) {
     db.ref('/cadeiras').once('value', snapshot => {
         var data = snapshot.val();
         res.status(200).send(data);
     }, errorObject => {
         console.log("GET /cadeiras -> The read failed: " + errorObject.code);
-        res.sendStatus(404);
+        menssage = {error: 'Courses can not be loaded', code: 'ECF01'};
+        res.status(500).send(menssage);
     });  
 });
 
@@ -38,13 +40,15 @@ cadeiras.get('/:id', function(req, res) {
     db.ref(dbRef).once('value', snapshot =>{
         var data = snapshot.val();
         if (data === null){
-            res.sendStatus(404);
+            menssage = {error: 'Course not found'};
+            res.status(404).send(menssage);
         } else {
             res.status(200).send(data);
         }
     }, errorObject => {
         console.log("GET /cadeiras -> The read failed: " + errorObject.code);
-        res.sendStatus(404);
+        menssage = {error: 'Course can not be loaded', code: 'ECF02'};
+        res.status(500).send(menssage);
     });
 });
 
