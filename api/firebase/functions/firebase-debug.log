@@ -1,0 +1,35 @@
+[debug] [2018-02-24T19:48:39.994Z] ----------------------------------------------------------------------
+[debug] [2018-02-24T19:48:39.996Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Italo\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve --only functions:api
+[debug] [2018-02-24T19:48:39.996Z] CLI Version:   3.17.4
+[debug] [2018-02-24T19:48:39.996Z] Platform:      win32
+[debug] [2018-02-24T19:48:39.997Z] Node Version:  v8.7.0
+[debug] [2018-02-24T19:48:39.997Z] Time:          Sat Feb 24 2018 16:48:39 GMT-0300 (Hora Padrão da Bahia)
+[debug] [2018-02-24T19:48:39.997Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-02-24T19:48:40.009Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-02-24T19:48:40.010Z] > authorizing via signed-in user
+[debug] [2018-02-24T19:48:40.013Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/ddesign-3b3a1  
+  
+ Sat Feb 24 2018 16:48:40 GMT-0300 (Hora Padrão da Bahia)
+[debug] [2018-02-24T19:48:41.063Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-24T19:48:41.065Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/ddesign-3b3a1/tokens  
+  
+ Sat Feb 24 2018 16:48:41 GMT-0300 (Hora Padrão da Bahia)
+[debug] [2018-02-24T19:48:41.950Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Italo\Desktop\firebase'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-02-24T19:48:42.551Z] Fetching environment
+[debug] [2018-02-24T19:48:42.552Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/ddesign-3b3a1  
+  
+ Sat Feb 24 2018 16:48:42 GMT-0300 (Hora Padrão da Bahia)
+[debug] [2018-02-24T19:48:42.552Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/ddesign-3b3a1/apiKeys  
+  
+ Sat Feb 24 2018 16:48:42 GMT-0300 (Hora Padrão da Bahia)
+[debug] [2018-02-24T19:48:43.653Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-24T19:48:43.867Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-24T19:48:43.868Z] Starting @google-cloud/functions-emulator
+[debug] [2018-02-24T19:48:45.999Z] Parsing function triggers
+[info] +  functions: helloWorld: http://localhost:5000/ddesign-3b3a1/us-central1/helloWorld
+[info] +  functions: api: http://localhost:5000/ddesign-3b3a1/us-central1/api
