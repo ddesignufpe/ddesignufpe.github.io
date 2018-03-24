@@ -26,8 +26,9 @@ h1,h2,h3,h4, h5, h6 {
 
     .logo {
     font-size: 20px;
-    line-height: 40px;
-    font-family: $fontheading;    
+    line-height: 30px;
+    font-family: $fontheading;  
+    color: $maincolor;  
     }
 }
 
@@ -138,6 +139,12 @@ dt {
       color: $maincolor;
       border-bottom:2px solid darken($color: $sidecolor, $amount: 5);
     }
+  }
+
+  @include mobile {
+      position: fixed;
+      bottom: 0;
+      z-index: 9999;
   }
 }
 
@@ -269,8 +276,27 @@ dt {
     padding: 20px;
 }
 
+
+@include mobile {
+    .manha>div,
+    .tarde>div {
+        grid-column: 1/6;
+    }
+}
+
 // FOOTER
 
 #footer{
     background: $maincolor;
+}
+
+// Scroll to top
+.scrollup {
+    padding: 20px 25px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: none;
+    color: white;
+    background-color: $maincolor;
 }
