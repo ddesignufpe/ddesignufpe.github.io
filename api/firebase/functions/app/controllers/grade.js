@@ -58,7 +58,7 @@ exports.readAll = (req, res) => {
                 console.log(err);
                 res.status(500).send({ message: 'Error na query', code: 'EG02' });
             } else {
-                if (grades.length == 0) {
+                if (grades.length === 0) {
                     res.status(200).send({ message: 'Não existem cadeiras cadastradas' });
                 } else {
                     res.status(200).send(grades);

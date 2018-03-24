@@ -43,7 +43,7 @@ exports.readAll = (req, res) => {
         if (err) {
             res.status(500).send({message: 'Error na query', code: 'EP02'});
         } else {
-            if (professores.length == 0){
+            if (professores.length === 0){
                 res.status(200).send({message: 'Não existem professores cadastrados'});                
             } else {
                 res.status(200).send(professores);

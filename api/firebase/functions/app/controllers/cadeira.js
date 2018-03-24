@@ -49,7 +49,7 @@ exports.readAll = (req, res) => {
         if (err) {
             res.status(500).send({ message: 'Error na query', code: 'EC02' });
         } else {
-            if (cadeiras.length == 0) {
+            if (cadeiras.length === 0) {
                 res.status(200).send({ message: 'Não existem cadeiras cadastradas' });
             } else {
                 res.status(200).send(cadeiras);
