@@ -5,9 +5,10 @@ const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
  
 gulp.task('sass', function () {
+  console.log("Deu");
   return gulp.src('./src/scss/**/*.scss')
   .pipe(sass({outputStyle: 'compressed'}))
-  .pipe(gulp.dest('./dist/css'))
+  .pipe(gulp.dest('./dist/css'))  
   .pipe(browserSync.stream());
 });
  
@@ -17,7 +18,8 @@ gulp.task('serve', function () {
     server: "./"
   });
 
-  gulp.watch("./src/scss/**/*.scss", ['sass']);  
+  gulp.watch("./src/scss/**/*.scss", ['sass']);
+
   gulp.watch("./dist/**/*.scss").on('change', browserSync.reload);
   gulp.watch("./**/*.html").on('change', browserSync.reload);
   gulp.watch("./dist/**/*.js").on('change', browserSync.reload);
