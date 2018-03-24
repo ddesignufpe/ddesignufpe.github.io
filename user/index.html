@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="dDesign">
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -18,6 +18,7 @@
     <title>dDesign.ufpe</title>
     <link rel="stylesheet" href="dist/css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="dist/css/datatables.min.css"
 </head>
 
 <body>
@@ -33,18 +34,17 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item  active">
-                            <a class="nav-link" href="index.html">Home
-                            </a>
+                        <li class="nav-item">
+                            <a class="nav-link" ui-sref="main" ui-sref-active="active">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="grade.html">Grade Atual</a>
+                            <a class="nav-link" ui-sref="grade" ui-sref-active="active">Grade Atual</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="listagrupos.html">Lista de Grupos</a>
+                            <a class="nav-link" ui-sref="listagrupos" ui-sref-active="active">Lista de Grupos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="docentes.html">Docentes</a>
+                            <a class="nav-link" ui-sref="docentes" ui-sref-active="active">Docentes</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Sobre</a>
@@ -53,36 +53,43 @@
                 </div>
             </nav>
         </section>
-        <section id="corpo">
-            <div class="container">
-                <h1 class="display-4">Fluid jumbotron</h1>
-                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-            </div>
-    </div>
-    </section>
-    <section id="footer">
-        <div class="container d-flex justify-content-between">
-            <div class="redes">
-                <i class="fab fa-github mr-1"></i>
-                <a>View on Github</a>
-            </div>
-            <div class="copyright">Made With
-                <3 by Jonathas Souza & Italo Sousa</div>
-            </div>
-    </section>
-    </div>
-    <a href="#" class="scrollup">
-        <i class="fas fa-arrow-circle-up fa-2x"></i>
-    </a>
+        <!-- conteudo -->
+        <ui-view></ui-view>
+        <!-- fim do conteudo -->
+        <section id="footer">
+            <div class="container d-flex justify-content-between">
+                <div class="redes">
+                    <i class="fab fa-github mr-1"></i>
+                    <a>View on Github</a>
+                </div>
+                <div class="copyright">Made With
+                    <3 by Jonathas Souza & Italo Sousa</div>
+                </div>
+        </section>
+        </div>
+        <a href="#" class="scrollup">
+            <i class="fas fa-arrow-circle-up fa-2x"></i>
+        </a>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
-        crossorigin="anonymous"></script>
-    <script src="dist/js/scripts.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+            crossorigin="anonymous"></script>
+        <script type="text/javascript" src="dist/js/datatables.min.js"></script>
+        <script src="dist/js/scripts.js"></script>
+        <!-- ANGULAR -->
+        <script src="node_modules/angular/angular.min.js"></script>
+        <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+        <!-- APP -->
+        <script src="app/app.js"></script>
+        <script src="app/router.js"></script>
+        <script src="app/controllers/main.controller.js"></script>
+        <script src="app/controllers/grade.controller.js"></script>
+        <script src="app/controllers/docentes.controller.js"></script>
+        <script src="app/controllers/listagrupos.controller.js"></script>
 </body>
 
 </html>
