@@ -14,7 +14,7 @@ const CadeiraSchema = new Schema({
     vagasModificacaoOutros: Number,
     local: String
 }, {
-    timestamps: true
-});
+        timestamps: true
+    });
 
 module.exports = mongoose.model('Cadeira', CadeiraSchema);

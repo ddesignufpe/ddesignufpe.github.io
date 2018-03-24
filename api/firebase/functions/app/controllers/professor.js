@@ -6,25 +6,36 @@ exports.create = (req, res) => {
     }
 
     let query = req.body;
+    let ProfessorData = {};
+    let pass = false;
 
-    let ProfessorData = {
-        nome: query.nome,
-        email: query.email,
-        bio: query.bio,
-        lattes: query.lattes,
-        area: query.area
+    try {
+        ProfessorData = {
+            nome: query.nome,
+            email: query.email,
+            bio: query.bio,
+            lattes: query.lattes,
+            area: query.area
+        };
+        pass = true;
+    } catch (err) {
+        pass = false;       
     }
+    
+    if (pass) {
+        let professor = new Professor(ProfessorData);
 
-    let professor = new Professor(ProfessorData);
-
-    professor.save((err, data) => {
-        if (err) {
-            console.log(err);
-            res.status(500).send({message: 'Não foi possível criar este professor', code: 'EP01'});
-        } else {
-            res.status(201).send(data);
-        }
-    });
+        professor.save((err, data) => {
+            if (err) {
+                console.log(err);
+                res.status(500).send({message: 'Não foi possível criar este professor', code: 'EP01'});
+            } else {
+                res.status(201).send(data);
+            }
+        }); 
+    } else {
+        res.status(400).send({ message: 'Existem campos não preenchidos' });        
+    }
 }
 
 exports.readAll = (req, res) => {

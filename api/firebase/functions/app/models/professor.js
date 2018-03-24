@@ -9,7 +9,7 @@ const ProfessorSchema = new Schema({
     area: String,
     foto: String
 }, {
-    timestamps: true
-});
+        timestamps: true
+    });
 
 module.exports = mongoose.model('Professor', ProfessorSchema);

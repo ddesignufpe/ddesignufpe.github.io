@@ -1,45 +1,56 @@
-const Cadeira   = require('../models/cadeira');
+const Cadeira = require('../models/cadeira');
 
 exports.create = (req, res) => {
     if (!req.body) {
-        res.status(400).send({message: 'O conteúdo não pode ser vazio'});
+        res.status(400).send({ message: 'O conteúdo não pode ser vazio' });
     }
 
     let query = req.body;
+    let cadeiraData = {};
+    let pass = false;
 
-    let cadeiraData = {
-        codigo: query.codigo,
-        nomePerfil: query.nomePerfil,
-        nomeCadeira: query.nomeCadeira,
-        professor: query.professor,
-        eixo: query.eixo,
-        ementa: query.ementa,
-        nivel: query.nivel,
-        vagasMatricula: query.vagasMatricula,
-        vagasModificacaoDesign: query.vagasModificacaoDesign,
-        vagasModificacaoOutros: query.vagasModificacaoOutros,
-        local: query.local
-    };
+    try {
+        cadeiraData = {
+            codigo: query.codigo,
+            nomePerfil: query.nomePerfil,
+            nomeCadeira: query.nomeCadeira,
+            professor: query.professor,
+            eixo: query.eixo,
+            ementa: query.ementa,
+            nivel: query.nivel,
+            vagasMatricula: query.vagasMatricula,
+            vagasModificacaoDesign: query.vagasModificacaoDesign,
+            vagasModificacaoOutros: query.vagasModificacaoOutros,
+            local: query.local
+        };
+        pass = true;
+    } catch (err) {
+        pass = false;
+    }
 
-    let cadeira = new Cadeira(cadeiraData);
+    if (pass) {
+        let cadeira = new Cadeira(cadeiraData);
 
-    cadeira.save((err, data) => {
-        if (err) {
-            console.log(err);
-            res.status(500).send({message: 'Não foi possível criar esta cadeira', code: 'EC01'});
-        } else {
-            res.status(201).send(data);
-        }
-    });
+        cadeira.save((err, data) => {
+            if (err) {
+                console.log(err);
+                res.status(500).send({ message: 'Não foi possível criar esta cadeira', code: 'EC01' });
+            } else {
+                res.status(201).send(data);
+            }
+        });
+    } else {
+        res.status(400).send({ message: 'Existem campos não preenchidos' });        
+    }
 }
 
 exports.readAll = (req, res) => {
     Cadeira.find((err, cadeiras) => {
         if (err) {
-            res.status(500).send({message: 'Error na query', code: 'EC02'});
+            res.status(500).send({ message: 'Error na query', code: 'EC02' });
         } else {
-            if (cadeiras.length == 0){
-                res.status(200).send({message: 'Não existem cadeiras cadastradas'});                
+            if (cadeiras.length == 0) {
+                res.status(200).send({ message: 'Não existem cadeiras cadastradas' });
             } else {
                 res.status(200).send(cadeiras);
             }
@@ -52,15 +63,15 @@ exports.readOne = (req, res) => {
         if (err) {
             console.log(err);
             if (err.kind === 'ObjectId') {
-                res.status(404).send({message: 'Cadeira não encontrada'});
+                res.status(404).send({ message: 'Cadeira não encontrada' });
             } else {
-                res.status(500).send({message: 'Erro ao tentar encontrar a cadeira', code: 'EC03'});
+                res.status(500).send({ message: 'Erro ao tentar encontrar a cadeira', code: 'EC03' });
             }
         } else {
             if (!cadeira) {
-                res.status(404).send({message: 'Cadeira não encontrada'});                    
+                res.status(404).send({ message: 'Cadeira não encontrada' });
             } else {
-                res.status(200).send(cadeira);                    
+                res.status(200).send(cadeira);
             }
         }
     });
@@ -71,14 +82,14 @@ exports.updade = (req, res) => {
         if (err) {
             console.log(err);
             if (err.kind === 'ObjectId') {
-                res.status(404).send({message: 'Cadeira não encontrada'});
+                res.status(404).send({ message: 'Cadeira não encontrada' });
             }
-            res.status(500).send({message: 'Erro ao tentar encontrar a cadeira', code: 'EC04'});
-        } 
+            res.status(500).send({ message: 'Erro ao tentar encontrar a cadeira', code: 'EC04' });
+        }
 
         if (!cadeira) {
-            res.status(404).send({message: 'Cadeira não encontrada'});
-        } 
+            res.status(404).send({ message: 'Cadeira não encontrada' });
+        }
 
         let query = req.body;
 
@@ -93,10 +104,10 @@ exports.updade = (req, res) => {
         cadeira.vagasModificacaoDesign = query.vagasModificacaoDesign || cadeira.vagasModificacaoDesign;
         cadeira.vagasModificacaoOutros = query.vagasModificacaoOutros || cadeira.vagasModificacaoOutros;
         cadeira.local = query.local || cadeira.local;
-        
+
         cadeira.save((err, data) => {
             if (err) {
-                res.status(500).send({message: 'Erro ao tentar alterar a cadeira', code: 'EC05'});                    
+                res.status(500).send({ message: 'Erro ao tentar alterar a cadeira', code: 'EC05' });
             } else {
                 res.status(200).send(data);
             }
@@ -110,16 +121,16 @@ exports.delete = (req, res) => {
         if (err) {
             console.log(err);
             if (err.kind === 'ObjectId') {
-                res.status(404).send({message: 'Cadeira não encontrada'});
+                res.status(404).send({ message: 'Cadeira não encontrada' });
             }
-            res.status(500).send({message: 'Erro ao tentar encontrar a cadeira', code: 'EC06'});
+            res.status(500).send({ message: 'Erro ao tentar encontrar a cadeira', code: 'EC06' });
         }
 
         if (!cadeira) {
-            res.status(404).send({message: 'Cadeira não encontrada'});
+            res.status(404).send({ message: 'Cadeira não encontrada' });
         }
 
-        res.status(200).send({message: 'Cadeira deletada com sucesso'})
+        res.status(200).send({ message: 'Cadeira deletada com sucesso' });
 
     });
 }
