@@ -5,8 +5,6 @@
 ////////////////////////////////////////////// Geral
 
 body {
-padding-top: 10vh;
-padding-bottom: 5vh;
 font-family: $fontbody2;
 }
 
@@ -22,6 +20,7 @@ h1,h2,h3,h4, h5, h6 {
 #header {
     color: $maincolor;
     border-bottom: 1px solid $maincolor;
+    margin-top: 5vh;
     margin-bottom: 15px;
 
     .logo {
@@ -68,7 +67,7 @@ h1,h2,h3,h4, h5, h6 {
 
 ////// Sidebar
 
-.legenda {
+.sidebar {
     
     border-right: 1px $maincolor solid;
 
@@ -77,28 +76,38 @@ h1,h2,h3,h4, h5, h6 {
         @include textobonitinho(4px, 500);
         font-size: 18px;
         border-bottom: 1px solid gray;
+        margin-top: 25px;
+    }
+
+    .acessibilidade h4 {
+        margin-top: 0px;  
     }
 
     
 }
+.legenda {
+    
+    dt {
+        display: block;
+        font-size: 13px;
+        font-weight: 400;
+        margin: 0px 0px 5px 0px;
+    }
 
-dt {
-    display: block;
-    font-size: 13px;
-    font-weight: 400;
-    margin: 0px 0px 5px 0px;
 }
 
-@each $eixo, $cor in $cores {
-    .legenda .#{$eixo} span {
-        display: inline-block;
-        width: 10%;
-        height: 10px;
-        margin-right: 10px;
-        background: $cor;
-        @include border-radius(5px);
-    }
-    }
+    @each $eixo, $cor in $cores {
+    .legenda dt.#{$eixo} span {
+            display: inline-block;
+            width: 10%;
+            height: 10px;
+            margin-right: 10px;
+            background: $cor;
+            @include border-radius(5px);
+        }
+        }
+
+
 
 
 // Grid Grupos de Estudo
@@ -284,10 +293,38 @@ dt {
     }
 }
 
+
+/////////////// Docentes
+
+
+.professor {
+    .card-text {
+    font-size: 13px;
+    margin-bottom: 8px;
+    }
+    a {
+     font-size: 13px;   
+    }
+}
+
+
+////////////////// Tabela Grupos de Estudo
+
+#listagrupos {
+    font-size: 12px;
+}
+
 // FOOTER
 
 #footer{
-    background: $maincolor;
+    padding: 15px 0px;
+    border-top: 1px solid $maincolor;
+    margin-bottom: 20px;
+
+    .copyright {
+        font-size: 12px;
+        color: gray;
+    }
 }
 
 // Scroll to top
