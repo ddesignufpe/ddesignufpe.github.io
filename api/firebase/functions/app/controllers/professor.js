@@ -20,7 +20,7 @@ exports.create = (req, res) => {
     professor.save((err, data) => {
         if (err) {
             console.log(err);
-            res.status(500).send({message: 'Não foi possível criar este professor', code: 'EC01'});
+            res.status(500).send({message: 'Não foi possível criar este professor', code: 'EP01'});
         } else {
             res.status(201).send(data);
         }
@@ -30,7 +30,7 @@ exports.create = (req, res) => {
 exports.readAll = (req, res) => {
     Professor.find((err, professores) => {
         if (err) {
-            res.status(500).send({message: 'Error na query', code: 'EC02'});
+            res.status(500).send({message: 'Error na query', code: 'EP02'});
         } else {
             if (professores.length == 0){
                 res.status(200).send({message: 'Não existem professores cadastrados'});                
@@ -48,7 +48,7 @@ exports.readOne = (req, res) => {
             if (err.kind === 'ObjectId') {
                 res.status(404).send({message: 'Professor não encontrado'});
             } else {
-                res.status(500).send({message: 'Erro ao tentar encontrar o professor', code: 'EC03'});
+                res.status(500).send({message: 'Erro ao tentar encontrar o professor', code: 'EP03'});
             }
         } else {
             if (!professor) {
@@ -67,7 +67,7 @@ exports.updade = (req, res) => {
             if (err.kind === 'ObjectId') {
                 res.status(404).send({message: 'Professor não encontrado'});
             }
-            res.status(500).send({message: 'Erro ao tentar encontrar o professor', code: 'EC04'});
+            res.status(500).send({message: 'Erro ao tentar encontrar o professor', code: 'EP04'});
         } 
 
         if (!professor) {
@@ -84,7 +84,7 @@ exports.updade = (req, res) => {
         
         professor.save((err, data) => {
             if (err) {
-                res.status(500).send({message: 'Erro ao tentar alterar o professor', code: 'EC05'});
+                res.status(500).send({message: 'Erro ao tentar alterar o professor', code: 'EP05'});
             } else {
                 res.status(200).send(data);
             }
@@ -99,7 +99,7 @@ exports.delete = (req, res) => {
             if (err.kind === 'ObjectId') {
                 res.status(404).send({message: 'Professor não encontrado'});
             }
-            res.status(500).send({message: 'Erro ao tentar encontrar o professor', code: 'EC06'});
+            res.status(500).send({message: 'Erro ao tentar encontrar o professor', code: 'EP06'});
         }
 
         if (!professor) {

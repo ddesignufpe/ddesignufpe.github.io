@@ -24,5 +24,6 @@ app.get('/', (req, res) => {
 
 app.use('/cadeiras', routes.Cadeira);
 app.use('/professores', routes.Professor);
+app.use('/grades', routes.Grade);
 
 exports.backend = app;

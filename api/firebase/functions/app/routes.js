@@ -2,9 +2,11 @@ const express   = require('express');
 
 const cadeiraController     = require('./controllers/cadeira');
 const professorController   = require('./controllers/professor');
+const gradeController       = require('./controllers/grade');
 
 const Cadeira   = express.Router();
 const Professor = express.Router();
+const Grade     = express.Router();
 
 Cadeira.get('/:cadeiraId', cadeiraController.readOne);
 Cadeira.get('/', cadeiraController.readAll);
@@ -18,7 +20,11 @@ Professor.post('/', professorController.create);
 Professor.put('/:professorId', professorController.updade);
 Professor.delete('/:professorId', professorController.delete);
 
+Grade.get('/', gradeController.readAll);
+Grade.post('/', gradeController.create);
+
 module.exports = {
     Cadeira: Cadeira,
-    Professor: Professor
+    Professor: Professor,
+    Grade: Grade
 }
