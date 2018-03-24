@@ -22,6 +22,7 @@ app.get('/', (req, res) => {
     res.status(200).send({menssage: "Bem vindo a API dDesign! ~ Versao: 2.0.0"});
 });
 
-app.use('/cadeiras', routes.Cadeiras);
+app.use('/cadeiras', routes.Cadeira);
+app.use('/professores', routes.Professor);
 
 exports.backend = app;

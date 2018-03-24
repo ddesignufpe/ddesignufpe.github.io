@@ -1,14 +1,24 @@
 const express   = require('express');
-const cadeiraController  = require('./controllers/cadeira');
 
-const Cadeiras  = express.Router();
+const cadeiraController     = require('./controllers/cadeira');
+const professorController   = require('./controllers/professor');
 
-Cadeiras.get('/:cadeiraId', cadeiraController.findOne);
-Cadeiras.get('/', cadeiraController.findAll);
-Cadeiras.post('/', cadeiraController.create);
-Cadeiras.put('/:cadeiraId', cadeiraController.updade);
-Cadeiras.delete('/:cadeiraId', cadeiraController.delete);
+const Cadeira   = express.Router();
+const Professor = express.Router();
+
+Cadeira.get('/:cadeiraId', cadeiraController.readOne);
+Cadeira.get('/', cadeiraController.readAll);
+Cadeira.post('/', cadeiraController.create);
+Cadeira.put('/:cadeiraId', cadeiraController.updade);
+Cadeira.delete('/:cadeiraId', cadeiraController.delete);
+
+Professor.get('/:professorId', professorController.readOne);
+Professor.get('/', professorController.readAll);
+Professor.post('/', professorController.create);
+Professor.put('/:professorId', professorController.updade);
+Professor.delete('/:professorId', professorController.delete);
 
 module.exports = {
-    Cadeiras: Cadeiras
+    Cadeira: Cadeira,
+    Professor: Professor
 }

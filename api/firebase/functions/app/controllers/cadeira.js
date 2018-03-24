@@ -33,7 +33,7 @@ exports.create = (req, res) => {
     });
 }
 
-exports.findAll = (req, res) => {
+exports.readAll = (req, res) => {
     Cadeira.find((err, cadeiras) => {
         if (err) {
             res.status(500).send({message: 'Error na query', code: 'EC02'});
@@ -47,7 +47,7 @@ exports.findAll = (req, res) => {
     });
 }
 
-exports.findOne = (req, res) => {
+exports.readOne = (req, res) => {
     Cadeira.findById(req.params.cadeiraId, (err, cadeira) => {
         if (err) {
             console.log(err);
