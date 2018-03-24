@@ -3,54 +3,58 @@
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112800473-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112800473-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'UA-112800473-1');
-</script>
+        gtag('config', 'UA-112800473-1');
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Grade dDesign</title>
+    <title>dDesign.ufpe</title>
+    <link rel="stylesheet" href="dist/css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="dist/css/style.css">
-    <link rel="stylesheet" href="dist/css/grid.min.css">
 </head>
 
 <body>
-    <div class="fulfilling-square-spinner">
-        <div class="spinner-inner"></div>
-    </div>
-    <section id="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h1>Grade de Ofertas dDesign</h1>
-                    <h2>Semestre
-                        <strong>2018.1</strong>
-                    </h2>
+    <div class="container">
+        <section id="header">
+            <div class="row d-flex">
+                <div class="col-lg-5 logo" href="">
+                    <strong>dDesign</strong>.ufpe
                 </div>
-                <div class="col-md-7 col-sm-12">
-                    <p>Essa tabela está em versão beta. Nela estão dispostos os grupos de estudo ofertados no semestre
-                        <strong>2018.1</strong> além das ementas enviadas por cada professor.
-                        <strong>Boa Escolha!</strong>
-                    </p>
+                <div class="col-lg-3 align-self-end ml-auto">
+                    
                 </div>
             </div>
-
-        </div>
-    </section>
-    <section id="corpo">
-        <div class="container">
-            <div id="wrapper">
+        </section>
+        <section id="corpo">
+            <div class="container">
+                <div class="row titulo d-flex align-items-end">
+                    <div class="col-lg-5 col md 12">
+                        <h1>Grade de Ofertas</h1>
+                        <h4>2018.2</h4>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dicta tempore nobis quidem mollitia voluptate!
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-12 d-flex justify-content-end">
+                        <p>
+                            <button type="button" class="btn btn-outline-primary btn-sm"><i class="fas fa-arrow-alt-circle-down mr-2"></i>Baixar Versão em PDF</button>
+                        </p>
+                    </div>
+                </div>
                 <div class="row">
-                    <div id="sidebar" class="col-md-12 col-lg-3">
+                    <div class="col-lg-3 col-md-12 legenda">
                         <div id="getFixed">
                             <h4>Legenda</h4>
-                            <dl class="legenda">
+                            <dl>
                                 <dt class="obrigatorio">
                                     <span></span>Eixo Obrigatório | 1º Período</dt>
                                 <dt class="estetica">
@@ -80,7 +84,20 @@
                                 <!--Grupos de Estudo Manhã -->
                                 <div class="segunda">
                                     <div class="dias">Segunda</div>
-                                    <div id="DD053"></div>
+                                    <div class="grupo estetica">
+                                        <div class="codigos">
+                                            <span class="codigo">DD001</span>
+                                            <span class="nomeperfil">Estética Z</span>
+                                        </div>
+                                        <div class="info">
+                                            <p class="nomecadeira">Metodologia Visual</p>
+                                            <p class="professor">Hans Waechter</p>
+                                            <hr>
+                                            <span class="nivel">Ciclo Intermediário</span>
+                                            <span class="vagasmatricula">30 vagas</span>
+                                            <button>Ementa</button>
+                                        </div>
+                                    </div>
                                     <div id="DD005"></div>
                                     <div id="DD084"></div>
                                     <div id="DD073"></div>
@@ -164,7 +181,8 @@
                                         <div class="area">
                                             <h4>DP (Design de Produto)</h4>
                                             <div class="professor">
-                                                Amilton Andrade · Ana Andrade · Ana Emília · Débora Ferro · Leonardo Castillo · Paulo Silva · Virgínia Cavalcanti · Walter Franklin · Adailton Laporte
+                                                Amilton Andrade · Ana Andrade · Ana Emília · Débora Ferro · Leonardo Castillo · Paulo Silva · Virgínia Cavalcanti · Walter
+                                                Franklin · Adailton Laporte
                                             </div>
                                         </div>
                                         <div class="area">
@@ -196,23 +214,25 @@
                             </div>
                         </section>
                     </div>
-                </div>
-            </div>
-        </div>
 
-        </section>
-        <section id="footer">
-            <div class="container">
-                <div class="copyright">
-                    Made with ♥ by
-                    <a href="http://be.net/jonathasbsouza" target="_blank">Jônathas Souza</a>.
-                    <br> Source code on
-                    <a href="https://github.com/jonathasbsouza/gradeddesign" target="_blank">Github</a>.
+
                 </div>
             </div>
-        </section>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="dist/js/scripts.js"></script>
+    </div>
+    </section>
+    <section id="footer">
+        <div class="container">
+            Footer
+        </div>
+    </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+        crossorigin="anonymous"></script>
+
+
+    <script src="dist/js/scripts.js"></script>
 </body>
 
 </html>
