@@ -1,7 +1,3 @@
-$.ajaxSetup({
-    cache:false
-  });
-
 /*Gerar cadeiras
 from http://github.com/caiobsouza */
 window.onload = function () {
