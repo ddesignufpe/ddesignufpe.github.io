@@ -12,7 +12,6 @@ h1,h2,h3,h4, h5, h6 {
     font-family: $fontheading;
 }
 
-
 //////////////////////////////////////////// Seções
 
 ////////////// Header
@@ -36,6 +35,7 @@ h1,h2,h3,h4, h5, h6 {
 #corpo {
     
     padding-top: 10px;
+    min-height: 68vh;
 
 /////// Área de Titulo
 
@@ -60,6 +60,10 @@ h1,h2,h3,h4, h5, h6 {
 
     p {
         font-size: 12px;
+        margin-bottom: 0px;
+    }
+
+    &.docentes {
         margin-bottom: 0px;
     }
     }
@@ -297,13 +301,22 @@ h1,h2,h3,h4, h5, h6 {
 /////////////// Docentes
 
 
-.professor {
+.docente {
+
+    margin-top: 30px;
+    margin-bottom: 15px;
+
     .card-text {
     font-size: 13px;
     margin-bottom: 8px;
     }
     a {
      font-size: 13px;   
+    }
+
+    .card-body {
+        padding: 0px;
+        margin-top: 10px;
     }
 }
 
@@ -329,11 +342,21 @@ h1,h2,h3,h4, h5, h6 {
 
 // Scroll to top
 .scrollup {
-    padding: 20px 25px;
+    padding: 10px 13px;
     position: fixed;
     bottom: 50px;
     right: 50px;
+    @include border-radius(40px);
     display: none;
     color: white;
     background-color: $maincolor;
+    @include transition(0.15s ease-in);
+
+    &:hover {
+        background-color: mix(black, $maincolor, $dark);
+        color: rgba(255,255,255,0.5);
+        @include box-shadow(0px, 0px, 5px, rgba(0,0,0,0.3));
+        bottom: 53px;
+
+    }
 }

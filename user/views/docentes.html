@@ -1,6 +1,6 @@
 <section id="corpo">
     <div class="container">
-        <div class="row titulo d-flex align-items-end">
+        <div class="row titulo d-flex align-items-end docentes">
             <div class="col-lg-5 col md 12">
                 <h1>Docentes</h1>
             </div>
@@ -16,68 +16,20 @@
                 </p>
             </div>
         </div>
-        <div class="row mb-5">
-            <!-- Card Professor -->
-            <div class="col-lg-3">
-                <div class="card professor">
-                    <img class="card-img-top" src="http://placehold.it/300x250" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Hans Waechter</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Design de Informação</h6>
-                        <hr>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <p class="card-text email">
-                            <i class="fas fa-envelope fa-xs mr-1"></i> hans.wachter@ufpe.br</p>
-                        <a href="#" class="card-link">Lattes</a>
-                    </div>
-                </div>
+        <div class="row">
+            <div class="docente col-lg-3 col-md-6 col-sm-12" ng-repeat="docente in docentes">
+                        <img class="img-fluid" src="http://placehold.it/350x250" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">{{docente.nome}}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">{{docente.area}}</h6>
+                                <hr>
+                                <p class="card-text">{{docente.bio}}</p>
+                                <p class="card-text email">
+                                    <i class="fas fa-envelope fa-xs mr-1"></i>{{docente.email}}</p>
+                                <a href="{{docente.lattes}}" class="card-link">Lattes</a>
+                            </div>
             </div>
 
-            <div class="col-lg-3">
-                <div class="card professor">
-                    <img class="card-img-top" src="http://placehold.it/300x250" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Hans Waechter</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Design de Informação</h6>
-                        <hr>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <p class="card-text email">
-                            <i class="fas fa-envelope fa-xs mr-1"></i> hans.wachter@ufpe.br</p>
-                        <a href="#" class="card-link">Lattes</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3">
-                <div class="card professor">
-                    <img class="card-img-top" src="http://placehold.it/300x250" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Hans Waechter</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Design de Informação</h6>
-                        <hr>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <p class="card-text email">
-                            <i class="fas fa-envelope fa-xs mr-1"></i> hans.wachter@ufpe.br</p>
-                        <a href="#" class="card-link">Lattes</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3">
-                <div class="card professor">
-                    <img class="card-img-top" src="http://placehold.it/300x250" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Guilherme Ranoya</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Design Digital</h6>
-                        <hr>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <p class="card-text email">
-                            <i class="fas fa-envelope fa-xs mr-1"></i> hans.wachter@ufpe.br</p>
-                        <a href="#" class="card-link">Lattes</a>
-                        <a href="#" class="card-link">Slack</a>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>

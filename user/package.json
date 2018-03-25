@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@uirouter/angularjs": "^1.0.15",
-    "angular": "^1.6.9"
+    "angular": "^1.6.9",
+    "angular-page-loader": "^1.0.2"
   }
 }
