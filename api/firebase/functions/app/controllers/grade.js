@@ -20,7 +20,7 @@ exports.create = (req, res) => {
         };
         pass = true;
     } catch (err) {
-        pass: false;
+        pass = false;
     }
 
     if (pass) {
