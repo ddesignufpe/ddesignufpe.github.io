@@ -35,7 +35,7 @@ exports.create = (req, res) => {
             }
         });
     } else {
-        res.status(400).send({ message: 'Existem campos não preenchidos' });        
+        res.status(400).send({ message: 'Existem campos não preenchidos' });
     }
 }
 
@@ -61,7 +61,7 @@ exports.readAll = (req, res) => {
                 if (grades.length === 0) {
                     res.status(200).send({ message: 'Não existem cadeiras cadastradas' });
                 } else {
-                    res.status(200).send(grades);
+                    res.status(200).send({ lenght: grades.length, data: grades });
                 }
             }
         });

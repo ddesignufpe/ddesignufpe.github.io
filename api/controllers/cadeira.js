@@ -40,7 +40,7 @@ exports.create = (req, res) => {
             }
         });
     } else {
-        res.status(400).send({ message: 'Existem campos não preenchidos' });        
+        res.status(400).send({ message: 'Existem campos não preenchidos' });
     }
 }
 
@@ -52,7 +52,7 @@ exports.readAll = (req, res) => {
             if (cadeiras.length === 0) {
                 res.status(200).send({ message: 'Não existem cadeiras cadastradas' });
             } else {
-                res.status(200).send(cadeiras);
+                res.status(200).send({ lenght: cadeiras.length, data: cadeiras });
             }
         }
     });
