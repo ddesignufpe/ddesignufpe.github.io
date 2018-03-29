@@ -25,9 +25,11 @@ app.get('/', (req, res) => {
 });
 
 app.use(cors);
+app.use(bodyParser.json());
 app.use('/cadeiras', routes.Cadeira);
 app.use('/professores', routes.Professor);
 app.use('/grades', routes.Grade);
+app.use('/usuarios', routes.Usuario);
 
 app.listen(port, function () {
     console.log('Umbler listening on port %s', port);
