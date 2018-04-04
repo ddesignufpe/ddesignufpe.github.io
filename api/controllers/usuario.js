@@ -21,9 +21,9 @@ exports.create = (req, res) => {
     }
 
     if (pass) {
-        let cadeira = new Usuario(usuarioData);
+        let usuario = new Usuario(usuarioData);
 
-        cadeira.save((err, data) => {
+        usuario.save((err, data) => {
             if (err) {
                 console.log(err);
                 res.status(500).send({ message: 'Não foi possível criar este usuário', code: 'EU01' });
@@ -70,34 +70,36 @@ exports.readOne = (req, res) => {
 }
 
 exports.updade = (req, res) => {
-    Usuario.findById(req.params.usuarioId, (err, usuario) => {
-        if (err) {
-            console.log(err);
-            if (err.kind === 'ObjectId') {
+    Usuario.findById(req.params.usuarioId)
+        .select('+senha')    
+        .exec((err, usuario) => {
+            if (err) {
+                console.log(err);
+                if (err.kind === 'ObjectId') {
+                    res.status(404).send({ message: 'Usuário não encontrado' });
+                }
+                res.status(500).send({ message: 'Erro ao tentar encontrar o usuário', code: 'EU04' });
+            }
+
+            if (!usuario) {
                 res.status(404).send({ message: 'Usuário não encontrado' });
             }
-            res.status(500).send({ message: 'Erro ao tentar encontrar o usuário', code: 'EU04' });
-        }
 
-        if (!usuario) {
-            res.status(404).send({ message: 'Usuário não encontrado' });
-        }
+            let query = req.body;
 
-        let query = req.body;
+            usuario.nome = query.nome || usuario.nome;
+            usuario.email = query.email || usuario.email;
+            usuario.senha = query.senha || usuario.senha;
+            
+            usuario.save((err, data) => {
+                if (err) {
+                    res.status(500).send({ message: 'Erro ao tentar alterar o usuário', code: 'EU05' });
+                } else {
+                    res.status(200).send({ message: 'Usuário modificado com sucesso' });
+                }
+            });
 
-        usuario.nome = query.nome || usuario.nome;
-        usuario.email = query.email || usuario.email;
-        usuario.senha = query.senha || usuario.senha;
-        
-        usuario.save((err, data) => {
-            if (err) {
-                res.status(500).send({ message: 'Erro ao tentar alterar o usuário', code: 'EU05' });
-            } else {
-                res.status(200).send(data);
-            }
         });
-
-    });
 }
 
 exports.delete = (req, res) => {

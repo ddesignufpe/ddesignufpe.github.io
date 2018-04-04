@@ -5,23 +5,25 @@ const Schema = mongoose.Schema;
 const UsuarioSchema = new Schema({
     nome: { type: String, required: true },
     email: { type: String, required: true },
-    senha: { type: String, required: true, select: false }
+    senha: { type: String, required: true, select: false },
+    admin: { type: Boolean, required: false, select: false, default: false },
+    token: { type: String, select: false }
 }, {
         timestamps: true
     });
 
-UsuarioSchema.pre('save', next => {
-    let user = this;
-    if (!user.isModified('senha')) { return next() }
+UsuarioSchema.pre('save', function(next) {
+    let usuario = this;
+    if (!usuario.isModified('senha')) { return next() }
 
-    let hash = bcrypt.hashSync(user.senha);
-    user.senha = hash;
+    let hash = bcrypt.hashSync(usuario.senha);
+    usuario.senha = hash;
     next();
 });
 
-UsuarioSchema.methods.comparePassword = (senha) => {
-    let user = this;
-    return bcrypt.compareSync(senha, user.senha);
+UsuarioSchema.methods.comparePassword = function(senha) {
+    let usuario = this;
+    return bcrypt.compareSync(senha, usuario.senha);
 }
 
 module.exports = mongoose.model('Usuario', UsuarioSchema);

@@ -3,9 +3,11 @@ const bodyParser    = require('body-parser');
 const cors          = require('cors')({origin: true});
 const mongoose      = require('mongoose');
 const routes        = require('./routes');
+const appAuth       = require('./middlewares/app.auth');
 
-const jsonParser    = bodyParser.json();
-const app           = express();
+const jsonParser        = bodyParser.json();
+const app               = express();
+const appAuthMiddleware = appAuth.appMiddleware;
 
 const port = process.env.PORT || 3000;
 
@@ -26,10 +28,13 @@ app.get('/', (req, res) => {
 
 app.use(cors);
 app.use(bodyParser.json());
+app.use(appAuthMiddleware);
 app.use('/cadeiras', routes.Cadeira);
 app.use('/professores', routes.Professor);
 app.use('/grades', routes.Grade);
 app.use('/usuarios', routes.Usuario);
+app.use('/auth', routes.Auth);
+app.use('/aplicativos', routes.Aplicativo);
 
 app.listen(port, function () {
     console.log('Umbler listening on port %s', port);
