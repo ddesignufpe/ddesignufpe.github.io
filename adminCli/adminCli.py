@@ -102,13 +102,13 @@ class AdminCli():
             print(' /!\ Opção inválida!')
         return False
 
-    # USUARIOS
+    # USUARIOS -----------------------------------------------------------------------
     def usuariosMenu(self):
-        usuarios = self.__controller.carregarUsuarios()
-        if usuarios:
-            print('')
-            print('| USUÁRIOS')
-            while True:
+        print('')
+        print('| USUÁRIOS')
+        while True:
+            usuarios = self.__controller.carregarUsuarios()
+            if usuarios:
                 cnt = 0
                 print('')
                 for usuario in usuarios:
@@ -136,13 +136,15 @@ class AdminCli():
                     if usuario:
                         self.alterarUsuario(usuario)
                 elif opc == '3':
-                    print('excluir')
+                    usuario = self.selecionarDaLista(usuarios, 'Usuário')
+                    if usuario:
+                        self.excluirUsuario(usuario)
                 elif opc == 'q':
                     break
                 else:
                     print(' /!\ Opção inválida, tente novamente!')
-        else:
-            print(' /!\ Não foi possível carregar os usuários!')
+            else:
+                print(' /!\ Não foi possível carregar os usuários!')
 
     def novoUsuario(self):
         print('')
@@ -177,7 +179,7 @@ class AdminCli():
                 self.alterarUsuario(usuario)
                 break
             elif opc == '2':
-                print('excluir')
+                self.excluirUsuario(usuario)
                 break
             elif opc == 'q':
                 break
@@ -233,6 +235,7 @@ class AdminCli():
                 print('\n /!\ Usuário excluído com sucesso\n')
             else:
                 print('\n /!\ Erro ao excluir ao usuário\n')
+    # FIM USUARIOS -------------------------------------------------------------------
 
 app = AdminCli()
 app.run()

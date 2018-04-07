@@ -2,3 +2,4 @@ node_modules
 .vscode
 firebase-debug.log
 api/firebase/functions/firebase-debug.log
+adminCli/__pycache__
