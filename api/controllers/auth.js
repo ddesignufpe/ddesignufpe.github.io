@@ -23,7 +23,7 @@ exports.login = (req, res) => {
     if (pass) {
         Usuario.findOne()
             .where('email').equals(usuarioData.email)
-            .select(['+senha','+admin', '+token'])
+            .select(['+senha', '+token'])
             .exec((err, usuario) => {
                 if (err) {
                     res.status(500).send({ message: 'Não foi possível realizar o login', code: 'EA01' });                    

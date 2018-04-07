@@ -32,8 +32,8 @@ Professor.delete('/:professorId', userAuthMiddleware, professorController.delete
 Grade.get('/', gradeController.readAll);
 Grade.post('/', userAuthMiddleware, gradeController.create);
 
-Usuario.get('/:usuarioId', usuarioController.readOne);
-Usuario.get('/', usuarioController.readAll);
+Usuario.get('/:usuarioId', userAuthMiddleware, usuarioController.readOne);
+Usuario.get('/', userAuthMiddleware, usuarioController.readAll);
 Usuario.post('/', userAuthMiddleware, usuarioController.create);
 Usuario.put('/:usuarioId', userAuthMiddleware, usuarioController.updade);
 Usuario.delete('/:usuarioId', userAuthMiddleware, usuarioController.delete);

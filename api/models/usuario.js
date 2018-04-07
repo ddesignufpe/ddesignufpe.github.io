@@ -6,7 +6,7 @@ const UsuarioSchema = new Schema({
     nome: { type: String, required: true },
     email: { type: String, required: true },
     senha: { type: String, required: true, select: false },
-    admin: { type: Boolean, required: false, select: false, default: false },
+    admin: { type: Boolean, required: false, default: false },
     token: { type: String, select: false }
 }, {
         timestamps: true

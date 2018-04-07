@@ -25,7 +25,7 @@ exports.verifyUserToken = (token) => {
             let admin = decoded.adm;
 
             return Usuario.findById(usuarioId)
-                .select(['+senha','+admin', '+token'])
+                .select(['+senha', '+token'])
                 .exec()
                 .then((usuario)=>{
                     if (usuario.token === token) {
