@@ -4,12 +4,14 @@ const cors          = require('cors')({origin: true});
 const mongoose      = require('mongoose');
 const routes        = require('./routes');
 const appAuth       = require('./middlewares/app.auth');
+const debug         = require('./middlewares/debug');
 
 const jsonParser        = bodyParser.json();
 const app               = express();
 const appAuthMiddleware = appAuth.appMiddleware;
 
 const port = process.env.PORT || 3000;
+const debugMode = true;
 
 mongoose.connect("mongodb://admin:8hq8xba9@cluster0-shard-00-00-mfu9r.mongodb.net:27017,cluster0-shard-00-01-mfu9r.mongodb.net:27017,cluster0-shard-00-02-mfu9r.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin");
 
@@ -25,6 +27,11 @@ mongoose.connection.once('open', function() {
 app.get('/', (req, res) => {
     res.status(200).send({message: "Bem vindo a API dDesign! ~ Versao: 2.0.0"});
 });
+
+if (debugMode) {
+    console.log('>> DebugMode ON!');
+    app.use(debug.debugMiddleware);
+}
 
 app.use(cors);
 app.use(bodyParser.json());
