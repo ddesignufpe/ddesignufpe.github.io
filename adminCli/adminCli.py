@@ -10,6 +10,7 @@ class AdminCli():
         print('| BEM VINDO AO DDESIGN ADMIN | \n')
         print('| Versão: 1.0')
         print('| Feito com <3 por Ítalo Sousa')
+        print('| Contri: Nickolas Ribeiro')
         while True:
             print('')
             print('| 0 - Login')
@@ -76,6 +77,7 @@ class AdminCli():
                 self.usuariosMenu()
             elif opc == '2':
                 print('Aplicativos')
+                self.aplicativosMenu()
             elif opc == '3':
                 print('Professores')
             elif opc == '4':
@@ -237,5 +239,138 @@ class AdminCli():
                 print('\n /!\ Erro ao excluir ao usuário\n')
     # FIM USUARIOS -------------------------------------------------------------------
 
+
+
+
+
+    # --------------------------- APLICATIVOS --------------------------------------
+    def aplicativosMenu(self):
+        print('')
+        print('| APLICATIVOS')
+        while True:
+            aplicativos = self.__controller.carregarAplicativos()
+            if aplicativos:
+                cnt = 0
+                print('')
+                for aplicativo in aplicativos:
+                    print('| %i - %s - %s - %s' %(cnt, aplicativo.nome, aplicativo.emailAutor, aplicativo.url))
+                    cnt += 1
+                print('| OPÇÕES:')
+                print('| 0 - Novo aplicativo')
+                print('| 1 - Detalhar aplicativo')
+                print('| 2 - Alterar aplicativo')
+                print('| 3 - Excluir aplicativo')
+                print('| q - Sair')
+
+                opc = input('\n:')
+
+                if opc == '0':
+                    self.novoAplicativo()
+                elif opc == '1':
+                    aplicativo = self.selecionarDaLista(aplicativos, 'Aplicativo')
+                    if aplicativo:
+                        self.detalharAplicativo(aplicativo)      
+                elif opc == '2':
+                    print("2")
+                    aplicativo = self.selecionarDaLista(aplicativos, 'Aplicativo')
+                    if aplicativo:
+                        self.alterarAplicativo(aplicativo)
+                elif opc == '3':
+                    aplicativo = self.selecionarDaLista(aplicativos, 'Aplicativo')
+                    if aplicativo:
+                        self.excluirAplicativo(aplicativo)
+                elif opc == 'q':
+                    break
+                else:
+                    print(' /!\ Opção inválida, tente novamente!')
+            else:
+                print(' /!\ Não foi possível carregar os aplicativos!')
+
+    def novoAplicativo(self):
+        print('')
+        print('| CADASTRO DE APLICATIVO')
+        print('|')
+        nome = input('| Nome do Aplicativo: ')
+        emailAutor = input('| Email do Autor: ')
+        appurl = input('| URL: ')
+        cadastrado = self.__controller.inserirAplicativo(nome, emailAutor, appurl)
+        if cadastrado:
+            print(' /!\ Aplicativo cadastrado com sucesso')
+        else: 
+            print(' /!\ Erro ao criar aplicativo!')
+
+    def detalharAplicativo(self, aplicativo):
+        print('')
+        print('| DETALHE - %s' %(aplicativo.nome))
+        print('|')
+        print('| Nome: %s' %(aplicativo.nome))
+        print('| Email do Autor: %s' %(aplicativo.emailAutor))
+        print('| URL: %s' %(aplicativo.url))
+        print('| Token: %s' %(aplicativo.token))
+        print('|')
+        print('| OPÇÕES:')
+        print('| 1 - Editar aplicativo')
+        print('| 2 - Excluir aplicativo')
+        print('| q - Sair')
+        
+        while True:
+            opc = input('\n:')
+            if opc == '1':
+                print("1")
+                self.alterarAplicativo(aplicativo)
+                break
+            elif opc == '2':
+                self.excluirAplicativo(aplicativo)
+                break
+            elif opc == 'q':
+                break
+            else:
+                print(' /!\ Opção inválida!')            
+
+    def alterarAplicativo(self, aplicativo):
+        print('')
+        print('| ALTERAR APLICATIVO')
+        print('| /!\ Para não alterar o campo, deixe em branco e pressione enter :) ')
+        print('|')
+        nome = input('| Nome (%s): ' %(aplicativo.nome))
+        emailAutor = input('| Email do autor (%s): ' %(aplicativo.emailAutor))
+        appurl = input('| URL (%s): ' %(aplicativo.url))
+
+        if nome == "":
+            nome = aplicativo.nome
+        if emailAutor == "":
+            emailAutor = aplicativo.emailAutor
+        if appurl == "":
+            appurl = aplicativo.url
+
+        print('')
+        print(' /?\ Confirmar alterações?\n')
+        print('| Nome: %s -> %s' %(aplicativo.nome, nome))
+        print('| Email do autor: %s -> %s' %(aplicativo.emailAutor, emailAutor))
+        print('| URL: %s -> %s' %(aplicativo.url, appurl))
+        
+        opc = input('\n(s/n):')
+
+        if opc == 's':
+            aplicativo.nome = nome
+            aplicativo.emailAutor = emailAutor
+            aplicativo.url = appurl
+
+            alterado = self.__controller.atualizarAplicativo(aplicativo)
+            if alterado:
+                print('\n /!\ Aplicativo cadastrado com sucesso\n')
+            else:
+                print('\n /!\ Erro ao alterar o aplicativo\n')
+
+    def excluirAplicativo(self, aplicativo):
+        print('\n /?\ Você realmente deseja excluir o aplicativo %s?\n' %(aplicativo.nome))
+        opc = input('\n(s/n):')
+        if opc == 's':
+            removido = self.__controller.removerAplicativo(aplicativo)
+            if removido:
+                print('\n /!\ Aplicativo excluído com sucesso\n')
+            else:
+                print('\n /!\ Erro ao excluir o aplicativo\n')
+    # ------------------------ FIM APLICATIVOS ---------------------------------            
 app = AdminCli()
 app.run()

@@ -91,3 +91,62 @@ class AdminController():
             return True
         else:
             return False
+
+    #Aplicativos
+    def carregarAplicativos(self):
+        url = url = self.__apiUrl + '/aplicativos'
+        response = requests.get(url, headers=self.__headers)
+        if response.status_code == 200:
+            responseData = response.json()
+            dados = responseData['data']
+            length = len(dados)
+            
+            aplicativos = [None for x in range(length)]
+            
+            for i in range(length):
+                appId = dados[i]['_id']
+                emailAutor = dados[i]['emailAutor']
+                nome = dados[i]['nome']
+                appurl = dados[i]['url']
+                token = dados[i]['token']
+
+                aplicativo = Aplicativo()
+                aplicativo.loadAplicativo(appId, nome, emailAutor, appurl, token)
+                aplicativos[i] =  aplicativo
+            return aplicativos
+        else:
+            return False
+
+    def inserirAplicativo(self, nome, emailAutor, appurl):
+        url = self.__apiUrl + '/aplicativos/'
+        
+        aplicativo = Aplicativo()
+        aplicativo.nome = nome
+        aplicativo.emailAutor = emailAutor
+        aplicativo.url = appurl
+
+        jsonData = aplicativo.getDados()
+        response = requests.post(url, json=jsonData, headers=self.__headers)
+
+        if response.status_code == 201:
+            return True
+        else: 
+            return False
+
+    def atualizarAplicativo(self, aplicativo):
+        url = self.__apiUrl + '/aplicativos/' + aplicativo.appId
+
+        jsonData = aplicativo.getDados()
+        response = requests.put(url, json=jsonData, headers=self.__headers)
+        if response.status_code == 200:
+            return True
+        else: 
+            return False
+
+    def removerAplicativo(self, aplicativo):
+        url = self.__apiUrl + '/aplicativos/' + aplicativo.appId
+        response = requests.delete(url, headers=self.__headers)
+        if response.status_code == 200:
+            return True
+        else:
+            return False        
