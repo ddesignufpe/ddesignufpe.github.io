@@ -80,6 +80,7 @@ class AdminCli():
                 self.aplicativosMenu()
             elif opc == '3':
                 print('Professores')
+                self.profMenu()
             elif opc == '4':
                 print('Cadeiras')
             elif opc == '5':
@@ -371,6 +372,156 @@ class AdminCli():
                 print('\n /!\ Aplicativo excluído com sucesso\n')
             else:
                 print('\n /!\ Erro ao excluir o aplicativo\n')
-    # ------------------------ FIM APLICATIVOS ---------------------------------            
+    # ------------------------ FIM APLICATIVOS ------------------------------------------------------------  
+  
+
+
+
+      
+    # ------------------------- PROFESSORES ----------------------------------------------------------------  
+    def profMenu(self):
+        print('')
+        print('| PROFESSORES')
+        while True:
+            professores = self.__controller.carregarProfessores()
+            if professores:
+                cnt = 0
+                print('')
+                for prof in professores:
+                    print('| %i - %s - %s - %s' %(cnt, prof.nome, prof.area, prof.email))
+                    cnt += 1
+                print('| OPÇÕES:')
+                print('| 0 - Cadastrar novo professor')
+                print('| 1 - Detalhar professor')
+                print('| 2 - Alterar cadastro do professor')
+                print('| 3 - Excluir cadastro do professor')
+                print('| q - Sair')
+
+                opc = input('\n:')
+
+                if opc == '0':
+                    self.novoProfessor()
+                elif opc == '1':
+                    
+                    professor = self.selecionarDaLista(professores, 'Professor')
+                    if professor:
+                        self.detalharProfessor(professor)      
+                elif opc == '2':
+                    print("2")
+                    aplicativo = self.selecionarDaLista(professores, 'Professor')
+                    if aplicativo:
+                        self.alterarProfessor(professor)
+                elif opc == '3':
+                    professor = self.selecionarDaLista(professores, 'Professor')
+                    if professor:
+                        self.excluirProfessor(professor)
+                elif opc == 'q':
+                    break
+                else:
+                    print(' /!\ Opção inválida, tente novamente!')
+            else:
+                print(' /!\ Não foi possível carregar os professores!')
+
+    def novoProfessor(self):
+        print('')
+        print('| CADASTRO DE PROFESSOR')
+        print('|')
+        nome = input('| Nome do Professor: ')
+        email = input('| Email: ')
+        bio = input('| Biografia: ')
+        lattes = input('| Lattes: ')
+        area = input('| Area: ')
+        cadastrado = self.__controller.inserirProfessor(nome, email, bio, lattes, area)
+        if cadastrado:
+            print(' /!\ Professor cadastrado com sucesso')
+        else: 
+            print(' /!\ Erro ao criar professor!')
+
+    def detalharProfessor(self, professor):
+        print('')
+        print('| DETALHE - %s' %(professor.nome))
+        print('|')
+        print('| Nome: %s' %(professor.nome))
+        print('| Email: %s' %(professor.email))
+        print('| Bio: %s' %(professor.bio))
+        print('| Lattes: %s' %(professor.lattes))
+        print('| Area: %s' %(professor.area))
+        print('|')
+        print('| OPÇÕES:')
+        print('| 1 - Editar cadastro do professor')
+        print('| 2 - Excluir cadastro do professor')
+        print('| q - Sair')
+        
+        while True:
+            opc = input('\n:')
+            if opc == '1':
+                print("1")
+                self.alterarProfessor(professor)
+                break
+            elif opc == '2':
+                self.excluirProfessor(professor)
+                break
+            elif opc == 'q':
+                break
+            else:
+                print(' /!\ Opção inválida!')    
+
+    def alterarProfessor(self, professor):
+        print('')
+        print('| ALTERAR PROFESSOR')
+        print('| /!\ Para não alterar o campo, deixe em branco e pressione enter :) ')
+        print('|')
+        nome = input('| Nome (%s): ' %(professor.nome))
+        email = input('| Email do autor (%s): ' %(professor.email))
+        bio = input('| Bio (%s): ' %(professor.bio))
+        lattes = input('| Lattes (%s): ' %(professor.lattes))
+        area = input('| Area (%s): ' %(professor.area))
+
+        if nome == "":
+            nome = professor.nome
+        if email == "":
+            email = professor.email
+        if bio == "":
+            bio = professor.bio
+        if lattes == "":
+            lattes = professor.lattes
+        if area == "":
+            area = professor.area       
+
+        print('')
+        print(' /?\ Confirmar alterações?\n')
+        print('| Nome: %s -> %s' %(professor.nome, nome))
+        print('| Email: %s -> %s' %(professor.email, email))
+        print('| Bio: %s -> %s' %(professor.bio, bio))
+        print('| Lattes: %s -> %s' %(professor.lattes, lattes))
+        print('| Area: %s -> %s' %(professor.area, area))
+        
+        opc = input('\n(s/n):')
+
+        if opc == 's':
+            professor.nome = nome
+            professor.emailAutor = email
+            professor.bio = bio
+            professor.lattes = lattes
+            professor.area = area
+
+
+            alterado = self.__controller.atualizarProfessor(professor)
+            if alterado:
+                print('\n /!\ Professor cadastrado com sucesso\n')
+            else:
+                print('\n /!\ Erro ao alterar o cadastro do professor\n')
+
+    def excluirProfessor(self, professor):
+        print('\n /?\ Você realmente deseja excluir o professor %s?\n' %(professor.nome))
+        opc = input('\n(s/n):')
+        if opc == 's':
+            removido = self.__controller.removerProfessor(professor)
+            if removido:
+                print('\n /!\ Professor excluído com sucesso\n')
+            else:
+                print('\n /!\ Erro ao excluir o professor\n')   
+    # --------------------------------------------- FIM PROFESSORES ----------------------------------------------            
+
 app = AdminCli()
 app.run()

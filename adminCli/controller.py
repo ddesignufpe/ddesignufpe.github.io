@@ -150,3 +150,66 @@ class AdminController():
             return True
         else:
             return False        
+
+    # Professores
+    def carregarProfessores(self):
+        url = url = self.__apiUrl + '/professores'
+        response = requests.get(url, headers=self.__headers)
+        if response.status_code == 200:
+            responseData = response.json()
+            dados = responseData['data']
+            length = len(dados)
+            
+            professores = [None for x in range(length)]
+            
+            for i in range(length):
+                profId = dados[i]['_id']
+                nome = dados[i]['nome']
+                email = dados[i]['email']
+                bio = dados[i]['bio']
+                lattes = dados[i]['lattes']
+                area = dados[i]['area']
+
+                professor = Professor()
+                professor.loadProfessor(profId, nome, email, bio, lattes, area)
+                professores[i] =  professor
+            return professores
+        else:
+            return False
+
+    def inserirProfessor(self, nome, email, bio, lattes, area):
+        url = self.__apiUrl + '/professores/'
+        
+        professor = Professor()
+        professor.nome = nome
+        professor.email = email
+        professor.bio = bio
+        professor.lattes = lattes
+        professor.area = area
+
+
+        jsonData = professor.getDados()
+        response = requests.post(url, json=jsonData, headers=self.__headers)
+
+        if response.status_code == 201:
+            return True
+        else: 
+            return False
+
+    def atualizarProfessor(self, professor):
+        url = self.__apiUrl + '/professores/' + professor.profId
+
+        jsonData = professor.getDados()
+        response = requests.put(url, json=jsonData, headers=self.__headers)
+        if response.status_code == 200:
+            return True
+        else: 
+            return False
+
+    def removerProfessor(self, professor):
+        url = self.__apiUrl + '/professores/' + professor.profId
+        response = requests.delete(url, headers=self.__headers)
+        if response.status_code == 200:
+            return True
+        else:
+            return False    

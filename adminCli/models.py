@@ -50,4 +50,30 @@ class Aplicativo():
         self.url = url or self.url
         self.token = token or self.token
 
+class Professor():
+    def __init__(self):
+        self.profId = ""
+        self.nome = ""
+        self.email = ""
+        self.bio = ""
+        self.lattes = ""
+        self.area = ""
+
+    def getDados(self):
+        dados = {
+            'nome': self.nome,
+            'email': self.email,
+            'bio': self.bio,
+            'lattes': self.lattes,
+            'area': self.area
+        }    
+        return dados
+
+    def loadProfessor(self, profId, nome, email, bio, lattes, area):
+        self.profId = profId or self.profId
+        self.nome = nome or self.nome
+        self.email = email or self.email
+        self.bio = bio or self.bio
+        self.lattes = lattes or self.lattes
+        self.area = area or self.area    
 
