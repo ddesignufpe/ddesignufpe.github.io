@@ -212,4 +212,79 @@ class AdminController():
         if response.status_code == 200:
             return True
         else:
-            return False    
+            return False
+
+    #Cadeiras
+    def carregarCadeiras(self):
+        url = url = self.__apiUrl + '/cadeiras'
+        response = requests.get(url, headers=self.__headers)
+        if response.status_code == 200:
+            responseData = response.json()
+            dados = responseData['data']
+            length = len(dados)
+            
+            cadeiras = [None for x in range(length)]
+            
+            for i in range(length):
+                cadeiraId = dados[i]['_id']
+                codigo = dados[i]['codigo']
+                nomePerfil = dados[i]['nomePerfil']
+                nomeCadeira = dados[i]['nomeCadeira']
+                professor = dados[i]['professor']
+                eixo = dados[i]['eixo']
+                ementa = dados[i]['ementa']
+                nivel = dados[i]['nivel']
+                vagasMatricula = dados[i]['vagasMatricula']
+                vagasModificacaoDesign = dados[i]['vagasModificacaoDesign']
+                vagasModificacaoOutros = dados[i]['vagasModificacaoOutros']
+                local = dados[i]['local']
+
+                cadeira = Cadeira()
+                cadeira.loadCadeira(cadeiraId, codigo, nomePerfil, nomeCadeira, professor, eixo, ementa, nivel, vagasMatricula, vagasModificacaoDesign, vagasModificacaoOutros, local)
+                cadeiras[i] =  cadeira
+            return cadeiras
+        else:
+            return False        
+
+    def inserirCadeira(self, codigo, nomePerfil, nomeCadeira, professor, eixo, ementa, nivel, vagasMatricula, vagasModificacaoDesign, vagasModificacaoOutros, local):
+        url = self.__apiUrl + '/cadeiras/'
+        
+        cadeira = Cadeira()
+        cadeira.codigo = codigo
+        cadeira.nomePerfil = nomePerfil
+        cadeira.nomeCadeira = nomeCadeira
+        cadeira.professor = professor
+        cadeira.eixo = eixo
+        cadeira.ementa = ementa
+        cadeira.nivel = nivel
+        cadeira.vagasMatricula = vagasMatricula
+        cadeira.vagasModificacaoDesign = vagasModificacaoDesign
+        cadeira.vagasModificacaoOutros = vagasModificacaoOutros
+        cadeira.local = local
+
+
+        jsonData = cadeira.getDados()
+        response = requests.post(url, json=jsonData, headers=self.__headers)
+
+        if response.status_code == 201:
+            return True
+        else: 
+            return False        
+
+    def atualizarCadeira(self, cadeira):
+        url = self.__apiUrl + '/cadeiras/' + cadeira.cadeiraId
+
+        jsonData = cadeira.getDados()
+        response = requests.put(url, json=jsonData, headers=self.__headers)
+        if response.status_code == 200:
+            return True
+        else: 
+            return False
+
+    def removerCadeira(self, cadeira):
+        url = self.__apiUrl + '/cadeiras/' + cadeira.cadeiraId
+        response = requests.delete(url, headers=self.__headers)
+        if response.status_code == 200:
+            return True
+        else:
+            return False        

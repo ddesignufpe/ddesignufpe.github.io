@@ -83,6 +83,7 @@ class AdminCli():
                 self.profMenu()
             elif opc == '4':
                 print('Cadeiras')
+                self.cadeiraMenu()
             elif opc == '5':
                 print('Grades')
             elif opc == 'q':
@@ -522,6 +523,201 @@ class AdminCli():
             else:
                 print('\n /!\ Erro ao excluir o professor\n')   
     # --------------------------------------------- FIM PROFESSORES ----------------------------------------------            
+
+    
+
+
+    # ----------------------------------------------- CADEIRAS ---------------------------------------------------
+    def cadeiraMenu(self):
+        print('')
+        print('| CADEIRAS')
+        while True:
+            cadeiras = self.__controller.carregarCadeiras()
+            if cadeiras:
+                cnt = 0
+                print('')
+                for cadeira in cadeiras:
+                    print('| %i - %s - %s - %s' %(cnt, cadeira.nomeCadeira, cadeira.ementa, cadeira.professor))
+                    cnt += 1
+                print('| OPÇÕES:')
+                print('| 0 - Cadastrar nova cadeira')
+                print('| 1 - Detalhar cadeira')
+                print('| 2 - Alterar cadastro da cadeira')
+                print('| 3 - Excluir cadastro da cadeira')
+                print('| q - Sair')
+
+                opc = input('\n:')
+
+                if opc == '0':
+                    print("0!")
+                    self.novaCadeira()
+                elif opc == '1':
+                    print("1")   
+                    cadeira = self.selecionarDaLista(cadeiras, 'Cadeira')
+                    if cadeira:
+                        self.detalharCadeira(cadeira)      
+                elif opc == '2':
+                    cadeira = self.selecionarDaLista(cadeiras, 'Cadeira')
+                    if cadeira:
+                        self.alterarCadeira(cadeira)
+                elif opc == '3':
+                    cadeira = self.selecionarDaLista(cadeiras, 'Cadeira')
+                    if cadeira:
+                        self.excluirCadeira(cadeira)
+                elif opc == 'q':
+                    break
+                else:
+                    print(' /!\ Opção inválida, tente novamente!')
+            else:
+                print(' /!\ Não foi possível carregar as cadeiras!')
+
+    def novaCadeira(self):
+        print('')
+        print('| CADASTRO DE CADEIRA')
+        print('|')
+        codigo = input('| Codigo: ')
+        nomePerfil = input('| Nome Perfil: ')
+        nomeCadeira = input('| Nome Cadeira: ')
+        professor = input('| Professor: ')
+        eixo = input('| Eixo: ')
+        ementa = input('| Ementa: ')
+        nivel = input('| Nivel: ')
+        vagasMatricula = input('| Vagas Matricula: ')
+        vagasModificacaoDesign = input('| Vagas Modificação Design: ')
+        vagasModificacaoOutros = input('| Vagas Modificação Outros: ')
+        local = input('| Local: ')
+        cadastrado = self.__controller.inserirCadeira(codigo, nomePerfil, nomeCadeira, professor, eixo, ementa, nivel, vagasMatricula, vagasModificacaoDesign, vagasModificacaoOutros, local)
+        if cadastrado:                    
+            print(' /!\ Cadeira cadastrada com sucesso')
+        else: 
+            print(' /!\ Erro ao criar cadeira!')
+
+    def detalharCadeira(self, cadeira):
+        print('')
+        print('| DETALHE - %s' %(cadeira.codigo))
+        print('|')
+        print('| Codigo: %s' %(cadeira.codigo))
+        print('| Nome Perfil: %s' %(cadeira.nomePerfil))
+        print('| Nome Cadeira: %s' %(cadeira.nomeCadeira))
+        print('| Professor: %s' %(cadeira.professor))
+        print('| Eixo: %s' %(cadeira.eixo))
+        print('| Ementa: %s' %(cadeira.ementa))
+        print('| Nivel: %s' %(cadeira.nivel))
+        print('| Vagas Matricula: %s' %(cadeira.vagasMatricula))
+        print('| Vagas Modificação Design: %s' %(cadeira.vagasModificacaoDesign))
+        print('| Vagas Modificação Outros: %s' %(cadeira.vagasModificacaoOutros))
+        print('| Local: %s' %(cadeira.local))
+        print('|')
+        print('| OPÇÕES:')
+        print('| 1 - Editar cadeira')
+        print('| 2 - Excluir cadeira')
+        print('| q - Sair')
+        
+        while True:
+            opc = input('\n:')
+            if opc == '1':
+                self.alterarCadeira(cadeira)
+                break
+            elif opc == '2':
+                self.excluirCadeira(cadeira)
+                break
+            elif opc == 'q':
+                break
+            else:
+                print(' /!\ Opção inválida!')
+
+    def alterarCadeira(self, cadeira):
+        print('')
+        print('| ALTERAR CADEIRA')
+        print('| /!\ Para não alterar o campo, deixe em branco e pressione enter :) ')
+        print('|')
+        codigo = input('| Codigo: (%s): ' %(cadeira.codigo))
+        nomePerfil = input('| Nome Perfil (%s): ' %(cadeira.nomePerfil))
+        nomeCadeira = input('| Nome Cadeira (%s): ' %(cadeira.nomeCadeira))
+        professor = input('| Professor (%s): ' %(cadeira.professor))
+        eixo = input('| Eixo (%s): ' %(cadeira.eixo))
+        ementa = input('| Ementa (%s): ' %(cadeira.ementa))
+        nivel = input('| Nivel (%s): ' %(cadeira.nivel))
+        vagasMatricula = input('| Vagas Matricula (%s): ' %(cadeira.vagasMatricula))
+        vagasModificacaoDesign = input('| Vagas Modificação Design (%s): ' %(cadeira.vagasModificacaoDesign))
+        vagasModificacaoOutros = input('| Vagas Modificação Outros (%s): ' %(cadeira.vagasModificacaoOutros))
+        local = input('| Local (%s): ' %(cadeira.local))
+
+
+        if codigo == "":
+            codigo = cadeira.codigo
+        if nomePerfil == "":
+            nomePerfil = cadeira.nomePerfil
+        if nomeCadeira == "":
+            nomeCadeira = cadeira.nomeCadeira
+        if professor == "":
+            professor = cadeira.professor
+        if eixo == "":
+            eixo = cadeira.eixo   
+        if ementa == "":
+            ementa = cadeira.ementa
+        if nivel == "":
+            nivel = cadeira.nivel                
+        if vagasMatricula == "":
+            vagasMatricula = cadeira.vagasMatricula  
+        if vagasModificacaoDesign == "":
+            vagasModificacaoDesign = cadeira.vagasModificacaoDesign  
+        if vagasModificacaoOutros == "":
+            vagasModificacaoOutros = cadeira.vagasModificacaoOutros  
+        if local == "":
+            local = cadeira.local    
+
+        print('')
+        print(' /?\ Confirmar alterações?\n')
+        print('| Codigo: %s -> %s' %(cadeira.codigo, codigo))
+        print('| Nome Perfil: %s -> %s' %(cadeira.nomePerfil, nomePerfil))
+        print('| Nome Cadeira: %s -> %s' %(cadeira.nomeCadeira, nomeCadeira))
+        print('| Professor: %s -> %s' %(cadeira.professor, professor))
+        print('| Eixo: %s -> %s' %(cadeira.eixo, eixo))
+        print('| Ementa: %s -> %s' %(cadeira.ementa, ementa))
+        print('| Nivel: %s -> %s' %(cadeira.nivel, nivel))
+        print('| Vagas Matricula: %s -> %s' %(cadeira.vagasMatricula, vagasMatricula))
+        print('| Vagas Modificação Design: %s -> %s' %(cadeira.vagasModificacaoDesign, vagasModificacaoDesign))
+        print('| Vagas Modificação Outros: %s -> %s' %(cadeira.vagasModificacaoOutros, vagasModificacaoOutros))
+        print('| Local: %s -> %s' %(cadeira.local, local))
+        
+        opc = input('\n(s/n):')
+
+        if opc == 's':
+            cadeira.codigo
+            cadeira.nomePerfil
+            cadeira.nomeCadeira
+            cadeira.professor
+            cadeira.eixo
+            cadeira.ementa
+            cadeira.nivel
+            cadeira.vagasMatricula
+            cadeira.vagasModificacaoDesign
+            cadeira.vagasModificacaoOutros
+            cadeira.local
+
+
+            alterado = self.__controller.atualizarCadeira(cadeira)
+            if alterado:
+                print('\n /!\ Cadeira cadastrada com sucesso!\n')
+            else:
+                print('\n /!\ Erro ao alterar o cadastro da cadeira!\n')
+
+    def excluirCadeira(self, cadeira):
+        print('\n /?\ Você realmente deseja excluir a cadeira %s?\n' %(cadeira.codigo))
+        opc = input('\n(s/n):')
+        if opc == 's':
+            removido = self.__controller.removerCadeira(cadeira)
+            if removido:
+                print('\n /!\ Cadeira excluída com sucesso\n')
+            else:
+                print('\n /!\ Erro ao excluir a cadeira\n') 
+
+
+
+
+
+
 
 app = AdminCli()
 app.run()

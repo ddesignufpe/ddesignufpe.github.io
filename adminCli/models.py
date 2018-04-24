@@ -75,5 +75,50 @@ class Professor():
         self.email = email or self.email
         self.bio = bio or self.bio
         self.lattes = lattes or self.lattes
-        self.area = area or self.area    
+        self.area = area or self.area  
+
+class Cadeira():
+    def __init__(self):
+        self.cadeiraId = ""
+        self.codigo = "" 
+        self.nomePerfil = ""
+        self.nomeCadeira = ""
+        self.professor = ""
+        self.eixo = ""
+        self.ementa = ""
+        self.nivel = ""
+        self.vagasMatricula = ""
+        self.vagasModificacaoDesign = ""
+        self.vagasModificacaoOutros = ""
+        self.local = ""
+
+    def getDados(self):
+        dados = {
+            'codigo': self.codigo,
+            'nomePerfil': self.nomePerfil,
+            'nomeCadeira': self.nomeCadeira,
+            'professor': self.professor,
+            'eixo': self.eixo,
+            'ementa': self.ementa,
+            'nivel': self.nivel,
+            'vagasMatricula': self.vagasMatricula,
+            'vagasModificacaoDesign': self.vagasModificacaoDesign,
+            'vagasModificacaoOutros': self.vagasModificacaoOutros,
+            'local': self.local
+        }
+        return dados
+
+    def loadCadeira(self, cadeiraId, codigo, nomePerfil, nomeCadeira, professor, eixo, ementa, nivel, vagasMatricula, vagasModificacaoDesign, vagasModificacaoOutros, local):
+        self.cadeiraId = cadeiraId or self.cadeiraId
+        self.codigo = codigo or self.codigo
+        self.nomePerfil = nomePerfil or self.nomePerfil
+        self.nomeCadeira = nomeCadeira or self.nomeCadeira
+        self.professor = professor or self.professor
+        self.eixo = eixo or self.eixo
+        self.ementa = ementa or self.ementa
+        self.nivel = nivel or self.nivel
+        self.vagasMatricula = vagasMatricula or self.vagasMatricula
+        self.vagasModificacaoDesign = vagasModificacaoDesign or self.vagasModificacaoDesign
+        self.vagasModificacaoOutros = vagasModificacaoOutros or self.vagasModificacaoOutros
+        self.local = local or self.local     
 
